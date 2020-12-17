@@ -5,6 +5,8 @@ search:
   - W.M. Mongan
   - W. M. Mongan
   - WM Mongan
+  - William Mongan
+  - William M. Mongan
 role: pi
 image: images/mongan.png
 website: "http://www.billmongan.com"
