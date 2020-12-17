@@ -11,6 +11,7 @@ import json
 import yaml
 import subprocess
 from datetime import datetime
+import traceback
 
 # input and output files
 current_dir = os.path.dirname(os.path.realpath(__file__))
@@ -21,15 +22,18 @@ output_file = os.path.join(current_dir, "research-output.yml")
 try:
     with open(input_file, encoding="utf8") as file:
         input_papers = yaml.load(file, Loader=yaml.FullLoader)
-except Exception:
+except Exception as e:
     print("Problem with input file.")
+    traceback.print_exception(Exception, e, None)
     sys.exit(1)
 
 # load existing output papers as yaml
 try:
     with open(output_file, encoding="utf8") as file:
         output_papers = yaml.load(file, Loader=yaml.FullLoader)
-except Exception:
+except Exception as e:
+    print("Problem with output file")
+    traceback.print_exception(Exception, e, None)   
     output_papers = []
 
 # get citation metadata for each paper
@@ -41,7 +45,11 @@ for index, input_paper in enumerate(input_papers, start=1):
     print("------------------------------\n")
 
     # if input paper already exists in output, use that citation info to save time
-    matches = [p for p in output_papers if p.get("id", "") == input_paper.get("id", "")]
+    if not (output_papers is None):
+        matches = [p for p in output_papers if p.get("id", "") == input_paper.get("id", "")]
+    else:
+        matches = []
+        
     if len(matches) > 0:
         print("Paper already in output. Using existing citation.")
         new_papers.append(matches[0])
