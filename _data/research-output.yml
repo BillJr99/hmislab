@@ -1,0 +1,29 @@
+- title: 'drexelwireless/iot-sensor-framework: Public Release 1.0'
+  authors:
+  - William M. Mongan
+  - ' '
+  - ' '
+  - Henry Dang
+  - Victor S. Cushman
+  - Charlie Rose Chiccarine
+  - Kapil R. Dandekar
+  - Adam K. Fontecchio
+  publisher: Zenodo
+  date: '2020-05-05'
+  link: https://doi.org/ghp39k
+  id: doi:10.5281/zenodo.3786932
+  thumbnail: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
+  tags:
+  - iot
+- title: 'drexelwireless/iot-processing-framework: Public Release 1.1'
+  authors:
+  - William M. Mongan
+  - Kapil R. Dandekar
+  - Adam K. Fontecchio
+  publisher: Zenodo
+  date: '2020-05-13'
+  link: https://doi.org/ghp39m
+  id: doi:10.5281/zenodo.3786930
+  thumbnail: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
+  tags:
+  - iot
