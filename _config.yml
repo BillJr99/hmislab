@@ -5,9 +5,9 @@ title: Human-Machine Intelligent Systems Lab # title of site, used in tab name a
 email: billmongan@gmail.com # default email
 google: William Mongan # default name to search on Google Scholar
 github: billjr99 # default GitHub user/org, without the @
-#twitter: faketwitterhandle # default Twitter handle, without the @
-#instagram: fakeinstagramhandle # default Instagram handle, without the @
-#youtube: fakeyoutubechannel # default YouTube channel handle
+#twitter: faketwitterhandle # default Twitter handle, without the @ - uncomment in _includes/footer.html
+#instagram: fakeinstagramhandle # default Instagram handle, without the @ - uncomment in _includes/footer.html
+#youtube: fakeyoutubechannel # default YouTube channel handle 
 
 # base directory where site is hosted
 # set to "" if hosting at a custom domain, eg yoursite.com
