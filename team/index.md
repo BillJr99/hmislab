@@ -6,9 +6,9 @@ title: Team
 
 ## Team List
 
-A _team list_ component, to sort and group all of the members on your team automatically.
+<!--A _team list_ component, to sort and group all of the members on your team automatically.
 Can be used on any page, but assumes its content from `/_members`.
-Uses the _portrait_ component.
+Uses the _portrait_ component.-->
 
 All team members, sorted alphabetically by file name:
 
@@ -18,6 +18,7 @@ All team members, sorted alphabetically by file name:
 
 {% include centerer.html html=html %}
 
+<!--
 Team members filtered and sorted by role:
 
 {% capture html %}
@@ -45,3 +46,4 @@ Team members in a specific order and in a mini size:
 {% endcapture %}
 
 {% include centerer.html html=html %}
+-->

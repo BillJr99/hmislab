@@ -4,31 +4,26 @@ title: Contact
 
 # <i class="fas fa-envelope"></i>Contact
 
-Our lab is part of the [Department of Metaphor](), at the school of [Whimsy and Caprice]().
-We are located on the 13th floor of the [Center for Wit and Sagacity]().
+Our lab is primarily located in the [Department of Mathematics and Computer Science](https://www.ursinus.edu/academics/mathematics-and-computer-science/), at [Ursinus College](https://www.ursinus.edu) in Collegeville, Pennsylvania.
 
-{% include figure.html image="images/volcano.jpg" width="100%" %}
+<!-- Image Attribution: Rob266, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons -->
+{% include figure.html image="https://upload.wikimedia.org/wikipedia/commons/3/34/Pfahler_Hall_of_Science_Ursinus_College.jpg" width="100%" %}
 
 ## Email
 
-[scrooge@mcduck.com](mailto:scrooge@mcduck.com)
+[billmongan@gmail.com](mailto:billmongan@gmail.com)
 {:.center}
 
 ## Phone
 
-[(555) 867-5309](tel:+1-555-867-5309)
+[(610) 409-3268](tel:+1-610-409-3268)
 {:.center}
 
 ## Address
 
-{% comment %}
-Tip: put both a mailing address for mail/deliveries, AND a navigation-friendly address so people can find their way to you easily.
-{% endcomment %}
-
-That St & The Other St  
-Porters Lake, NS B3E 1H3  
-Canada  
+601 E. Main Street
+Collegeville, PA 19426
 {:.center}
 
-[<i class="fas fa-external-link-alt"></i> on Google Maps](https://www.google.com/maps/place/That+St+%26+The+Other+St,+Porters+Lake,+NS+B3E+1H3,+Canada/@44.7389237,-63.3033296,20.78z/data=!4m5!3m4!1s0x4b5a31023bb02565:0xb9505694e83a53d7!8m2!3d44.7389353!4d-63.3030828)
+[<i class="fas fa-external-link-alt"></i> on Google Maps](https://www.google.com/maps/place/Pfahler+Hall/@40.192478,-75.4596931,17z/data=!4m13!1m7!3m6!1s0x89c690a206bf911d:0x16d638e8cda9a964!2sMyrin+Library,+601+E+Main+St,+Collegeville,+PA+19426!3b1!8m2!3d40.192478!4d-75.4575044!3m4!1s0x89c69098b3ff815b:0xf265514575d9f8ff!8m2!3d40.1927641!4d-75.4588243)
 {:.center}

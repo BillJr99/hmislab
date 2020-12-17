@@ -8,9 +8,9 @@ title: Resources
 
 ## Resource List
 
-A _resource list_ component, to sort and group all of your tools, datasets, etc.
+<!--A _resource list_ component, to sort and group all of your tools, datasets, etc.
 Can be used on any page, but assumes its content from `/_data/resources.yml`.
-Uses the _card_ component (large, medium, or small).
+Uses the _card_ component (large, medium, or small).-->
 
 {% capture html %}
 {% include resource-list.html type="featured" size="large" %}
