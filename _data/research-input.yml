@@ -64,12 +64,14 @@
 #    - type: source
 #      link: http://github.com/greenelab/deep-review
 
-- id: doi:10.5281/zenodo.3786932
+- id: doi:10.5281/zenodo.3786933
+  type: source
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
   tags:
     - iot
     
-- id: doi:10.5281/zenodo.3786930
+- id: doi:10.5281/zenodo.3825126
+  type: source
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
     - iot    
