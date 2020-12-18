@@ -4,7 +4,7 @@ search:
   - Matt Quigley
   - Matthew Quigley
   - M. Quigley
-role: researcher
+role: undergrad
 group: current
 image: images/quigley.jpg
 github: maquigley-urs
