@@ -5,7 +5,7 @@ search:
   - Matthew Quigley
   - M. Quigley
 role: researcher
-image: images/quigley.png
+image: images/quigley.jpg
 github: maquigley-urs
 ---
 
