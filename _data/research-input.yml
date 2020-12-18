@@ -67,11 +67,13 @@
 - id: doi:10.5281/zenodo.3786933
   type: source
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
+  link: https://github.com/drexelwireless/iot-sensor-framework
   tags:
     - iot
     
 - id: doi:10.5281/zenodo.3825126
   type: source
+  link: https://github.com/drexelwireless/iot-processing-framework
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
     - iot    
