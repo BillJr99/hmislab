@@ -10,12 +10,12 @@
   - Adam K. Fontecchio
   publisher: Zenodo
   date: '2020-05-05'
-  link: https://doi.org/ghp39k
-  id: doi:10.5281/zenodo.3786932
-  thumbnail: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
+  link: https://doi.org/ghp6qt
+  id: doi:10.5281/zenodo.3786933
+  type: source
+  image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
   tags:
   - iot
-  image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
 - title: 'drexelwireless/iot-processing-framework: Public Release 1.1'
   authors:
   - William M. Mongan
@@ -23,9 +23,9 @@
   - Adam K. Fontecchio
   publisher: Zenodo
   date: '2020-05-13'
-  link: https://doi.org/ghp39m
-  id: doi:10.5281/zenodo.3786930
-  thumbnail: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
+  link: https://doi.org/ghp6qv
+  id: doi:10.5281/zenodo.3825126
+  type: source
+  image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
   - iot
-  image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
