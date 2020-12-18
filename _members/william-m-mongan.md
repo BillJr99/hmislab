@@ -8,6 +8,7 @@ search:
   - William Mongan
   - William M. Mongan
 role: pi
+group: current
 image: images/mongan.png
 website: "http://www.billmongan.com"
 email: billmongan@gmail.com
