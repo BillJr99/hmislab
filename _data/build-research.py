@@ -69,7 +69,8 @@ for index, input_paper in enumerate(input_papers, start=1):
         new_paper["authors"] = []
         for author in citation.get("author", []):
             new_author = author.get("given", "") + " " + author.get("family", "")
-            new_paper["authors"].append(new_author)
+            if len(new_author).strip > 0:
+                new_paper["authors"].append(new_author)
         # output_ publisher
         new_paper["publisher"] = citation.get("container-title", citation.get("publisher", citation.get("collection-title", "")))
         # output_ date
