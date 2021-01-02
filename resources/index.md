@@ -19,6 +19,12 @@ Uses the _card_ component (large, medium, or small).-->
 {% include centerer.html html=html %}
 
 {% capture html %}
+{% include resource-list.html type="tutorial" size="medium" %}
+{% endcapture %}
+
+{% include centerer.html html=html %}
+
+{% capture html %}
 {% include resource-list.html type="other" size="medium" %}
 {% endcapture %}
 

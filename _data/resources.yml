@@ -33,3 +33,24 @@
   link: http://www.billmongan.com/software/iotframework/
   description: The IoT Processing Framework integrates with the IoT Sensor Framework to provide real-time or offline signal processing and machine learning on data collected by the sensor framework.  
   repo: drexelwireless/iot-processing-framework
+
+- title: Neural Networks by 3 Blue 1 Brown
+  type: tutorial
+  link: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+  image: https://i9.ytimg.com/s_p/PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi/landscape_sddefault.jpg?sqp=CNzSw_8Fir7X7AMGCNGyiNsF&rs=AOn4CLAXR3eDYyGyAPfuQAfuB1JR1qckKg&v=1533155665
+  
+- title: Kalman Filters by Michael van Biezen
+  type: tutorial
+  link: https://www.youtube.com/playlist?list=PLX2gX-ftPVXU3oUFNATxGXY90AULiqnWT
+  image: https://i.ytimg.com/vi/CaCcOwJPytQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDJGg9qckdGM3ggj615gA7RDx039Q
+  
+- title: MIT Missing Semester 2020
+  type: tutorial
+  link: https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J
+  image: https://i.ytimg.com/vi/Z56Jmr9Z34Q/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDMx3faO9vNgRS_siR4ksZ-S20tMw
+  description: This MIT Missing Semester course teaches fundamental skills about computer literacy for the technologist.  Topics include the shell, editors, shell scripting, debugging, and version control.
+  
+- title: Learning from Data by Prof. Yaser Abu-Mostafa at Caltech
+  type: tutorial
+  link: https://www.youtube.com/playlist?list=PLCA2C1469EA777F9A
+  image: https://i.ytimg.com/vi/VeKeFIepJBU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBSlOYdg3D6GtylkB7cCFex9vVVVw
