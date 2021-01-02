@@ -23,13 +23,13 @@ Uses the _card_ component (large, medium, or small).-->
 
 ### Tutorials
 {% capture html %}
-{% include resource-list.html type="tutorial" size="medium" %}
+{% include resource-list.html type="tutorial" size="small" %}
 {% endcapture %}
 
 {% include centerer.html html=html %}
 
-### Additional Resources
-
+<!-- ### Additional Resources -->
+<!--
 {% capture html %}
 {% include resource-list.html type="other" size="medium" %}
 {% endcapture %}
@@ -41,3 +41,4 @@ Uses the _card_ component (large, medium, or small).-->
 {% endcapture %}
 
 {% include centerer.html html=html %}
+-->
