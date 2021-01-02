@@ -20,14 +20,14 @@
 # repo:
 # A GitHub repo to automatically fetch tags (aka "topics") from.
 
-- title: IoT Sensor Framework
+- title: IoT Sensor Framework and Wearable Smart Garments
   type: featured
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
-  link: http://www.billmongan.com/software/iotframework/
+  link: http://www.billmongan.com/portfolio/smartgarments/
   description: The IoT Sensor Framework provides a platform to collect data from IoT-based sensors such as knitted smart textiles for HIPAA-compliant processing and research, developed with the Drexel Wireless Systems Lab at Drexel University in Philadelphia, Pennsylvania.
   repo: drexelwireless/iot-sensor-framework
   
-- title: IoT Processing Framework
+- title: IoT Processing Framework for Machine Learning using the IoT Sensor Framework
   type: featured
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   link: http://www.billmongan.com/software/iotframework/
