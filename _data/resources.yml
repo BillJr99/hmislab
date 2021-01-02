@@ -38,11 +38,13 @@
   type: tutorial
   link: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
   image: https://i9.ytimg.com/s_p/PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi/landscape_sddefault.jpg?sqp=CNzSw_8Fir7X7AMGCNGyiNsF&rs=AOn4CLAXR3eDYyGyAPfuQAfuB1JR1qckKg&v=1533155665
+  description: This is a gentle and visual introduction to the mathematics underlying neural networks and perceptron-based learning.
   
 - title: Kalman Filters by Michael van Biezen
   type: tutorial
   link: https://www.youtube.com/playlist?list=PLX2gX-ftPVXU3oUFNATxGXY90AULiqnWT
   image: https://i.ytimg.com/vi/CaCcOwJPytQ/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDJGg9qckdGM3ggj615gA7RDx039Q
+  description: This is an example-rich introduction to the intuition behind and application of the Kalman Filter to reduce measurement and process error from estimated values.
   
 - title: MIT Missing Semester 2020
   type: tutorial
@@ -54,3 +56,4 @@
   type: tutorial
   link: https://www.youtube.com/playlist?list=PLCA2C1469EA777F9A
   image: https://i.ytimg.com/vi/VeKeFIepJBU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBSlOYdg3D6GtylkB7cCFex9vVVVw
+  description: This Caltech course provides a theoretical foundation for data-driven machine learning models and techniques. 
