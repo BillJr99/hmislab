@@ -12,17 +12,23 @@ title: Resources
 Can be used on any page, but assumes its content from `/_data/resources.yml`.
 Uses the _card_ component (large, medium, or small).-->
 
+### Featured
+
 {% capture html %}
 {% include resource-list.html type="featured" size="large" %}
 {% endcapture %}
 
 {% include centerer.html html=html %}
 
+
+### Tutorials
 {% capture html %}
 {% include resource-list.html type="tutorial" size="medium" %}
 {% endcapture %}
 
 {% include centerer.html html=html %}
+
+### Additional Resources
 
 {% capture html %}
 {% include resource-list.html type="other" size="medium" %}
