@@ -15,7 +15,7 @@ baseurl: "" #/lab-website-template
 
 # Analytics
 analytics:
-  provider               :  "google" # false (default), "google", "google-universal", "custom"
+  provider               :  "google-tag" # false (default), "google", "google-universal", "google-tag", "custom"
   google:
     tracking_id          : "G-78JWFLTW06"
     
