@@ -7,6 +7,8 @@ title: Team
 ## Team List
 
 <!--
+See data/team-order.yml for ordering
+
 {% capture html %}
 {% include team-list.html order="team-order" %}
 {% endcapture %}
