@@ -6,11 +6,13 @@ title: Team
 
 ## Team List
 
+<!--
 {% capture html %}
 {% include team-list.html order="team-order" %}
 {% endcapture %}
 
 {% include centerer.html html=html %}
+-->
 
 <!--A _team list_ component, to sort and group all of the members on your team automatically.
 Can be used on any page, but assumes its content from `/_members`.
@@ -26,15 +28,19 @@ All team members, sorted alphabetically by file name:
 {% include centerer.html html=html %}
 
 Team members filtered and sorted by role:
+-->
 
 {% capture html %}
 {% include team-list.html role="pi" %}
 {% include team-list.html role="phd" %}
+{% include team-list.html role="grad" %}
+{% include team-list.html role="undergrad" %}
 {% include team-list.html role="programmer" %}
 {% endcapture %}
 
 {% include centerer.html html=html %}
 
+<!--
 Team members filtered and sorted by group:
 
 {% capture html %}
