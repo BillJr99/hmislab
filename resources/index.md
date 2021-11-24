@@ -22,6 +22,8 @@ Uses the _card_ component (large, medium, or small).-->
 
 
 ### Tutorials
+<!-- See data/resources.yml -->
+
 {% capture html %}
 {% include resource-list.html type="tutorial" size="small" %}
 {% endcapture %}

@@ -34,10 +34,10 @@
   description: The IoT Processing Framework integrates with the IoT Sensor Framework to provide real-time or offline signal processing and machine learning on data collected by the sensor framework.  
   repo: drexelwireless/iot-processing-framework
 
-- title: Neural Networks by 3 Blue 1 Brown
+- title: Neural Networks by 3blue1brown
   type: tutorial
   link: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-  image: https://i.ytimg.com/an_webp/aircAruvnKk/mqdefault_6s.webp?du=3000&sqp=COuT9_8F&rs=AOn4CLBGY_0BXPmDBe0Rga0UE_9YHkxsPg
+  image: https://i9.ytimg.com/s_p/PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi/landscape_sddefault.jpg?sqp=CNzO-YwGir7X7AMGCNGyiNsF&rs=AOn4CLC9cyskQ3Oz9Pw9wxtzBlyhPSl0aQ&v=1533155665
   description: This is a gentle and visual introduction to the mathematics underlying neural networks and perceptron-based learning.
   
 - title: Kalman Filters by Michael van Biezen

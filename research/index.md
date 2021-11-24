@@ -2,6 +2,8 @@
 title: Research
 ---
 
+<!-- See data/research*.yml --> 
+
 # <i class="fas fa-microscope"></i>Research
 
 <!-- section break -->
