@@ -17,7 +17,7 @@ baseurl: "" #/lab-website-template
 analytics:
   provider               :  "google-tag" # false (default), "google", "google-universal", "google-tag", "custom"
   google:
-    tracking_id          : "G-78JWFLTW06"
+    tracking_id          : "G-83MTWRHJBM"
     
 # default front matter parameters for markdown files
 # defaults can be overridden on a particular page, eg:
