@@ -13,12 +13,6 @@ github: billjr99 # default GitHub user/org, without the @
 # set to "" if hosting at a custom domain, eg yoursite.com
 baseurl: "" #/lab-website-template
 
-# Analytics
-analytics:
-  provider               :  "google-tag" # false (default), "google", "google-universal", "google-tag", "custom"
-  google:
-    tracking_id          : "G-83MTWRHJBM"
-    
 # default front matter parameters for markdown files
 # defaults can be overridden on a particular page, eg:
 # ---
