@@ -53,3 +53,7 @@ highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+
+# Analytics
+analytics:
+  provider               :  false # false (default), "google", "google-universal", "google-tag", "custom"  
