@@ -29,3 +29,15 @@
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
   - iot
+- title: "NVIZ: Unraveling Neural Networks Through Visualization"
+  authors:
+  - Kevin Hoffman
+  - William M. Mongan
+  publisher: Ursinus College
+  date: '2023-04-19'
+  type: poster
+  link: https://digitalcommons.ursinus.edu/math_comp_pres/4/
+  tags:
+  - explainableai
+  - visualization
+  - cosa
