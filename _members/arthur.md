@@ -1,7 +1,7 @@
 ---
-title: Matthew C.
+title: Arthur A.
 search:
-  - Matthew
+  - Arthur
 role: undergrad
 group: alum
 ---

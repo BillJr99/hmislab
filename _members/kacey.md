@@ -1,7 +1,7 @@
 ---
-title: Ian U.
+title: Kacey L.
 search:
-  - Ian
+  - Kacey
 role: undergrad
 group: current
 ---

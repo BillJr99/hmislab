@@ -5,7 +5,7 @@ search:
   - Matthew Quigley
   - M. Quigley
 role: undergrad
-group: current
+group: alum
 image: images/quigley.jpg
 github: maquigley-urs
 ---

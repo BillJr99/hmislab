@@ -1,8 +1,8 @@
 ---
-title: Manning
+title: Manning S.
 search:
-  - Mannin
+  - Manning
 role: undergrad
-group: current
+group: alum
 ---
 

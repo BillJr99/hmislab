@@ -1,8 +1,8 @@
 ---
-title: Kevin
+title: Kevin H.
 search:
   - Kevin
 role: undergrad
-group: current
+group: alum
 ---
 

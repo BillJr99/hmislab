@@ -1,7 +1,7 @@
 ---
-title: Matthew C.
+title: Jonas L.
 search:
-  - Matthew
+  - Jonas
 role: undergrad
 group: alum
 ---

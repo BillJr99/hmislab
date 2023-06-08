@@ -1,8 +1,8 @@
 ---
-title: Dylan
+title: Dylan M.
 search:
   - Dylan
 role: undergrad
-group: current
+group: alum
 ---
 

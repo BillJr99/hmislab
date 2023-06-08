@@ -1,7 +1,7 @@
 ---
-title: Ian U.
+title: Nikolai L.
 search:
-  - Ian
+  - Nikolai
 role: undergrad
 group: current
 ---

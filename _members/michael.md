@@ -1,7 +1,7 @@
 ---
-title: Ian U.
+title: Michael E.
 search:
-  - Ian
+  - Michael
 role: undergrad
 group: current
 ---

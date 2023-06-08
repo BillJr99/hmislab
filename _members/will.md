@@ -1,5 +1,5 @@
 ---
-title: Will
+title: Will P.
 search:
   - Will
 role: undergrad

@@ -1,8 +1,8 @@
 ---
-title: Josh
+title: Josh K.
 search:
   - Josh
 role: undergrad
-group: current
+group: alum
 ---
 

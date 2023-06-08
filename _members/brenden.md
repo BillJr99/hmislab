@@ -1,7 +1,7 @@
 ---
-title: Ian U.
+title: Brenden R.
 search:
-  - Ian
+  - Brenden
 role: undergrad
 group: current
 ---
