@@ -1,7 +1,7 @@
 ---
-title: Matthew C.
+title: Josh K.
 search:
-  - Matthew
+  - JoshK
 role: undergrad
 group: alum
 ---
