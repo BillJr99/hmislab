@@ -3,6 +3,6 @@ title: Zack R.
 search:
   - Zack
 role: undergrad
-group: current
+group: alum
 ---
 

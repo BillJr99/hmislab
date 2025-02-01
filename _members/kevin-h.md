@@ -1,7 +1,7 @@
 ---
 title: Kevin H.
 search:
-  - Kevin
+  - KevinH
 role: undergrad
 group: alum
 ---
