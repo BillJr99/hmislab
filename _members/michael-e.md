@@ -1,7 +1,7 @@
 ---
 title: Michael E.
 search:
-  - Michael
+  - MichaelE
 role: undergrad
 group: alum
 ---

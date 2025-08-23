@@ -3,6 +3,6 @@ title: Khoi N.
 search:
   - Khoi
 role: undergrad
-group: current
+group: alum
 ---
 
