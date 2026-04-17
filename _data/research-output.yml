@@ -35,9 +35,134 @@
   - William M. Mongan
   publisher: Ursinus College
   date: '2023-04-19'
+  id: url:https://digitalcommons.ursinus.edu/math_comp_pres/4/
   type: poster
   link: https://digitalcommons.ursinus.edu/math_comp_pres/4/
   tags:
   - explainableai
   - visualization
+  - cosa
+- title: "The Ursinus WebIDE: A Serverless Browser-Based Development Environment for Student Practice and Rapid Instructor Exercise Development"
+  authors:
+  - Christopher Tralie
+  - William M. Mongan
+  publisher: Proceedings of the 55th ACM Technical Symposium on Computer Science Education
+    (SIGCSE TS 2026)
+  date: '2026-03-12'
+  link: https://doi.org/10.1145/3770761.3777114
+  id: doi:10.1145/3770761.3777114
+  type: paper
+  tags:
+  - cs education
+  - ide
+  - webide
+- title: "Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback on Student Mathematical Thinking"
+  authors:
+  - A. Reinsburrow
+  - C. Yovanov
+  - William M. Mongan
+  - Michael Cummins
+  - Matt Latta
+  - W. Shumar
+  - V. Klein
+  - J. Silverman
+  - S. Weimar
+  publisher: Society for Information Technology & Teacher Education International Conference 2026
+  date: '2026-03-25'
+  id: manual:reinsburrow-2026-site
+  type: paper
+  tags:
+  - ai
+  - education
+  - mathematics
+- title: "RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir AI"
+  authors:
+  - Michael Cummins
+  - Matt Latta
+  - Claire Shoemaker
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2026-04-01'
+  id: manual:cummins-2026-cosa-rag
+  type: poster
+  tags:
+  - ai
+  - education
+  - rag
+  - cosa
+- title: "Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine Learning Pipeline"
+  authors:
+  - Andrei Bogdan
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2026-04-01'
+  id: manual:bogdan-2026-cosa-sleep
+  type: poster
+  tags:
+  - machine learning
+  - healthcare
+  - ecg
+  - cosa
+- title: Developing Tools for AI Explainability
+  authors:
+  - Michael Cummins
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2025-04-01'
+  id: manual:cummins-2025-cosa-explainability
+  type: poster
+  tags:
+  - explainableai
+  - ai
+  - cosa
+- title: Financial Tools for the Grizzly Guide to Wealth (GGTW)
+  authors:
+  - Eugene Thompson
+  - George Psaradakis
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2025-04-01'
+  id: manual:thompson-2025-cosa-ggtw
+  type: poster
+  tags:
+  - financial
+  - tools
+  - cosa
+- title: 'UCPlaces: Campus Orientation App Using ArcGIS'
+  authors:
+  - Arthur Artene
+  - Tristan Ashcroft
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2023-04-19'
+  id: manual:artene-2023-cosa-ucplaces
+  type: poster
+  tags:
+  - gis
+  - mobile
+  - cosa
+- title: RF IoT Security Layer
+  authors:
+  - Jonas Ling
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2023-04-19'
+  id: manual:ling-2023-cosa-iot
+  type: poster
+  tags:
+  - iot
+  - security
+  - cosa
+- title: 'Automated Moon Crater Detection: Exploring Algorithmic and Neural Network
+    Approaches'
+  authors:
+  - Dylan Melby
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2023-04-19'
+  id: manual:melby-2023-cosa-moon
+  type: poster
+  tags:
+  - machine learning
+  - computer vision
   - cosa
