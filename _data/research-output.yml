@@ -78,6 +78,8 @@
   type: paper
   link: https://www.learntechlib.org/primary/p/2129322/
   image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/400px-Colored_neural_network.svg.png
+  image_credit: "Glosser.ca, CC BY-SA 3.0"
+  image_credit_url: "https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg"
   tags:
   - ai
   - education
@@ -94,6 +96,8 @@
   id: manual:cummins-2026-cosa-rag
   type: poster
   image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/RAG_schema.svg/640px-RAG_schema.svg.png
+  image_credit: "Gknor, CC BY-SA 4.0"
+  image_credit_url: "https://commons.wikimedia.org/wiki/File:RAG_schema.svg"
   tags:
   - ai
   - education

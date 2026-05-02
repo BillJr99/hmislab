@@ -18,6 +18,15 @@
     {%- else -%}
     <img src="{{ placeholder }}">
     {%- endif -%}
+    {%- if include.image_credit -%}
+    <span class="card_image_credit">
+      {%- if include.image_credit_url -%}
+      <a href="{{ include.image_credit_url }}" target="_blank" rel="noopener noreferrer">{{ include.image_credit }}</a>
+      {%- else -%}
+      {{ include.image_credit }}
+      {%- endif -%}
+    </span>
+    {%- endif -%}
   </a>
   <div class="card_text">
     {% if include.heading %}
