@@ -64,20 +64,23 @@
     margin: 20px;
     border-radius: $radius-lg;
     border: 1px solid $border-medium;
+    border-top: 3px solid $primary;
     background: $bg-surface;
-    padding: 16px;
-    box-shadow: $shadow;
-    transition: box-shadow $fast, transform $fast;
+    padding: 20px 16px 16px;
+    box-shadow: $shadow-card;
+    transition: box-shadow $fast, transform $fast, border-top-color $fast;
 
     &:hover {
       box-shadow: $shadow-overlay;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      border-top-color: $secondary;
     }
 
     .card_image {
       width: 268px;
-      height: 200px;
+      height: 180px;
       margin-bottom: 16px;
+      background: $border-subtle;
     }
 
     .card_text {
@@ -85,6 +88,9 @@
 
       .card_title {
         text-align: center;
+        font-family: $serif;
+        font-optical-sizing: auto;
+        font-size: 1.05rem;
       }
     }
   }
@@ -99,20 +105,23 @@
     margin: 20px;
     border-radius: $radius-lg;
     border: 1px solid $border-medium;
+    border-top: 3px solid $secondary;
     background: $bg-surface;
-    padding: 12px;
-    box-shadow: $shadow;
-    transition: box-shadow $fast, transform $fast;
+    padding: 16px 12px 12px;
+    box-shadow: $shadow-card;
+    transition: box-shadow $fast, transform $fast, border-top-color $fast;
 
     &:hover {
       box-shadow: $shadow-overlay;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      border-top-color: $primary;
     }
 
     .card_image {
       width: 176px;
-      height: 150px;
+      height: 130px;
       margin-bottom: 16px;
+      background: $border-subtle;
     }
 
     .card_text {
@@ -120,6 +129,8 @@
 
       .card_title {
         text-align: center;
+        font-family: $serif;
+        font-optical-sizing: auto;
       }
     }
   }

@@ -23,11 +23,24 @@ h4 {
 
 h1 {
   font-family: $serif;
-  font-size: 2.2rem;
+  font-optical-sizing: auto;
+  font-size: 2.4rem;
   font-weight: $bold;
-  letter-spacing: 0.5px;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 14px auto 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, $primary, $secondary);
+    border-radius: $radius-full;
+  }
 
   & + p {
     margin-top: 40px;
@@ -36,16 +49,21 @@ h1 {
 
 h2 {
   font-family: $serif;
+  font-optical-sizing: auto;
   font-size: 1.9rem;
-  font-weight: $bold;
+  font-weight: $semi-bold;
+  letter-spacing: -0.3px;
   text-align: center;
 }
 
 h3 {
   font-family: $sans;
-  font-size: 1.05rem;
+  font-size: 0.72rem;
   font-weight: $semi-bold;
   text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
 }
 
 h4 {

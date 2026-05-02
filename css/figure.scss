@@ -11,31 +11,40 @@
   @include trim-margins;
 
   .figure_image {
-    img[data-default="true"] {
-      max-width: 400px;
-      max-height: 300px;
+    display: block;
+    overflow: hidden;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-card;
+    background: $border-subtle;
+    // Suppress the browser broken-image icon; background shows instead
+    min-height: 48px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      transition: transform $slow;
+      // Hide broken-image icon — container bg acts as placeholder
+      color: transparent;
+
+      &[data-default="true"] {
+        max-width: 400px;
+        max-height: 300px;
+      }
+    }
+
+    &:hover img {
+      transform: scale(1.03);
     }
   }
 
   .figure_caption {
-    margin-top: 10px;
+    margin-top: 12px;
     margin-bottom: 0;
     font-style: italic;
+    font-size: 0.85rem;
+    color: $text-secondary;
     text-align: center;
-  }
-
-  &[data-flat="false"] {
-    .figure_image {
-      overflow: hidden;
-      box-shadow: $shadow;
-
-      img {
-        transition: transform $fast;
-      }
-
-      &:hover img {
-        transform: scale(1.1);
-      }
-    }
+    max-width: 520px;
   }
 }
