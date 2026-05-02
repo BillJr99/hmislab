@@ -93,6 +93,7 @@
   date: '2026-04-01'
   id: manual:cummins-2026-cosa-rag
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/RAG_schema.svg/640px-RAG_schema.svg.png
   tags:
   - ai
   - education
