@@ -112,6 +112,7 @@
   date: '2026-04-01'
   id: manual:bogdan-2026-cosa-sleep
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
   tags:
   - machine learning
   - healthcare
