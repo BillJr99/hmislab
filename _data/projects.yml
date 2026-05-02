@@ -1,0 +1,228 @@
+# List of lab projects. Rendered by the project-list component on the Projects page.
+#
+# status: "active" | "completed"
+# type:   "research" | "software" | "student"
+# link:   Optional URL (demo, repo, publication, etc.)
+# image:  Optional thumbnail URL or path
+
+# ---------------------------------------------------------------------------
+# Active research projects (sourced from Asana Consulting backlog)
+# ---------------------------------------------------------------------------
+
+- title: "Mathforum AI: Mentir AI"
+  status: active
+  type: research
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/400px-Colored_neural_network.svg.png
+  description: >
+    An AI-powered math tutoring assistant built on the historic Mathforum
+    problem-thread archive. The project explores RAG (retrieval-augmented
+    generation) and fine-tuning strategies to provide pedagogically sound
+    feedback on student mathematical thinking, in collaboration with Jason
+    Silverman and the Gates Foundation.
+  tags:
+    - ai
+    - education
+    - mathematics
+    - rag
+
+- title: "End-to-End Intelligent Cardiorespiratory Monitor"
+  status: active
+  type: research
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  description: >
+    A full-stack wearable system for continuous, ambulatory cardiorespiratory
+    monitoring. The project integrates signal acquisition, edge processing,
+    and machine learning inference for real-time health monitoring outside
+    clinical settings.
+  tags:
+    - machine learning
+    - healthcare
+    - wearables
+    - iot
+
+- title: "DWSL Grid Testbed"
+  status: active
+  type: research
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  description: >
+    A reconfigurable wireless testbed at the Drexel Wireless Systems Lab
+    supporting experiments in RF sensing, smart grid communications, and
+    spectrum management.
+  tags:
+    - wireless
+    - iot
+    - infrastructure
+
+- title: "Ventilation Monitoring: Full-Stack Paper"
+  status: active
+  type: research
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  description: >
+    End-to-end paper on passive wearable respiratory device design and the
+    analysis algorithms that monitor respiratory activity, covering hardware,
+    signal processing, and clinical validation.
+  tags:
+    - healthcare
+    - wearables
+    - respiratory
+
+- title: "RFID Antenna State Selection"
+  status: active
+  type: research
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  description: >
+    Research into intelligent antenna state selection for RFID-based sensing,
+    targeting improved read range and accuracy in multi-tag environments.
+  tags:
+    - rfid
+    - wireless
+    - sensing
+
+# ---------------------------------------------------------------------------
+# Completed / published projects (sourced from research-input.yml + CV)
+# ---------------------------------------------------------------------------
+
+- title: "NVIZ: Neural Network Visualizer"
+  status: completed
+  type: software
+  link: https://michaelcummins1.github.io/nviz/
+  image: /images/nviz-sankey.png
+  description: >
+    An interactive, no-code neural network visualizer that lets users upload
+    data, define a network architecture, train a model, and explore its
+    behavior through Sankey diagram visualizations — all in the browser.
+    Developed by Ursinus students Kevin Hoffman and Michael Cummins.
+    Source on <a href="https://github.com/michaelcummins1/nviz">GitHub</a>.
+  tags:
+    - explainableai
+    - visualization
+    - education
+
+- title: "Ursinus WebIDE"
+  status: completed
+  type: software
+  link: https://www.billmongan.com/Ursinus-WebIDE/
+  image: https://www.billmongan.com/Ursinus-WebIDE/images/graphicsScreenshot.png
+  description: >
+    A serverless, browser-based development environment for student practice
+    and rapid instructor exercise development, supporting multiple languages
+    with no setup required. Developed with Christopher Tralie.
+  tags:
+    - cs education
+    - ide
+    - webide
+
+- title: "IoT Sensor Framework"
+  status: completed
+  type: software
+  link: https://github.com/drexelwireless/iot-sensor-framework
+  image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
+  description: >
+    A platform to collect data from IoT-based sensors — including knitted
+    smart textiles — for HIPAA-compliant processing and research. Developed
+    with the Drexel Wireless Systems Lab.
+  tags:
+    - iot
+    - healthcare
+    - wearables
+
+- title: "IoT Processing Framework"
+  status: completed
+  type: software
+  link: https://github.com/drexelwireless/iot-processing-framework
+  image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
+  description: >
+    Integrates with the IoT Sensor Framework to provide real-time or offline
+    signal processing and machine learning on data collected by the sensor
+    framework. Developed with the Drexel Wireless Systems Lab.
+  tags:
+    - iot
+    - machine learning
+    - signal processing
+
+- title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/RAG_schema.svg/640px-RAG_schema.svg.png
+  description: >
+    Student research comparing retrieval-augmented generation and fine-tuning
+    for building an AI math tutoring assistant on the Mathforum archive.
+    Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
+    and Claire Shoemaker.
+  tags:
+    - ai
+    - education
+    - rag
+
+- title: "Sleep Apnea Detection via ECG"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  description: >
+    A machine learning pipeline for minute-level and subject-level sleep apnea
+    detection using ECG signals. Presented at Ursinus CoSA 2026. Developed by
+    Andrei Bogdan.
+  tags:
+    - machine learning
+    - healthcare
+    - ecg
+
+- title: "AI Explainability Tools"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Simple_decision_tree.svg/480px-Simple_decision_tree.svg.png
+  description: >
+    Tools for making machine learning model decisions more interpretable and
+    transparent. Presented at Ursinus CoSA 2025. Developed by Michael Cummins.
+  tags:
+    - explainableai
+    - ai
+
+- title: "Grizzly Guide to Wealth (GGTW)"
+  status: completed
+  type: student
+  link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Candlestick_pattern_Shooting_Star.svg/480px-Candlestick_pattern_Shooting_Star.svg.png
+  description: >
+    A suite of financial literacy and planning tools developed for the Grizzly
+    Guide to Wealth platform. Presented at Ursinus CoSA 2025. Developed by
+    Eugene Thompson and George Psaradakis.
+  tags:
+    - financial
+    - tools
+
+- title: "UCPlaces: Campus Orientation App"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/480px-Map_pin_icon.svg.png
+  description: >
+    A mobile campus orientation app using ArcGIS to help new students navigate
+    Ursinus College. Presented at Ursinus CoSA 2023. Developed by Arthur Artene
+    and Tristan Ashcroft.
+  tags:
+    - gis
+    - mobile
+
+- title: "RF IoT Security Layer"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  description: >
+    A radio-frequency security layer for IoT sensor networks, adding
+    authentication and encryption at the physical layer. Presented at
+    Ursinus CoSA 2023. Developed by Jonas Ling.
+  tags:
+    - iot
+    - security
+
+- title: "Automated Moon Crater Detection"
+  status: completed
+  type: student
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apollo_crater_LRO.jpg/480px-Apollo_crater_LRO.jpg
+  description: >
+    Exploring algorithmic and neural network approaches to automatically
+    detect and catalog craters on the lunar surface from LRO imagery.
+    Presented at Ursinus CoSA 2023. Developed by Dylan Melby.
+  tags:
+    - machine learning
+    - computer vision
