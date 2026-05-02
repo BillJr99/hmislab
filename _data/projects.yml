@@ -12,7 +12,7 @@
 - title: "Mathforum AI: Mentir AI"
   status: active
   type: research
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/400px-Colored_neural_network.svg.png
+  image: /images/neural-network.svg
   description: >
     An AI-powered math tutoring assistant built on the historic Mathforum
     problem-thread archive. The project explores RAG (retrieval-augmented
@@ -28,7 +28,7 @@
 - title: "End-to-End Intelligent Cardiorespiratory Monitor"
   status: active
   type: research
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  image: /images/ecg-trace.svg
   description: >
     A full-stack wearable system for continuous, ambulatory cardiorespiratory
     monitoring. The project integrates signal acquisition, edge processing,
@@ -43,7 +43,7 @@
 - title: "DWSL Grid Testbed"
   status: active
   type: research
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  image: /images/wireless-encrypted.svg
   description: >
     A reconfigurable wireless testbed at the Drexel Wireless Systems Lab
     supporting experiments in RF sensing, smart grid communications, and
@@ -56,7 +56,7 @@
 - title: "Ventilation Monitoring: Full-Stack Paper"
   status: active
   type: research
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  image: /images/ecg-trace.svg
   description: >
     End-to-end paper on passive wearable respiratory device design and the
     analysis algorithms that monitor respiratory activity, covering hardware,
@@ -69,7 +69,7 @@
 - title: "RFID Antenna State Selection"
   status: active
   type: research
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  image: /images/wireless-encrypted.svg
   description: >
     Research into intelligent antenna state selection for RFID-based sensing,
     targeting improved read range and accuracy in multi-tag environments.
@@ -143,7 +143,7 @@
 - title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/RAG_schema.svg/640px-RAG_schema.svg.png
+  image: /images/rag-schema.svg
   description: >
     Student research comparing retrieval-augmented generation and fine-tuning
     for building an AI math tutoring assistant on the Mathforum archive.
@@ -157,7 +157,7 @@
 - title: "Sleep Apnea Detection via ECG"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  image: /images/ecg-trace.svg
   description: >
     A machine learning pipeline for minute-level and subject-level sleep apnea
     detection using ECG signals. Presented at Ursinus CoSA 2026. Developed by
@@ -170,7 +170,7 @@
 - title: "AI Explainability Tools"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Simple_decision_tree.svg/480px-Simple_decision_tree.svg.png
+  image: /images/decision-tree.svg
   description: >
     Tools for making machine learning model decisions more interpretable and
     transparent. Presented at Ursinus CoSA 2025. Developed by Michael Cummins.
@@ -182,7 +182,7 @@
   status: completed
   type: student
   link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Candlestick_pattern_Shooting_Star.svg/480px-Candlestick_pattern_Shooting_Star.svg.png
+  image: /images/candlestick-chart.svg
   description: >
     A suite of financial literacy and planning tools developed for the Grizzly
     Guide to Wealth platform. Presented at Ursinus CoSA 2025. Developed by
@@ -194,7 +194,7 @@
 - title: "UCPlaces: Campus Orientation App"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/480px-Map_pin_icon.svg.png
+  image: /images/map-pin.svg
   description: >
     A mobile campus orientation app using ArcGIS to help new students navigate
     Ursinus College. Presented at Ursinus CoSA 2023. Developed by Arthur Artene
@@ -206,7 +206,7 @@
 - title: "RF IoT Security Layer"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  image: /images/wireless-encrypted.svg
   description: >
     A radio-frequency security layer for IoT sensor networks, adding
     authentication and encryption at the physical layer. Presented at
@@ -218,7 +218,7 @@
 - title: "Automated Moon Crater Detection"
   status: completed
   type: student
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apollo_crater_LRO.jpg/480px-Apollo_crater_LRO.jpg
+  image: /images/moon-crater.svg
   description: >
     Exploring algorithmic and neural network approaches to automatically
     detect and catalog craters on the lunar surface from LRO imagery.

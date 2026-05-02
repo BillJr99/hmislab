@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#5b9bd5"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ed7d31"/>
+    </marker>
+  </defs>
+  <rect width="400" height="300" fill="#f8f9fa"/>
+
+  <!-- Documents / Knowledge Base -->
+  <rect x="20" y="60" width="70" height="90" rx="4" fill="#dce6f1" stroke="#5b9bd5" stroke-width="1.5"/>
+  <rect x="28" y="68" width="54" height="6" rx="2" fill="#5b9bd5" opacity="0.6"/>
+  <rect x="28" y="80" width="54" height="4" rx="1" fill="#aaa"/>
+  <rect x="28" y="88" width="40" height="4" rx="1" fill="#aaa"/>
+  <rect x="28" y="96" width="48" height="4" rx="1" fill="#aaa"/>
+  <rect x="28" y="104" width="36" height="4" rx="1" fill="#aaa"/>
+  <rect x="28" y="112" width="50" height="4" rx="1" fill="#aaa"/>
+  <text x="55" y="168" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333">Knowledge</text>
+  <text x="55" y="180" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#333">Base</text>
+
+  <!-- Retriever box -->
+  <rect x="145" y="90" width="80" height="50" rx="6" fill="#fff2cc" stroke="#ffc000" stroke-width="1.5"/>
+  <text x="185" y="111" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7f6000">Retriever</text>
+  <text x="185" y="126" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#7f6000">Semantic Search</text>
+
+  <!-- LLM box -->
+  <rect x="270" y="60" width="110" height="110" rx="8" fill="#e2efda" stroke="#70ad47" stroke-width="1.5"/>
+  <text x="325" y="92" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#375623">LLM</text>
+  <!-- brain squiggle -->
+  <path d="M300,108 Q310,98 320,108 Q330,118 340,108 Q350,98 355,108" fill="none" stroke="#70ad47" stroke-width="2"/>
+  <text x="325" y="145" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#375623">Generation</text>
+
+  <!-- Query from bottom -->
+  <rect x="145" y="220" width="80" height="36" rx="6" fill="#fce4ec" stroke="#e57373" stroke-width="1.5"/>
+  <text x="185" y="241" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#b71c1c">Query</text>
+
+  <!-- Arrows -->
+  <!-- Docs → Retriever -->
+  <line x1="90" y1="115" x2="143" y2="115" stroke="#5b9bd5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Retriever → LLM -->
+  <line x1="225" y1="115" x2="268" y2="115" stroke="#5b9bd5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Query → Retriever -->
+  <line x1="185" y1="220" x2="185" y2="142" stroke="#ed7d31" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <!-- Query → LLM -->
+  <path d="M225,238 Q290,238 325,172" fill="none" stroke="#ed7d31" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow2)"/>
+
+  <!-- Output arrow -->
+  <line x1="325" y1="170" x2="325" y2="275" stroke="#70ad47" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="270" y="256" width="110" height="32" rx="5" fill="#e2efda" stroke="#70ad47" stroke-width="1"/>
+  <text x="325" y="276" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#375623">Response</text>
+
+  <!-- Title -->
+  <text x="200" y="20" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Retrieval-Augmented Generation (RAG)</text>
+</svg>
