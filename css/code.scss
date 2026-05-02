@@ -13,9 +13,11 @@ code * {
 
 // inline code
 code.highlighter-rouge {
-  padding: 2px 6px;
-  background: $dark-gray;
-  color: $white;
+  padding: 2px 7px;
+  background: $surface;
+  color: $accent;
+  border-radius: 4px;
+  font-size: 0.9em;
   line-height: 1.5;
 }
 
@@ -23,7 +25,9 @@ code.highlighter-rouge {
 div.highlighter-rouge {
   margin: 40px 0;
   @include trim-margins;
-  background: $dark-gray;
+  background: $surface;
+  border: 1px solid $border-dark;
+  border-radius: 6px;
   overflow-x: auto;
   overflow-y: auto;
 
@@ -34,268 +38,71 @@ div.highlighter-rouge {
   }
 }
 
-// code block syntax highlighting
-// based on tomorrow night eighties from:
-// https://github.com/StylishThemes/Syntax-Themes/tree/master/pygments/css-github
-// check out more pretty themes:
-// https://stylishthemes.github.io/Syntax-Themes/pygments/
+// syntax highlighting (Tomorrow Night Eighties palette, updated colors)
 pre.highlight {
-  color: $white;
+  color: $text-primary;
 
-  // Comment
-  .c {
-    color: $gray;
-  }
-  // Error
-  .err {
-    color: $pink;
-  }
-  // Keyword
-  .k {
-    color: $light-purple;
-  }
-  // Literal
-  .l {
-    color: $light-orange;
-  }
-  // Name
-  .n,
-  .h {
-    color: $off-white;
-  }
-  // Operator
-  .o {
-    color: $light-blue;
-  }
-  // Punctuation
-  .p {
-    color: $off-white;
-  }
-  // Comment.Multiline
-  .cm {
-    color: $gray;
-  }
-  // Comment.Preproc
-  .cp {
-    color: $gray;
-  }
-  // Comment.Single
-  .c1 {
-    color: $gray;
-  }
-  // Comment.Special
-  .cs {
-    color: $gray;
-  }
-  // Generic.Deleted
-  .gd {
-    color: $pink;
-  }
-  // Generic.Emph
-  .ge {
-    font-style: italic;
-  }
-  // Generic.Heading
-  .gh {
-    color: $off-white;
-    font-weight: bold;
-  }
-  // Generic.Inserted
-  .gi {
-    color: $light-green;
-  }
-  // Generic.Prompt
-  .gp {
-    color: $gray;
-    font-weight: bold;
-  }
-  // Generic.Strong
-  .gs {
-    font-weight: bold;
-  }
-  // Generic.Subheading
-  .gu {
-    color: $light-blue;
-    font-weight: bold;
-  }
-  // Keyword.Constant
-  .kc {
-    color: $light-purple;
-  }
-  // Keyword.Declaration
-  .kd {
-    color: $light-purple;
-  }
-  // Keyword.Namespace
-  .kn {
-    color: $light-blue;
-  }
-  // Keyword.Pseudo
-  .kp {
-    color: $light-purple;
-  }
-  // Keyword.Reserved
-  .kr {
-    color: $light-purple;
-  }
-  // Keyword.Type
-  .kt {
-    color: $yellow;
-  }
-  // Literal.Date
-  .ld {
-    color: $light-green;
-  }
-  // Literal.Number
-  .m {
-    color: $light-orange;
-  }
-  // Literal.String
-  .s {
-    color: $light-green;
-  }
-  // Name.Attribute
-  .na {
-    color: $light-blue;
-  }
-  // Name.Builtin
-  .nb {
-    color: $off-white;
-  }
-  // Name.Class
-  .nc {
-    color: $yellow;
-  }
-  // Name.Constant
-  .no {
-    color: $pink;
-  }
-  // Name.Decorator
-  .nd {
-    color: $light-blue;
-  }
-  // Name.Entity
-  .ni {
-    color: $off-white;
-  }
-  // Name.Exception
-  .ne {
-    color: $pink;
-  }
-  // Name.Function
-  .nf {
-    color: $light-blue;
-  }
-  // Name.Label
-  .nl {
-    color: $off-white;
-  }
-  // Name.Namespace
-  .nn {
-    color: $yellow;
-  }
-  // Name.Other
-  .nx {
-    color: $light-blue;
-  }
-  // Name.Property
-  .py {
-    color: $off-white;
-  }
-  // Name.Tag
-  .nt {
-    color: $light-blue;
-  }
-  // Name.Variable
-  .nv {
-    color: $pink;
-  }
-  // Operator.Word
-  .ow {
-    color: $light-blue;
-  }
-  // Text.Whitespace
-  .w {
-    color: $off-white;
-  }
-  // Literal.Number.Float
-  .mf {
-    color: $light-orange;
-  }
-  // Literal.Number.Hex
-  .mh {
-    color: $light-orange;
-  }
-  // Literal.Number.Integer
-  .mi {
-    color: $light-orange;
-  }
-  // Literal.Number.Oct
-  .mo {
-    color: $light-orange;
-  }
-  // Literal.String.Backtick
-  .sb {
-    color: $light-green;
-  }
-  // Literal.String.Char
-  .sc {
-    color: $off-white;
-  }
-  // Literal.String.Doc
-  .sd {
-    color: $gray;
-  }
-  // Literal.String.Double
-  .s2 {
-    color: $light-green;
-  }
-  // Literal.String.Escape
-  .se {
-    color: $light-orange;
-  }
-  // Literal.String.Heredoc
-  .sh {
-    color: $light-green;
-  }
-  // Literal.String.Interpol
-  .si {
-    color: $light-orange;
-  }
-  // Literal.String.Other
-  .sx {
-    color: $light-green;
-  }
-  // Literal.String.Regex
-  .sr {
-    color: $light-green;
-  }
-  // Literal.String.Single
-  .s1 {
-    color: $light-green;
-  }
-  // Literal.String.Symbol
-  .ss {
-    color: $light-green;
-  }
-  // Name.Builtin.Pseudo
-  .bp {
-    color: $off-white;
-  }
-  // Name.Variable.Class
-  .vc {
-    color: $pink;
-  }
-  // Name.Variable.Global
-  .vg {
-    color: $pink;
-  }
-  // Name.Variable.Instance
-  .vi {
-    color: $pink;
-  }
-  // Literal.Number.Integer.Long
-  .il {
-    color: $light-orange;
-  }
+  .c  { color: $gray; }
+  .err { color: $pink; }
+  .k  { color: $light-purple; }
+  .l  { color: $light-orange; }
+  .n, .h { color: $text-primary; }
+  .o  { color: $light-blue; }
+  .p  { color: $text-primary; }
+  .cm { color: $gray; }
+  .cp { color: $gray; }
+  .c1 { color: $gray; }
+  .cs { color: $gray; }
+  .gd { color: $pink; }
+  .ge { font-style: italic; }
+  .gh { color: $text-primary; font-weight: bold; }
+  .gi { color: $light-green; }
+  .gp { color: $gray; font-weight: bold; }
+  .gs { font-weight: bold; }
+  .gu { color: $light-blue; font-weight: bold; }
+  .kc { color: $light-purple; }
+  .kd { color: $light-purple; }
+  .kn { color: $light-blue; }
+  .kp { color: $light-purple; }
+  .kr { color: $light-purple; }
+  .kt { color: $yellow; }
+  .ld { color: $light-green; }
+  .m  { color: $light-orange; }
+  .s  { color: $light-green; }
+  .na { color: $light-blue; }
+  .nb { color: $text-primary; }
+  .nc { color: $yellow; }
+  .no { color: $pink; }
+  .nd { color: $light-blue; }
+  .ni { color: $text-primary; }
+  .ne { color: $pink; }
+  .nf { color: $accent; }
+  .nl { color: $text-primary; }
+  .nn { color: $yellow; }
+  .nx { color: $light-blue; }
+  .py { color: $text-primary; }
+  .nt { color: $light-blue; }
+  .nv { color: $pink; }
+  .ow { color: $light-blue; }
+  .w  { color: $text-primary; }
+  .mf { color: $light-orange; }
+  .mh { color: $light-orange; }
+  .mi { color: $light-orange; }
+  .mo { color: $light-orange; }
+  .sb { color: $light-green; }
+  .sc { color: $text-primary; }
+  .sd { color: $gray; }
+  .s2 { color: $light-green; }
+  .se { color: $light-orange; }
+  .sh { color: $light-green; }
+  .si { color: $light-orange; }
+  .sx { color: $light-green; }
+  .sr { color: $light-green; }
+  .s1 { color: $light-green; }
+  .ss { color: $light-green; }
+  .bp { color: $text-primary; }
+  .vc { color: $pink; }
+  .vg { color: $pink; }
+  .vi { color: $pink; }
+  .il { color: $light-orange; }
 }

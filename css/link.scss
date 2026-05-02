@@ -4,9 +4,14 @@
 @import "variables";
 
 a {
-  color: $theme;
-  transition: color $fast;
+  color: $accent;
+  transition: color $fast, opacity $fast;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color $fast, text-decoration-color $fast;
 }
+
 a:hover {
-  color: $black;
+  color: darken(#5eead4, 12%);
+  text-decoration-color: $accent;
 }

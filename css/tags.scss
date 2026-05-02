@@ -12,11 +12,22 @@
   .tag {
     max-width: 100%;
     margin: 5px;
-    padding: 4px 12px;
+    padding: 3px 11px;
     border-radius: 999px;
-    background: $light-theme;
+    border: 1px solid rgba(129, 140, 248, 0.5);
+    color: $accent-secondary;
+    background: rgba(129, 140, 248, 0.06);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 0.8rem;
+    font-weight: $medium;
+    letter-spacing: 0.3px;
+    transition: background $fast, border-color $fast;
+
+    &:hover {
+      background: rgba(129, 140, 248, 0.14);
+      border-color: $accent-secondary;
+    }
   }
 }

@@ -1,54 +1,70 @@
 // use these variables in other scss files to keep consistent look across site
 
-// shades of gray
-$black: #101010;
-$dark-gray: #404040;
-$gray: #a0a0a0;
-$light-gray: #d0d0d0;
-$off-white: #f8f8f8;
-$white: #ffffff;
+// ── Dark surface palette ──────────────────────────────────────────────────────
+$surface:        #111827;  // header, footer, code blocks
+$surface-raised: #1a2234;  // cards, elevated elements
+$surface-deep:   #0a0e1a;  // hero, deepest backgrounds
 
-// colors
-// https://www.materialpalette.com/colors
-$red: #e91e63;
-$pink: #f48fb1;
-$purple: #9c27b0;
-$light-purple: #ce93d8;
-$blue: #03a9f4;
-$light-blue: #b3e5fc;
-$cyan: #00bcd4;
-$teal: #009688;
-$green: #4caf50;
-$light-green: #a5d6a7;
-$yellow: #ffd54f;
-$orange: #ff9800;
-$light-orange: #ffe082;
-$slate: #607d8b;
+// ── Accent colors ─────────────────────────────────────────────────────────────
+$accent:           #5eead4;                    // teal-mint (primary accent)
+$accent-glow:      rgba(94, 234, 212, 0.10);   // teal at low opacity
+$accent-secondary: #818cf8;                    // indigo (tags, secondary accents)
 
-// main theme color for links, tags, and other accents
-$theme: $blue;
-$light-theme: $light-blue;
+// ── Text ──────────────────────────────────────────────────────────────────────
+$text-primary: #f1f5f9;
+$text-muted:   #94a3b8;
 
-// effects
-$shadow: 0 0 10px 0 #00000040;
+// ── Borders & dividers ────────────────────────────────────────────────────────
+$border-dark:  #1e2d42;  // dividers on dark backgrounds
+$border-light: #e2e8f0;  // dividers on light backgrounds
 
-// fonts
-$serif: "Lora", serif;
-$sans: "Poppins", sans-serif;
-$mono: "Cousine", monospace;
-// additional code needed to use these in /_includes/fonts.html
+// ── Legacy names (kept for backward compatibility) ────────────────────────────
+$black:      #0d1117;
+$dark-gray:  $surface;
+$gray:       #94a3b8;
+$light-gray: $border-light;
+$off-white:  #f6f8fb;
+$white:      #ffffff;
 
-// font weights
-$medium: 500;
+// ── Material palette (kept for syntax highlighting) ───────────────────────────
+$red:          #f87171;
+$pink:         #f9a8d4;
+$purple:       #c084fc;
+$light-purple: #e9d5ff;
+$blue:         #60a5fa;
+$light-blue:   #bfdbfe;
+$cyan:         #22d3ee;
+$teal:         $accent;
+$green:        #4ade80;
+$light-green:  #bbf7d0;
+$yellow:       #fde047;
+$orange:       #fb923c;
+$light-orange: #fed7aa;
+$slate:        #94a3b8;
+
+// ── Theme (links, tags, accents) ──────────────────────────────────────────────
+$theme:       $accent;
+$light-theme: $accent-glow;
+
+// ── Effects ───────────────────────────────────────────────────────────────────
+$shadow:      0 1px 4px 0 rgba(10, 14, 26, 0.45);
+$shadow-card: 0 2px 12px 0 rgba(10, 14, 26, 0.12);
+
+// ── Fonts ─────────────────────────────────────────────────────────────────────
+$serif: "DM Serif Display", "Georgia", serif;
+$sans:  "Inter", "system-ui", sans-serif;
+$mono:  "JetBrains Mono", "Courier New", monospace;
+
+// ── Font weights ──────────────────────────────────────────────────────────────
+$medium:    500;
 $semi-bold: 600;
-$bold: 700;
+$bold:      700;
 
-// transitions
-$fast: 0.25s ease;
-$slow: 0.5s ease;
+// ── Transitions ───────────────────────────────────────────────────────────────
+$fast: 0.2s ease;
+$slow: 0.45s ease;
 
-// sizes
-$page: 800px; // max-width of the main page column
-// these affect layout of header and other components:
-$tablet: 900px; // screen width cutoff point for tablets
-$phone: 500px; // screen width cutoff point for phones
+// ── Sizes ─────────────────────────────────────────────────────────────────────
+$page:   800px;
+$tablet: 900px;
+$phone:  500px;

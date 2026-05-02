@@ -7,10 +7,20 @@
   display: inline-block;
   margin: 10px 20px;
   font-family: $sans;
-  font-weight: $medium;
+  font-weight: $semi-bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
   text-decoration: none;
+  color: $accent;
+  border-bottom: 1px solid transparent;
+  transition: color $fast, border-color $fast;
 
   i {
     margin-right: 0.5rem;
+  }
+
+  &:hover {
+    color: darken(#5eead4, 10%);
+    border-bottom-color: $accent;
   }
 }
