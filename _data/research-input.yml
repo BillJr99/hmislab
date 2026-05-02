@@ -188,6 +188,7 @@
   publisher: "Ursinus Celebration of Student Achievement (CoSA)"
   date: '2025-04-01'
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Candlestick_pattern_Shooting_Star.svg/480px-Candlestick_pattern_Shooting_Star.svg.png
   tags:
     - financial
     - tools
@@ -202,6 +203,9 @@
   publisher: "Ursinus Celebration of Student Achievement (CoSA)"
   date: '2023-04-19'
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/480px-Map_pin_icon.svg.png
+  image_credit: "Nicolas Mollet, CC BY-SA 3.0"
+  image_credit_url: "https://commons.wikimedia.org/wiki/File:Map_pin_icon.svg"
   tags:
     - gis
     - mobile
@@ -215,6 +219,7 @@
   publisher: "Ursinus Celebration of Student Achievement (CoSA)"
   date: '2023-04-19'
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
   tags:
     - iot
     - security
@@ -228,6 +233,7 @@
   publisher: "Ursinus Celebration of Student Achievement (CoSA)"
   date: '2023-04-19'
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apollo_crater_LRO.jpg/480px-Apollo_crater_LRO.jpg
   tags:
     - machine learning
     - computer vision

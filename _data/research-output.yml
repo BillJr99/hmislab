@@ -140,6 +140,7 @@
   date: '2025-04-01'
   id: manual:thompson-2025-cosa-ggtw
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Candlestick_pattern_Shooting_Star.svg/480px-Candlestick_pattern_Shooting_Star.svg.png
   tags:
   - financial
   - tools
@@ -153,6 +154,9 @@
   date: '2023-04-19'
   id: manual:artene-2023-cosa-ucplaces
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/480px-Map_pin_icon.svg.png
+  image_credit: "Nicolas Mollet, CC BY-SA 3.0"
+  image_credit_url: "https://commons.wikimedia.org/wiki/File:Map_pin_icon.svg"
   tags:
   - gis
   - mobile
@@ -165,6 +169,7 @@
   date: '2023-04-19'
   id: manual:ling-2023-cosa-iot
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
   tags:
   - iot
   - security
@@ -178,6 +183,7 @@
   date: '2023-04-19'
   id: manual:melby-2023-cosa-moon
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apollo_crater_LRO.jpg/480px-Apollo_crater_LRO.jpg
   tags:
   - machine learning
   - computer vision
