@@ -24,7 +24,7 @@ jobs:
           cache: "pip"
 
       - name: Install Manubot
-        run: pip install --upgrade manubot
+        run: pip install -r requirements.txt
 
       - name: Build updated research output file
         run: python _data/build-research.py
