@@ -1,0 +1,27 @@
+{% assign projects = site.data.projects %}
+
+{% if include.status != nil %}
+{% assign projects = projects | where: "status", include.status %}
+{% endif %}
+
+{% if include.type != nil %}
+{% assign projects = projects | where: "type", include.type %}
+{% endif %}
+
+{% for project in projects %}
+{% capture tags %}
+{% include tags.html repo=project.repo tags=project.tags %}
+{% endcapture %}
+
+{%-
+  include card.html
+  size=include.size
+  heading=project.title
+  image=project.image
+  image_credit=project.image_credit
+  image_credit_url=project.image_credit_url
+  link=project.link
+  row1=project.description
+  row2=tags
+-%}
+{% endfor %}

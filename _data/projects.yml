@@ -1,0 +1,423 @@
+# List of lab projects. Rendered by the project-list component on the Projects page.
+#
+# status: "active" | "completed"
+# type:   "research" | "software" | "student"
+# link:   Optional URL (demo, repo, publication, etc.)
+# image:  Optional thumbnail URL or path
+
+# ---------------------------------------------------------------------------
+# Active research projects (sourced from Asana Consulting backlog)
+# ---------------------------------------------------------------------------
+
+- title: "Mathforum AI: Mentir AI"
+  status: active
+  type: research
+  image: /images/neural-network.svg
+  description: >
+    An AI-powered math tutoring assistant built on the historic Mathforum
+    problem-thread archive. The project explores RAG (retrieval-augmented
+    generation) and fine-tuning strategies to provide pedagogically sound
+    feedback on student mathematical thinking, in collaboration with Jason
+    Silverman and the Gates Foundation.
+  tags:
+    - ai
+    - education
+    - mathematics
+    - rag
+
+- title: "End-to-End Intelligent Cardiorespiratory Monitor"
+  status: active
+  type: research
+  image: /images/ecg-trace.svg
+  description: >
+    A full-stack wearable system for continuous, ambulatory cardiorespiratory
+    monitoring. The project integrates signal acquisition, edge processing,
+    and machine learning inference for real-time health monitoring outside
+    clinical settings.
+  tags:
+    - machine learning
+    - healthcare
+    - wearables
+    - iot
+
+- title: "DWSL Grid Testbed"
+  status: active
+  type: research
+  image: /images/wireless-encrypted.svg
+  description: >
+    A reconfigurable wireless testbed at the Drexel Wireless Systems Lab
+    supporting experiments in RF sensing, smart grid communications, and
+    spectrum management.
+  tags:
+    - wireless
+    - iot
+    - infrastructure
+
+- title: "Ventilation Monitoring: Full-Stack Paper"
+  status: active
+  type: research
+  image: /images/ecg-trace.svg
+  description: >
+    End-to-end paper on passive wearable respiratory device design and the
+    analysis algorithms that monitor respiratory activity, covering hardware,
+    signal processing, and clinical validation.
+  tags:
+    - healthcare
+    - wearables
+    - respiratory
+
+- title: "RFID Antenna State Selection"
+  status: active
+  type: research
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research into intelligent antenna state selection for RFID-based sensing,
+    targeting improved read range and accuracy in multi-tag environments.
+  tags:
+    - rfid
+    - wireless
+    - sensing
+
+# ---------------------------------------------------------------------------
+# Completed / published projects (sourced from research-input.yml + CV)
+# ---------------------------------------------------------------------------
+
+- title: "NVIZ: Neural Network Visualizer"
+  status: completed
+  type: software
+  link: https://michaelcummins1.github.io/nviz/
+  image: /images/nviz-sankey.png
+  description: >
+    An interactive, no-code neural network visualizer that lets users upload
+    data, define a network architecture, train a model, and explore its
+    behavior through Sankey diagram visualizations — all in the browser.
+    Developed by Ursinus students Kevin Hoffman and Michael Cummins.
+    Source on <a href="https://github.com/michaelcummins1/nviz">GitHub</a>.
+  tags:
+    - explainableai
+    - visualization
+    - education
+
+- title: "Ursinus WebIDE"
+  status: completed
+  type: software
+  link: https://www.billmongan.com/Ursinus-WebIDE/
+  image: https://www.billmongan.com/Ursinus-WebIDE/images/graphicsScreenshot.png
+  description: >
+    A serverless, browser-based development environment for student practice
+    and rapid instructor exercise development, supporting multiple languages
+    with no setup required. Developed with Christopher Tralie.
+  tags:
+    - cs education
+    - ide
+    - webide
+
+- title: "IoT Sensor Framework"
+  status: completed
+  type: software
+  link: https://github.com/drexelwireless/iot-sensor-framework
+  image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
+  description: >
+    A platform to collect data from IoT-based sensors — including knitted
+    smart textiles — for HIPAA-compliant processing and research. Developed
+    with the Drexel Wireless Systems Lab.
+  tags:
+    - iot
+    - healthcare
+    - wearables
+
+- title: "IoT Processing Framework"
+  status: completed
+  type: software
+  link: https://github.com/drexelwireless/iot-processing-framework
+  image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
+  description: >
+    Integrates with the IoT Sensor Framework to provide real-time or offline
+    signal processing and machine learning on data collected by the sensor
+    framework. Developed with the Drexel Wireless Systems Lab.
+  tags:
+    - iot
+    - machine learning
+    - signal processing
+
+- title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
+  status: completed
+  type: student
+  image: /images/rag-schema.svg
+  description: >
+    Student research comparing retrieval-augmented generation and fine-tuning
+    for building an AI math tutoring assistant on the Mathforum archive.
+    Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
+    and Claire Shoemaker.
+  tags:
+    - ai
+    - education
+    - rag
+
+- title: "Sleep Apnea Detection via ECG"
+  status: completed
+  type: student
+  image: /images/ecg-trace.svg
+  description: >
+    A machine learning pipeline for minute-level and subject-level sleep apnea
+    detection using ECG signals. Presented at Ursinus CoSA 2026. Developed by
+    Andrei Bogdan.
+  tags:
+    - machine learning
+    - healthcare
+    - ecg
+
+- title: "AI Explainability Tools"
+  status: completed
+  type: student
+  image: /images/decision-tree.svg
+  description: >
+    Tools for making machine learning model decisions more interpretable and
+    transparent. Presented at Ursinus CoSA 2025. Developed by Michael Cummins.
+  tags:
+    - explainableai
+    - ai
+
+- title: "Grizzly Guide to Wealth (GGTW)"
+  status: completed
+  type: student
+  link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
+  image: /images/candlestick-chart.svg
+  description: >
+    A suite of financial literacy and planning tools developed for the Grizzly
+    Guide to Wealth platform. Presented at Ursinus CoSA 2025. Developed by
+    Eugene Thompson and George Psaradakis.
+  tags:
+    - financial
+    - tools
+
+- title: "UCPlaces: Campus Orientation App"
+  status: completed
+  type: student
+  image: /images/map-pin.svg
+  description: >
+    A mobile campus orientation app using ArcGIS to help new students navigate
+    Ursinus College. Presented at Ursinus CoSA 2023. Developed by Arthur Artene
+    and Tristan Ashcroft.
+  tags:
+    - gis
+    - mobile
+
+- title: "RF IoT Security Layer"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    A radio-frequency security layer for IoT sensor networks, adding
+    authentication and encryption at the physical layer. Presented at
+    Ursinus CoSA 2023. Developed by Jonas Ling.
+  tags:
+    - iot
+    - security
+
+- title: "Automated Moon Crater Detection"
+  status: completed
+  type: student
+  image: /images/moon-crater.svg
+  description: >
+    Exploring algorithmic and neural network approaches to automatically
+    detect and catalog craters on the lunar surface from LRO imagery.
+    Presented at Ursinus CoSA 2023. Developed by Dylan Melby.
+  tags:
+    - machine learning
+    - computer vision
+
+# ---------------------------------------------------------------------------
+# Student independent studies (sourced from CV)
+# ---------------------------------------------------------------------------
+
+- title: "Interactive AI Theater Presentation"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    An AI-driven interactive theater performance exploring human-machine
+    collaboration in live performance art. Presented at Ursinus CoSA 2026.
+    Developed by Levi Fritz and Shannon Zura.
+  tags:
+    - ai
+    - performance art
+    - interactive
+
+- title: "AI in Teaching and Learning"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Honors and research independent studies investigating AI applications
+    in educational contexts, including generative AI, classroom integration,
+    and pedagogy. Conducted by four students across CS394 and the Honors
+    thesis sequence (CS491–CS492).
+  tags:
+    - ai
+    - education
+
+- title: "AI-Based Wi-Fi Penetration Tool"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Honors independent study designing an AI-assisted tool for automated
+    Wi-Fi security assessment and penetration testing. Conducted in the
+    Honors thesis sequence (CS491–CS492).
+  tags:
+    - ai
+    - cybersecurity
+    - wireless
+
+- title: "Human Pose Estimation through WiFi"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent studies using RF signal analysis and machine
+    learning to estimate human body pose without cameras. Conducted by
+    two students (CS394).
+  tags:
+    - machine learning
+    - wireless
+    - sensing
+
+- title: "RFID Localization and Tracking"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent studies in RFID-based indoor localization,
+    multi-tag tracking, and dynamic radar sensing techniques. Conducted
+    by four students across CS394.
+  tags:
+    - rfid
+    - wireless
+    - sensing
+
+- title: "RF Biomedical Analysis via Wearable IoT"
+  status: completed
+  type: student
+  image: /images/ecg-trace.svg
+  description: >
+    Multi-semester research in RF-based biomedical signal acquisition
+    and analysis using wearable IoT sensor devices. Conducted by four
+    students across CS391 and CS394.
+  tags:
+    - healthcare
+    - wearables
+    - iot
+
+- title: "Grid Software Defined Radios"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research and educational module development for software-defined
+    radio (SDR) platforms in smart-grid communication scenarios.
+    Conducted by multiple students across CS392 and CS394.
+  tags:
+    - wireless
+    - sdr
+    - infrastructure
+
+- title: "AI Feature Visualization"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Research independent studies developing methods to visualize
+    internal feature representations in trained neural networks,
+    connecting to broader explainable AI themes. Conducted by
+    multiple students across CS391 and CS392.
+  tags:
+    - ai
+    - explainableai
+    - visualization
+
+- title: "Natural Language Processing Research"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Research independent study in natural language processing
+    techniques and applications, including retrieval-augmented
+    approaches. Conducted by three students (CS394).
+  tags:
+    - ai
+    - nlp
+
+- title: "FinLitKit: Financial Literacy Toolkit"
+  status: completed
+  type: student
+  image: /images/candlestick-chart.svg
+  description: >
+    Independent study developing an open financial literacy
+    toolkit for educational and personal finance use. Conducted
+    in CS392.
+  tags:
+    - financial
+    - tools
+
+- title: "Sensor Fusion Research"
+  status: completed
+  type: student
+  image: /images/ecg-trace.svg
+  description: >
+    Research independent study in multi-sensor data fusion
+    techniques for wearable and IoT applications. Conducted
+    by two students (CS392).
+  tags:
+    - iot
+    - sensing
+    - machine learning
+
+- title: "Malware Detection via Electromagnetic Response"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent study exploring side-channel
+    electromagnetic signatures for hardware-level malware
+    detection. Conducted in CS391.
+  tags:
+    - cybersecurity
+    - machine learning
+
+- title: "Virtual Museum Environments"
+  status: completed
+  type: student
+  image: /images/map-pin.svg
+  description: >
+    Research independent study in virtual reality museum
+    environment design and interactive digital exhibit
+    development. Conducted in CS391.
+  tags:
+    - vr
+    - education
+
+- title: "Wireless Emergency Communications"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Independent studies in reliable RF-based emergency
+    communication systems and protocols, including amateur
+    radio integration. Conducted across CS392 and CS394.
+  tags:
+    - wireless
+    - communications
+    - rf
+
+- title: "Deep Learning in Astrophysics"
+  status: completed
+  type: student
+  image: /images/moon-crater.svg
+  description: >
+    Research independent study applying deep learning
+    techniques to astrophysical image and data analysis.
+    Conducted in CS391.
+  tags:
+    - machine learning
+    - astrophysics

@@ -77,13 +77,26 @@
   id: manual:reinsburrow-2026-site
   type: paper
   link: https://www.learntechlib.org/primary/p/2129322/
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Colored_neural_network.svg/400px-Colored_neural_network.svg.png
-  image_credit: Glosser.ca, CC BY-SA 3.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg
+  image: /images/neural-network.svg
   tags:
   - ai
   - education
   - mathematics
+- title: Interactive AI Theater Presentation
+  authors:
+  - Levi Fritz
+  - Shannon Zura
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2026-04-01'
+  id: manual:fritz-2026-cosa-theater
+  type: poster
+  image: /images/neural-network.svg
+  tags:
+  - ai
+  - performance art
+  - interactive
+  - cosa
 - title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
     AI'
   authors:
@@ -95,9 +108,7 @@
   date: '2026-04-01'
   id: manual:cummins-2026-cosa-rag
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/RAG_schema.svg/640px-RAG_schema.svg.png
-  image_credit: Gknor, CC BY-SA 4.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:RAG_schema.svg
+  image: /images/rag-schema.svg
   tags:
   - ai
   - education
@@ -112,7 +123,7 @@
   date: '2026-04-01'
   id: manual:bogdan-2026-cosa-sleep
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SinusRhythmLabels.svg/640px-SinusRhythmLabels.svg.png
+  image: /images/ecg-trace.svg
   tags:
   - machine learning
   - healthcare
@@ -126,7 +137,7 @@
   date: '2025-04-01'
   id: manual:cummins-2025-cosa-explainability
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Simple_decision_tree.svg/480px-Simple_decision_tree.svg.png
+  image: /images/decision-tree.svg
   tags:
   - explainableai
   - ai
@@ -141,7 +152,7 @@
   id: manual:thompson-2025-cosa-ggtw
   type: poster
   link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Candlestick_pattern_Shooting_Star.svg/480px-Candlestick_pattern_Shooting_Star.svg.png
+  image: /images/candlestick-chart.svg
   tags:
   - financial
   - tools
@@ -155,9 +166,7 @@
   date: '2023-04-19'
   id: manual:artene-2023-cosa-ucplaces
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Map_pin_icon.svg/480px-Map_pin_icon.svg.png
-  image_credit: Nicolas Mollet, CC BY-SA 3.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:Map_pin_icon.svg
+  image: /images/map-pin.svg
   tags:
   - gis
   - mobile
@@ -170,7 +179,7 @@
   date: '2023-04-19'
   id: manual:ling-2023-cosa-iot
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Network-wireless-encrypted.svg/480px-Network-wireless-encrypted.svg.png
+  image: /images/wireless-encrypted.svg
   tags:
   - iot
   - security
@@ -184,7 +193,7 @@
   date: '2023-04-19'
   id: manual:melby-2023-cosa-moon
   type: poster
-  image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apollo_crater_LRO.jpg/480px-Apollo_crater_LRO.jpg
+  image: /images/moon-crater.svg
   tags:
   - machine learning
   - computer vision

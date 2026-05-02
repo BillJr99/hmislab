@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1c1c2e"/>
+
+  <!-- Grid -->
+  <g stroke="#2a2a4a" stroke-width="0.5">
+    <line x1="50" y1="50"  x2="380" y2="50"/>
+    <line x1="50" y1="100" x2="380" y2="100"/>
+    <line x1="50" y1="150" x2="380" y2="150"/>
+    <line x1="50" y1="200" x2="380" y2="200"/>
+    <line x1="50" y1="250" x2="380" y2="250"/>
+  </g>
+
+  <!-- Y axis labels -->
+  <g fill="#666" font-family="monospace" font-size="10" text-anchor="end">
+    <text x="45" y="54">250</text>
+    <text x="45" y="104">200</text>
+    <text x="45" y="154">150</text>
+    <text x="45" y="204">100</text>
+    <text x="45" y="254">50</text>
+  </g>
+
+  <!-- Candlesticks: (x_center, high, low, open, close) -->
+  <!-- Green candle 1: up move -->
+  <g>
+    <line x1="80"  y1="70"  x2="80"  y2="230" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="65"   y="120"  width="30" height="80" fill="#26a69a"/>
+  </g>
+
+  <!-- Red candle 2: down move -->
+  <g>
+    <line x1="130" y1="80"  x2="130" y2="220" stroke="#ef5350" stroke-width="1.5"/>
+    <rect x="115"  y="100"  width="30" height="70" fill="#ef5350"/>
+  </g>
+
+  <!-- Green candle 3 -->
+  <g>
+    <line x1="180" y1="90"  x2="180" y2="200" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="165"  y="130"  width="30" height="50" fill="#26a69a"/>
+  </g>
+
+  <!-- Green candle 4: big up -->
+  <g>
+    <line x1="230" y1="60"  x2="230" y2="200" stroke="#26a69a" stroke-width="1.5"/>
+    <rect x="215"  y="85"   width="30" height="90" fill="#26a69a"/>
+  </g>
+
+  <!-- Red candle 5 -->
+  <g>
+    <line x1="280" y1="70"  x2="280" y2="180" stroke="#ef5350" stroke-width="1.5"/>
+    <rect x="265"  y="85"   width="30" height="60" fill="#ef5350"/>
+  </g>
+
+  <!-- Green candle 6: shooting star-->
+  <g>
+    <line x1="330" y1="55"  x2="330" y2="160" stroke="#ef5350" stroke-width="1.5"/>
+    <rect x="315"  y="125"  width="30" height="25" fill="#ef5350"/>
+  </g>
+
+  <!-- Volume bars at bottom -->
+  <g opacity="0.5">
+    <rect x="65"  y="265" width="30" height="20" fill="#26a69a"/>
+    <rect x="115" y="270" width="30" height="15" fill="#ef5350"/>
+    <rect x="165" y="268" width="30" height="17" fill="#26a69a"/>
+    <rect x="215" y="260" width="30" height="25" fill="#26a69a"/>
+    <rect x="265" y="268" width="30" height="17" fill="#ef5350"/>
+    <rect x="315" y="263" width="30" height="22" fill="#ef5350"/>
+  </g>
+
+  <!-- X axis labels -->
+  <g fill="#666" font-family="monospace" font-size="9" text-anchor="middle">
+    <text x="80"  y="296">Mon</text>
+    <text x="130" y="296">Tue</text>
+    <text x="180" y="296">Wed</text>
+    <text x="230" y="296">Thu</text>
+    <text x="280" y="296">Fri</text>
+    <text x="330" y="296">Mon</text>
+  </g>
+
+  <!-- Title -->
+  <text x="215" y="30" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#aaa">Financial Chart</text>
+</svg>
