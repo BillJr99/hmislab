@@ -126,6 +126,7 @@
   date: '2025-04-01'
   id: manual:cummins-2025-cosa-explainability
   type: poster
+  image: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Simple_decision_tree.svg/480px-Simple_decision_tree.svg.png
   tags:
   - explainableai
   - ai
