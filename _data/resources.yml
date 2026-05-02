@@ -20,6 +20,12 @@
 # repo:
 # A GitHub repo to automatically fetch tags (aka "topics") from.
 
+- title: "NVIZ: Neural Network Visualizer"
+  type: featured
+  image: /images/nviz-sankey.png
+  link: https://michaelcummins1.github.io/nviz/
+  description: "NVIZ is an interactive, no-code neural network visualizer that lets you upload data, define a network architecture, train a model, and explore its behavior through Sankey diagram visualizations — all in the browser. Designed to improve AI literacy through hands-on experimentation, NVIZ makes explainable AI (XAI) accessible without any programming knowledge. Developed by Ursinus students Kevin Hoffman and Michael Cummins. Source code available on <a href=\"https://github.com/michaelcummins1/nviz\">GitHub</a>."
+
 - title: IoT Sensor Framework
   type: featured
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
@@ -37,7 +43,7 @@
 - title: Neural Networks by 3blue1brown
   type: tutorial
   link: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
-  image: https://i9.ytimg.com/s_p/PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi/landscape_sddefault.jpg?sqp=CNzO-YwGir7X7AMGCNGyiNsF&rs=AOn4CLC9cyskQ3Oz9Pw9wxtzBlyhPSl0aQ&v=1533155665
+  image: https://i.ytimg.com/vi/aircAruvnKk/hqdefault.jpg
   description: This is a gentle and visual introduction to the mathematics underlying neural networks and perceptron-based learning.
   
 - title: Kalman Filters by Michael van Biezen
