@@ -226,3 +226,198 @@
   tags:
     - machine learning
     - computer vision
+
+# ---------------------------------------------------------------------------
+# Student independent studies (sourced from CV)
+# ---------------------------------------------------------------------------
+
+- title: "Interactive AI Theater Presentation"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    An AI-driven interactive theater performance exploring human-machine
+    collaboration in live performance art. Presented at Ursinus CoSA 2026.
+    Developed by Levi Fritz and Shannon Zura.
+  tags:
+    - ai
+    - performance art
+    - interactive
+
+- title: "AI in Teaching and Learning"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Honors and research independent studies investigating AI applications
+    in educational contexts, including generative AI, classroom integration,
+    and pedagogy. Conducted by four students across CS394 and the Honors
+    thesis sequence (CS491–CS492).
+  tags:
+    - ai
+    - education
+
+- title: "AI-Based Wi-Fi Penetration Tool"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Honors independent study designing an AI-assisted tool for automated
+    Wi-Fi security assessment and penetration testing. Conducted in the
+    Honors thesis sequence (CS491–CS492).
+  tags:
+    - ai
+    - cybersecurity
+    - wireless
+
+- title: "Human Pose Estimation through WiFi"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent studies using RF signal analysis and machine
+    learning to estimate human body pose without cameras. Conducted by
+    two students (CS394).
+  tags:
+    - machine learning
+    - wireless
+    - sensing
+
+- title: "RFID Localization and Tracking"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent studies in RFID-based indoor localization,
+    multi-tag tracking, and dynamic radar sensing techniques. Conducted
+    by four students across CS394.
+  tags:
+    - rfid
+    - wireless
+    - sensing
+
+- title: "RF Biomedical Analysis via Wearable IoT"
+  status: completed
+  type: student
+  image: /images/ecg-trace.svg
+  description: >
+    Multi-semester research in RF-based biomedical signal acquisition
+    and analysis using wearable IoT sensor devices. Conducted by four
+    students across CS391 and CS394.
+  tags:
+    - healthcare
+    - wearables
+    - iot
+
+- title: "Grid Software Defined Radios"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research and educational module development for software-defined
+    radio (SDR) platforms in smart-grid communication scenarios.
+    Conducted by multiple students across CS392 and CS394.
+  tags:
+    - wireless
+    - sdr
+    - infrastructure
+
+- title: "AI Feature Visualization"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Research independent studies developing methods to visualize
+    internal feature representations in trained neural networks,
+    connecting to broader explainable AI themes. Conducted by
+    multiple students across CS391 and CS392.
+  tags:
+    - ai
+    - explainableai
+    - visualization
+
+- title: "Natural Language Processing Research"
+  status: completed
+  type: student
+  image: /images/neural-network.svg
+  description: >
+    Research independent study in natural language processing
+    techniques and applications, including retrieval-augmented
+    approaches. Conducted by three students (CS394).
+  tags:
+    - ai
+    - nlp
+
+- title: "FinLitKit: Financial Literacy Toolkit"
+  status: completed
+  type: student
+  image: /images/candlestick-chart.svg
+  description: >
+    Independent study developing an open financial literacy
+    toolkit for educational and personal finance use. Conducted
+    in CS392.
+  tags:
+    - financial
+    - tools
+
+- title: "Sensor Fusion Research"
+  status: completed
+  type: student
+  image: /images/ecg-trace.svg
+  description: >
+    Research independent study in multi-sensor data fusion
+    techniques for wearable and IoT applications. Conducted
+    by two students (CS392).
+  tags:
+    - iot
+    - sensing
+    - machine learning
+
+- title: "Malware Detection via Electromagnetic Response"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Research independent study exploring side-channel
+    electromagnetic signatures for hardware-level malware
+    detection. Conducted in CS391.
+  tags:
+    - cybersecurity
+    - machine learning
+
+- title: "Virtual Museum Environments"
+  status: completed
+  type: student
+  image: /images/map-pin.svg
+  description: >
+    Research independent study in virtual reality museum
+    environment design and interactive digital exhibit
+    development. Conducted in CS391.
+  tags:
+    - vr
+    - education
+
+- title: "Wireless Emergency Communications"
+  status: completed
+  type: student
+  image: /images/wireless-encrypted.svg
+  description: >
+    Independent studies in reliable RF-based emergency
+    communication systems and protocols, including amateur
+    radio integration. Conducted across CS392 and CS394.
+  tags:
+    - wireless
+    - communications
+    - rf
+
+- title: "Deep Learning in Astrophysics"
+  status: completed
+  type: student
+  image: /images/moon-crater.svg
+  description: >
+    Research independent study applying deep learning
+    techniques to astrophysical image and data analysis.
+    Conducted in CS391.
+  tags:
+    - machine learning
+    - astrophysics

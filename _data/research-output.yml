@@ -78,12 +78,25 @@
   type: paper
   link: https://www.learntechlib.org/primary/p/2129322/
   image: /images/neural-network.svg
-  image_credit: Glosser.ca, CC BY-SA 3.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg
   tags:
   - ai
   - education
   - mathematics
+- title: Interactive AI Theater Presentation
+  authors:
+  - Levi Fritz
+  - Shannon Zura
+  - William M. Mongan
+  publisher: Ursinus Celebration of Student Achievement (CoSA)
+  date: '2026-04-01'
+  id: manual:fritz-2026-cosa-theater
+  type: poster
+  image: /images/neural-network.svg
+  tags:
+  - ai
+  - performance art
+  - interactive
+  - cosa
 - title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
     AI'
   authors:
@@ -96,8 +109,6 @@
   id: manual:cummins-2026-cosa-rag
   type: poster
   image: /images/rag-schema.svg
-  image_credit: Gknor, CC BY-SA 4.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:RAG_schema.svg
   tags:
   - ai
   - education
@@ -156,8 +167,6 @@
   id: manual:artene-2023-cosa-ucplaces
   type: poster
   image: /images/map-pin.svg
-  image_credit: Nicolas Mollet, CC BY-SA 3.0
-  image_credit_url: https://commons.wikimedia.org/wiki/File:Map_pin_icon.svg
   tags:
   - gis
   - mobile

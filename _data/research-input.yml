@@ -129,6 +129,22 @@
     - education
     - mathematics
 
+- id: manual:fritz-2026-cosa-theater
+  title: "Interactive AI Theater Presentation"
+  authors:
+    - Levi Fritz
+    - Shannon Zura
+    - William M. Mongan
+  publisher: "Ursinus Celebration of Student Achievement (CoSA)"
+  date: '2026-04-01'
+  type: poster
+  image: /images/neural-network.svg
+  tags:
+    - ai
+    - performance art
+    - interactive
+    - cosa
+
 - id: manual:cummins-2026-cosa-rag
   title: "RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir AI"
   authors:
