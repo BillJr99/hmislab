@@ -2,23 +2,22 @@
 title: Research
 ---
 
-<!-- See data/research*.yml --> 
+<div class="research-page">
 
-# <i class="fas fa-microscope"></i>Research
+<div class="research-header">
+<div class="research-header_inner">
 
-<!-- section break -->
-
-## Card Search
-
-<!--A _card search_ component, a search box to find all _card_ components on the page that contain certain words/names.-->
-
-You can type in "terms" (single words) or "phrases" (quoted multiple words), like `term1 term2 "full phrase 1" "full phrase 2"`.
-Cards that contain all of the terms and at least one of the phrases will be considered a match.
-Search words will be highlighted in the results (if they're longer than 2 characters).
-Searching is case insensitive.
+<span class="research-header_eyebrow">The Lab's Work</span>
+<h1 class="research-header_title">Research</h1>
+<p class="research-header_intro">
+What follows is everything the lab has published or shown: peer-reviewed papers, conference posters, undergraduate research projects, and the occasional piece of software. Posters from undergraduate work belong here for the same reason papers do, because the work is real and the students did it.
+</p>
 
 {% include card-search.html subject="papers" %}
 
-<!-- section break -->
+</div>
+</div>
 
-{% include research-list.html %}
+{% include research-bibliography.html %}
+
+</div>

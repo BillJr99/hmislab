@@ -1,0 +1,53 @@
+{%- comment -%}
+  Single completed project rendered as a bibliography line.
+  Thumbnail left, title + description + tags + link right.
+  Carries `card` so the existing card-search JS can find it
+  if a search component is ever added to this page.
+
+  Parameter
+    project   The project object from site.data.projects.
+{%- endcomment -%}
+
+{%- assign project = include.project -%}
+
+<article class="card project-entry" data-type="{{ project.type }}">
+  {%- if project.link -%}
+  <a class="project-entry_thumbnail" href="{{ project.link }}" tabindex="-1" aria-hidden="true">
+    {%- if project.image -%}
+    <img src="{{ project.image | relative_url }}" alt="" loading="lazy"
+      onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
+    {%- else -%}
+    <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
+    {%- endif -%}
+  </a>
+  {%- else -%}
+  <div class="project-entry_thumbnail">
+    {%- if project.image -%}
+    <img src="{{ project.image | relative_url }}" alt="" loading="lazy"
+      onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
+    {%- else -%}
+    <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+
+  <div class="project-entry_text">
+    <h3 class="project-entry_title">
+      {%- if project.link -%}
+      <a href="{{ project.link }}">{{ project.title }}</a>
+      {%- else -%}
+      {{ project.title }}
+      {%- endif -%}
+    </h3>
+
+    {%- if project.description -%}
+    <p class="project-entry_description">{{ project.description }}</p>
+    {%- endif -%}
+
+    {%- if project.tags or project.repo -%}
+    <div class="project-entry_tags">
+      {%- include tags.html tags=project.tags repo=project.repo -%}
+    </div>
+    {%- endif -%}
+  </div>
+</article>

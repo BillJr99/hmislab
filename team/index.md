@@ -2,60 +2,50 @@
 title: Team
 ---
 
-# <i class="fas fa-users"></i>Team
+<div class="team-page">
 
-<!--
-See data/team-order.yml for ordering
+<div class="team-header">
+<div class="team-header_inner">
 
-{% capture html %}
-{% include team-list.html order="team-order" %}
-{% endcapture %}
+<span class="team-header_eyebrow">Who's in the lab</span>
+<h1 class="team-header_title">Team</h1>
+<p class="team-header_intro">
+Undergraduates do most of the work here. The lab is small, the doors are open, and most projects are real research with real outcomes. If you see someone whose work sounds interesting, write to them.
+</p>
 
-{% include centerer.html html=html %}
--->
+</div>
+</div>
 
-<!--A _team list_ component, to sort and group all of the members on your team automatically.
-Can be used on any page, but assumes its content from `/_members`.
-Uses the _portrait_ component.-->
+{%- assign pi = site.members | where: "role", "pi" | first -%}
+{%- if pi -%}
+<section class="team-pi">
+  {%- include member-feature.html member=pi -%}
+</section>
+{%- endif -%}
 
-<!--
-All team members, sorted alphabetically by file name:
+{%- assign current_count = site.members | where: "group", "current" | size -%}
+{%- if pi -%}{%- assign current_undergrads = current_count | minus: 1 -%}
+{%- else -%}{%- assign current_undergrads = current_count -%}{%- endif -%}
 
-{% capture html %}
-{% include team-list.html %}
-{% endcapture %}
+{%- capture current_lead -%}{{ current_undergrads }} undergraduates exploring authentic problem spaces.{%- endcapture -%}
 
-{% include centerer.html html=html %}
+{%- include team-grid.html
+  modifier="current"
+  eyebrow="Current"
+  lead=current_lead
+  group="current"
+  exclude_role="pi"
+-%}
 
-Team members filtered and sorted by role:
--->
+{%- assign alum_count = site.members | where: "group", "alum" | size -%}
 
-{% capture html %}
-{% include team-list.html role="pi" %}
-{% include team-list.html role="phd" %}
-{% include team-list.html role="grad" %}
-{% include team-list.html role="undergrad" %}
-{% include team-list.html role="programmer" %}
-{% endcapture %}
+{%- capture alumni_lead -%}{{ alum_count }} undergraduates whose work is part of how the lab learned to do this.{%- endcapture -%}
 
-{% include centerer.html html=html %}
+{%- include team-grid.html
+  modifier="alumni"
+  eyebrow="Alumni"
+  lead=alumni_lead
+  group="alum"
+-%}
 
-<!--
-Team members filtered and sorted by group:
-
-{% capture html %}
-{% include team-list.html group="current" %}
-{% include team-list.html group="" %}
-{% include team-list.html group="alum" %}
-{% endcapture %}
-
-{% include centerer.html html=html %}
-
-Team members in a specific order and in a mini size:
-
-{% capture html %}
-{% include team-list.html order="team-order" mini=true %}
-{% endcapture %}
-
-{% include centerer.html html=html %}
--->
+</div>

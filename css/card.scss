@@ -82,16 +82,15 @@
     margin: 20px;
     border-radius: $radius-lg;
     border: 1px solid $border-medium;
-    border-top: 3px solid $primary;
     background: $bg-surface;
     padding: 20px 16px 16px;
     box-shadow: $shadow-card;
-    transition: box-shadow $fast, transform $fast, border-top-color $fast;
+    transition: box-shadow $fast, transform $fast, border-color $fast;
 
     &:hover {
       box-shadow: $shadow-overlay;
       transform: translateY(-3px);
-      border-top-color: $secondary;
+      border-color: $border-strong;
     }
 
     .card_image {
@@ -123,16 +122,15 @@
     margin: 20px;
     border-radius: $radius-lg;
     border: 1px solid $border-medium;
-    border-top: 3px solid $secondary;
     background: $bg-surface;
     padding: 16px 12px 12px;
     box-shadow: $shadow-card;
-    transition: box-shadow $fast, transform $fast, border-top-color $fast;
+    transition: box-shadow $fast, transform $fast, border-color $fast;
 
     &:hover {
       box-shadow: $shadow-overlay;
       transform: translateY(-3px);
-      border-top-color: $primary;
+      border-color: $border-strong;
     }
 
     .card_image {
@@ -163,12 +161,10 @@
     padding: 14px 14px 14px 16px;
     border-radius: $radius-md;
     border: 1px solid transparent;
-    border-left: 2px solid transparent;
     background: transparent;
     transition: border-color $fast, background $fast, box-shadow $fast;
 
     &:hover {
-      border-left-color: $primary;
       border-color: $border-medium;
       background: $bg-surface;
       box-shadow: $shadow;
@@ -201,13 +197,6 @@
       align-items: center;
       flex-direction: column;
       padding: 14px;
-      border-left: none;
-      border-top: 2px solid transparent;
-
-      &:hover {
-        border-left-color: transparent;
-        border-top-color: $primary;
-      }
 
       .card_image {
         width: 200px;

@@ -1,0 +1,58 @@
+{%- comment -%}
+  Spread. Image one side, article-style text the other, with a slight overlap
+  at the seam. Alternates per instance via the `side` parameter.
+
+  Parameters
+    side          "image-left" (default) or "image-right".
+    eyebrow       Short uppercase label above the title (e.g., "TEACHING & LEARNING").
+    title         Plain-language headline. Required.
+    body          One short paragraph. Required.
+    image         Path to the spread's photograph. Optional; spread renders text-only if missing.
+    alt           Image alt text. Required when `image` is set.
+    link          Destination of the call-to-action and image link. Optional.
+    link_label    Label for the call-to-action. Defaults to "Read more".
+
+  Notes
+    The whole spread becomes a real <article>. The outer element breaks out
+    of the page-content .section wrapper so a spread can present at 1100px;
+    the inner .spread_inner carries the grid.
+{%- endcomment -%}
+
+{%- assign side = include.side | default: "image-left" -%}
+{%- assign link_label = include.link_label | default: "Read more" -%}
+
+<article class="spread spread--{{ side }}">
+  <div class="spread_inner">
+    {%- if include.image -%}
+    <div class="spread_image">
+      {%- if include.link -%}
+      <a href="{{ include.link | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}" loading="lazy" />
+      </a>
+      {%- else -%}
+      <img src="{{ include.image | relative_url }}" alt="{{ include.alt }}" loading="lazy" />
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <div class="spread_text">
+      {%- if include.eyebrow -%}
+      <span class="spread_eyebrow">{{ include.eyebrow }}</span>
+      {%- endif -%}
+      <h2 class="spread_title">
+        {%- if include.link -%}
+        <a href="{{ include.link | relative_url }}">{{ include.title }}</a>
+        {%- else -%}
+        {{ include.title }}
+        {%- endif -%}
+      </h2>
+      <p class="spread_body">{{ include.body }}</p>
+      {%- if include.link -%}
+      <a href="{{ include.link | relative_url }}" class="spread_link">
+        {{ link_label }}
+        <span aria-hidden="true">→</span>
+      </a>
+      {%- endif -%}
+    </div>
+  </div>
+</article>

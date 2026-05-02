@@ -1,0 +1,230 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Spread ─────────────────────────────────────────────────────────────────
+// Article-style content row. Image one side, text the other, with a slight
+// overlap at the seam. Alternates via the `--image-left` / `--image-right`
+// modifier. Replaces card grids for project / research highlights.
+
+.spread {
+  // Break out of the page-content .section container (max-width 800px) so
+  // the spread can extend to its own width. body has overflow-x: clip
+  // to prevent any horizontal scroll from the 100vw trick.
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  .spread_inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 0;
+  }
+
+  .spread_image {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $slow;
+    }
+
+    a:hover img {
+      transform: scale(1.03);
+    }
+
+    a:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .spread_text {
+    position: relative;
+    z-index: 2;
+    background: $bg-raised;
+    padding: 56px 40px;
+
+    @include trim-margins;
+  }
+
+  .spread_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 18px 0;
+  }
+
+  .spread_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.75rem;
+    font-weight: $semi-bold;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    color: $text-dark;
+    margin: 0 0 18px 0;
+    text-align: left;
+    padding: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color $fast;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .spread_body {
+    font-family: $sans;
+    font-size: 1rem;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    color: $text-dark;
+    margin: 0 0 24px 0;
+    max-width: 65ch;
+  }
+
+  .spread_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: $sans;
+    font-size: 0.95rem;
+    font-weight: $semi-bold;
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 2px;
+    transition: color $fast, border-color $fast, gap $fast;
+
+    span {
+      transition: transform $fast;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: #f84b4b;
+      border-bottom-color: $primary;
+
+      span {
+        transform: translateX(4px);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: 2px;
+    }
+  }
+
+  // ── Image-left variant ────────────────────────────────────────────────────
+  &--image-left .spread_inner {
+    .spread_image {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .spread_text {
+      grid-column: 2;
+      grid-row: 1;
+      margin-left: -80px;
+      padding-left: 64px;
+      text-align: left;
+    }
+  }
+
+  // ── Image-right variant ───────────────────────────────────────────────────
+  &--image-right .spread_inner {
+    .spread_image {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .spread_text {
+      grid-column: 1;
+      grid-row: 1;
+      margin-right: -80px;
+      padding-right: 64px;
+      // Text reads left-aligned regardless of image side; the alternation
+      // is in image position, not in column text alignment.
+      text-align: left;
+    }
+  }
+
+  // ── Mobile: stack vertically, image first, no overlap ─────────────────────
+  // Switch from grid to flex on mobile so `order` deterministically places
+  // image-then-text regardless of the desktop variant's grid placement.
+  @media (max-width: $tablet) {
+    margin-top: 56px;
+    margin-bottom: 56px;
+    padding: 0;
+
+    .spread_inner {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .spread_image {
+      order: 1;
+      aspect-ratio: 16 / 10;
+    }
+
+    .spread_text {
+      order: 2;
+      margin: 0 !important;
+      padding: 32px 24px !important;
+      text-align: left !important;
+      background: $bg-raised;
+    }
+  }
+}
+
+// ── Reduced motion ──────────────────────────────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  .spread .spread_image a:hover img,
+  .spread .spread_image:hover img {
+    transform: none;
+  }
+
+  .spread .spread_link:hover span {
+    transform: none;
+  }
+}

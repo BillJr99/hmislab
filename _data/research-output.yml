@@ -16,6 +16,7 @@
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
   tags:
   - iot
+  cluster: systems-iot-cv
 - title: 'drexelwireless/iot-processing-framework: Public Release 1.1'
   authors:
   - William M. Mongan
@@ -29,6 +30,7 @@
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
   - iot
+  cluster: systems-iot-cv
 - title: 'NVIZ: Unraveling Neural Networks Through Visualization'
   authors:
   - Kevin Hoffman
@@ -43,6 +45,7 @@
   - explainableai
   - visualization
   - cosa
+  cluster: explainable-ai
 - title: 'The Ursinus WebIDE: A Serverless Browser-Based Development Environment for
     Student Practice and Rapid Instructor Exercise Development'
   authors:
@@ -59,6 +62,7 @@
   - cs education
   - ide
   - webide
+  cluster: teaching-learning
 - title: 'Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback
     on Student Mathematical Thinking'
   authors:
@@ -82,6 +86,7 @@
   - ai
   - education
   - mathematics
+  cluster: teaching-learning
 - title: Interactive AI Theater Presentation
   authors:
   - Levi Fritz
@@ -97,6 +102,7 @@
   - performance art
   - interactive
   - cosa
+  cluster: teaching-learning
 - title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
     AI'
   authors:
@@ -114,6 +120,7 @@
   - education
   - rag
   - cosa
+  cluster: teaching-learning
 - title: Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine
     Learning Pipeline
   authors:
@@ -129,6 +136,7 @@
   - healthcare
   - ecg
   - cosa
+  cluster: biomedical-ml
 - title: Developing Tools for AI Explainability
   authors:
   - Michael Cummins
@@ -142,6 +150,7 @@
   - explainableai
   - ai
   - cosa
+  cluster: explainable-ai
 - title: Financial Tools for the Grizzly Guide to Wealth (GGTW)
   authors:
   - Eugene Thompson
@@ -157,6 +166,7 @@
   - financial
   - tools
   - cosa
+  cluster: teaching-learning
 - title: 'UCPlaces: Campus Orientation App Using ArcGIS'
   authors:
   - Arthur Artene
@@ -171,6 +181,7 @@
   - gis
   - mobile
   - cosa
+  cluster: systems-iot-cv
 - title: RF IoT Security Layer
   authors:
   - Jonas Ling
@@ -184,6 +195,7 @@
   - iot
   - security
   - cosa
+  cluster: systems-iot-cv
 - title: 'Automated Moon Crater Detection: Exploring Algorithmic and Neural Network
     Approaches'
   authors:
@@ -198,3 +210,4 @@
   - machine learning
   - computer vision
   - cosa
+  cluster: systems-iot-cv

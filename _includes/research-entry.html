@@ -1,0 +1,74 @@
+{%- comment -%}
+  Single research entry rendered as an editorial bibliography line.
+  Thumbnail left, title + authors + venue + tags + extra-links right.
+  Carries class `card` so the existing card-search JS finds and filters it.
+
+  Parameter
+    paper   The paper object from site.data.research-output.
+{%- endcomment -%}
+
+{%- assign paper = include.paper -%}
+{%- assign authors = paper.authors | join: ", " -%}
+{%- assign year = paper.date | date: "%Y" -%}
+
+<article class="card research-entry" data-type="{{ paper.type }}">
+  {%- if paper.link -%}
+  <a class="research-entry_thumbnail" href="{{ paper.link }}" tabindex="-1" aria-hidden="true">
+    {%- if paper.image -%}
+    <img src="{{ paper.image | relative_url }}" alt="" loading="lazy"
+      onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
+    {%- else -%}
+    <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
+    {%- endif -%}
+  </a>
+  {%- else -%}
+  <div class="research-entry_thumbnail">
+    {%- if paper.image -%}
+    <img src="{{ paper.image | relative_url }}" alt="" loading="lazy"
+      onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
+    {%- else -%}
+    <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
+    {%- endif -%}
+  </div>
+  {%- endif -%}
+
+  <div class="research-entry_text">
+    <h3 class="research-entry_title">
+      {%- if paper.link -%}
+      <a href="{{ paper.link }}">{{ paper.title }}</a>
+      {%- else -%}
+      {{ paper.title }}
+      {%- endif -%}
+    </h3>
+
+    <p class="research-entry_authors">{{ authors }}</p>
+
+    <p class="research-entry_venue">
+      {%- if paper.publisher -%}
+      <span class="research-entry_venue_name">{{ paper.publisher }}</span>
+      {%- endif -%}
+      {%- if paper.publisher and paper.date -%}
+      <span class="research-entry_venue_dot" aria-hidden="true"> · </span>
+      {%- endif -%}
+      {%- if paper.date -%}
+      <span class="research-entry_venue_date">{{ year }}</span>
+      {%- else -%}
+      <span class="research-entry_venue_date research-entry_venue_date--pending">Date pending</span>
+      {%- endif -%}
+    </p>
+
+    {%- if paper.tags or paper.repo -%}
+    <div class="research-entry_tags">
+      {%- include tags.html tags=paper.tags repo=paper.repo -%}
+    </div>
+    {%- endif -%}
+
+    {%- if paper.extra-links and paper.extra-links.size > 0 -%}
+    <div class="research-entry_links">
+      {%- for link in paper.extra-links -%}
+        {%- include paper-link.html type=link.type link=link.link text=link.text -%}
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+  </div>
+</article>

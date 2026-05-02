@@ -6,9 +6,11 @@ $secondary: #C4B5FD;  // lavender — tags, decorative accent
 $tertiary:  #A7F3D0;  // mint — success, secondary accents
 
 // ── Surface palette ───────────────────────────────────────────────────────────
-$bg-base:    #FFF7ED;  // warm pastel body
-$bg-surface: #FFFFFF;  // cards, frames
-$bg-raised:  #FFFBEB;  // nav bar, elevated elements
+// Tinted toward coral hue (~22°) per The Tinted Neutrals Rule.
+// "Warm Linen" + "Pale Coral" lean coral instead of yellow-cream.
+$bg-base:    #FBEFE7;  // Warm Linen, body background, oklch(95% 0.020 30)
+$bg-surface: #FDFAF8;  // off-white surface, lightly coral-tinted
+$bg-raised:  #FDF6F0;  // Pale Coral, raised surfaces / nav / alternating sections
 
 // ── Dark surfaces (hero, footer) ──────────────────────────────────────────────
 $surface:      #292524;  // warm dark — footer

@@ -4,35 +4,43 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+{% include page-header.html
+  eyebrow="Blog post"
+  title=page.title
+%}
 
-{% capture html %}
-{% include post-info.html post=page %}
-{% endcapture %}
+<div class="blog-post">
+  <div class="blog-post_inner">
 
-{% assign html = html | strip %}
-{% if html != empty %}
-{% include centerer.html html=html %}
-{% endif %}
+    <div class="blog-post_meta">
+      {%- if page.date -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      {%- endif -%}
+      {%- if page.author -%}
+      <span class="blog-post_meta_dot" aria-hidden="true">·</span>
+      <span>
+        {%- if page.member-page -%}
+        <a href="{{ page.member-page | prepend: 'members/' | relative_url }}">{{ page.author }}</a>
+        {%- else -%}
+        {{ page.author }}
+        {%- endif -%}
+      </span>
+      {%- endif -%}
+      {%- if page.tags and page.tags.size > 0 -%}
+      <span class="blog-post_meta_dot" aria-hidden="true">·</span>
+      {%- include tags.html tags=page.tags -%}
+      {%- endif -%}
+    </div>
 
-{% capture html %}
-{% include tags.html tags=page.tags %}
-{% endcapture %}
+    <div class="blog-post_body">
+      {{ content }}
+    </div>
 
-{% assign html = html | strip %}
-{% if html != empty %}
-{% include centerer.html html=html %}
-{% endif %}
+    {%- if page.previous or page.next -%}
+    <div class="blog-post_nav">
+      {%- include post-nav.html post=page -%}
+    </div>
+    {%- endif -%}
 
-<!-- section break -->
-
-{{ content }}
-
-<!-- section break -->
-
-{% include post-nav.html post=page %}
-
-{% comment %}
-Put comment service plugin code here. If a plugin requires a unique page
-identifier, just use "{{ page.url | absolute_url }}", with the quotes.
-{% endcomment %}
+  </div>
+</div>
