@@ -9,38 +9,66 @@ h2,
 h3,
 h4 {
   box-sizing: border-box;
-  font-family: $sans;
-  font-weight: $medium;
   line-height: 1.2;
   margin: 40px 0 20px 0;
   @include trim-margins;
   padding: 10px 0;
+  color: $text-dark;
 
   & > i {
-    color: $light-gray;
-    margin-right: 1rem;
+    color: $primary;
+    margin-right: 0.9rem;
   }
 }
+
 h1 {
-  font-size: 1.4rem;
-  letter-spacing: 2px;
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 2.4rem;
+  font-weight: $bold;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 14px auto 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, $primary, $secondary);
+    border-radius: $radius-full;
+  }
 
   & + p {
     margin-top: 40px;
   }
 }
+
 h2 {
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 1.9rem;
+  font-weight: $semi-bold;
+  letter-spacing: -0.3px;
   text-align: center;
 }
+
 h3 {
-  font-size: 1.1rem;
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
   text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
 }
+
 h4 {
+  font-family: $sans;
   font-size: 1rem;
+  font-weight: $medium;
   text-align: left;
 }

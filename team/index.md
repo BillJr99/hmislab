@@ -4,8 +4,6 @@ title: Team
 
 # <i class="fas fa-users"></i>Team
 
-## Team List
-
 <!--
 See data/team-order.yml for ordering
 

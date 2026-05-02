@@ -1,0 +1,139 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+.hero {
+  position: relative;
+  background: $surface-deep;
+  padding: 100px 40px 90px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid $border-dark;
+
+  // Coral dot-grid background
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba($primary, 0.18) 1px, transparent 1px);
+    background-size: 28px 28px;
+    animation: hero-grid-drift 30s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  // Vignette: clear center, dark edges
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, $surface-deep 85%);
+    z-index: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes hero-grid-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 28px 28px; }
+}
+
+.hero_content {
+  position: relative;
+  z-index: 1;
+  max-width: $page;
+  margin: 0 auto;
+}
+
+.hero_eyebrow {
+  display: inline-block;
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $accent-light;
+  margin-bottom: 20px;
+  padding: 4px 16px;
+  border: 1px solid rgba($primary, 0.4);
+  border-radius: $radius-full;
+  background: rgba($primary, 0.08);
+}
+
+.hero_title {
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  font-weight: $bold;
+  color: $text-primary;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+
+  em {
+    font-style: italic;
+    color: $accent-light;
+  }
+}
+
+.hero_subtitle {
+  font-family: $sans;
+  font-size: 1.05rem;
+  color: $text-muted;
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto 36px;
+}
+
+.hero_links {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .hero_cta {
+    font-family: $sans;
+    font-size: 0.88rem;
+    font-weight: $semi-bold;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding: 11px 26px;
+    border-radius: $radius-sm;
+    transition: background $fast, color $fast, box-shadow $fast, transform $fast;
+
+    &.hero_cta--primary {
+      background: $primary;
+      color: #fff;
+
+      &:hover {
+        background: #f84b4b;
+        box-shadow: 0 4px 16px rgba($primary, 0.4);
+        transform: translateY(-1px);
+        color: #fff;
+      }
+    }
+
+    &.hero_cta--secondary {
+      background: transparent;
+      color: $text-primary;
+      border: 1.5px solid rgba($text-primary, 0.3);
+
+      &:hover {
+        border-color: $accent-light;
+        color: $accent-light;
+      }
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .hero {
+    padding: 64px 24px 56px;
+  }
+
+  .hero_links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
