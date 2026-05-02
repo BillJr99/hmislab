@@ -17,19 +17,19 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba($accent-light, 0.13) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba($accent-light, 0.15) 1px, transparent 1px);
     background-size: 28px 28px;
     animation: hero-grid-drift 30s linear infinite;
     z-index: 0;
     pointer-events: none;
   }
 
-  // Radial vignette to fade dots toward center
+  // Vignette fades dots toward the edges, keeping center clear for text
   &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, $surface-deep 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, transparent 40%, $surface-deep 85%);
     z-index: 0;
     pointer-events: none;
   }
@@ -54,12 +54,12 @@
   font-weight: $semi-bold;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: $accent;
+  color: $accent-light;
   margin-bottom: 20px;
   padding: 4px 14px;
-  border: 1px solid rgba(94, 234, 212, 0.3);
+  border: 1px solid rgba($accent-light, 0.35);
   border-radius: 999px;
-  background: rgba(94, 234, 212, 0.06);
+  background: rgba($accent-light, 0.07);
 }
 
 .hero_title {
@@ -67,14 +67,12 @@
   font-size: clamp(2.4rem, 6vw, 3.8rem);
   font-weight: 700;
   color: $text-primary;
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 0 0 24px 0;
-  letter-spacing: -0.3px;
 
-  // Teal accent underline on the last word via a wrapper
   em {
     font-style: normal;
-    color: $accent;
+    color: $accent-light;
   }
 }
 
@@ -119,8 +117,8 @@
       border: 1px solid $border-dark;
 
       &:hover {
-        border-color: $accent;
-        color: $accent;
+        border-color: $accent-light;
+        color: $accent-light;
       }
     }
   }
