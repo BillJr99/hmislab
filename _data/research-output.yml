@@ -38,6 +38,7 @@
   id: url:https://digitalcommons.ursinus.edu/math_comp_pres/4/
   type: poster
   link: https://digitalcommons.ursinus.edu/math_comp_pres/4/
+  image: /images/nviz-sankey.png
   tags:
   - explainableai
   - visualization
