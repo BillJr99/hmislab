@@ -22,7 +22,7 @@ body {
   main {
     box-sizing: border-box;
     flex-grow: 1;
-    background: $white;
+    background: $bg-base;
   }
 
   section {
@@ -34,11 +34,11 @@ body {
     }
 
     &:nth-child(even) {
-      background: $off-white;
+      background: $bg-section;
     }
 
     &:nth-child(odd) {
-      background: $white;
+      background: $bg-base;
     }
   }
 }

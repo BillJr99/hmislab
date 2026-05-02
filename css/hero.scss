@@ -17,7 +17,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba(94, 234, 212, 0.13) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba($accent-light, 0.13) 1px, transparent 1px);
     background-size: 28px 28px;
     animation: hero-grid-drift 30s linear infinite;
     z-index: 0;
@@ -103,12 +103,12 @@
     transition: background $fast, color $fast, box-shadow $fast;
 
     &.hero_cta--primary {
-      background: $accent;
+      background: $accent-light;
       color: $surface-deep;
 
       &:hover {
-        background: lighten(#5eead4, 5%);
-        box-shadow: 0 4px 16px rgba(94, 234, 212, 0.3);
+        background: lighten($accent-light, 5%);
+        box-shadow: 0 4px 16px rgba($accent-light, 0.3);
         color: $surface-deep;
       }
     }

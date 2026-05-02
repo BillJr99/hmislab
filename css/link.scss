@@ -12,6 +12,6 @@ a {
 }
 
 a:hover {
-  color: darken(#5eead4, 12%);
+  color: darken($accent, 10%);
   text-decoration-color: $accent;
 }

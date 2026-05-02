@@ -20,7 +20,7 @@
   }
 
   &:hover {
-    color: darken(#5eead4, 10%);
+    color: darken($accent, 10%);
     border-bottom-color: $accent;
   }
 }

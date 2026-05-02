@@ -1,29 +1,35 @@
 // use these variables in other scss files to keep consistent look across site
 
 // ── Dark surface palette ──────────────────────────────────────────────────────
-$surface:        #111827;  // header, footer, code blocks
-$surface-raised: #1a2234;  // cards, elevated elements
-$surface-deep:   #0a0e1a;  // hero, deepest backgrounds
+$surface:        #111827;
+$surface-raised: #1a2234;
+$surface-deep:   #0a0e1a;
 
 // ── Accent colors ─────────────────────────────────────────────────────────────
-$accent:           #5eead4;                    // teal-mint (primary accent)
-$accent-glow:      rgba(94, 234, 212, 0.10);   // teal at low opacity
-$accent-secondary: #818cf8;                    // indigo (tags, secondary accents)
+// Two teal values: light for dark backgrounds, deeper for light backgrounds
+$accent-light:     #5eead4;                    // mint teal — dot grids, glows on dark
+$accent:           #0aab96;                    // deeper teal — links, tags, borders on white
+$accent-glow:      rgba(10, 171, 150, 0.10);
+$accent-secondary: #6366f1;                    // indigo — tags (darkened for legibility)
+
+// ── Pastel page backgrounds ───────────────────────────────────────────────────
+$bg-base:    #fffcfb;   // body base — barely warm, imperceptible coral whisper
+$bg-section: #f7f5ff;   // alternating section — lavender whisper
 
 // ── Text ──────────────────────────────────────────────────────────────────────
 $text-primary: #f1f5f9;
 $text-muted:   #94a3b8;
 
 // ── Borders & dividers ────────────────────────────────────────────────────────
-$border-dark:  #1e2d42;  // dividers on dark backgrounds
-$border-light: #e2e8f0;  // dividers on light backgrounds
+$border-dark:  #1e2d42;
+$border-light: #e2e8f0;
 
 // ── Legacy names (kept for backward compatibility) ────────────────────────────
 $black:      #0d1117;
 $dark-gray:  $surface;
 $gray:       #94a3b8;
 $light-gray: $border-light;
-$off-white:  #f6f8fb;
+$off-white:  $bg-section;
 $white:      #ffffff;
 
 // ── Material palette (kept for syntax highlighting) ───────────────────────────
