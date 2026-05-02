@@ -29,7 +29,7 @@
   image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
   tags:
   - iot
-- title: "NVIZ: Unraveling Neural Networks Through Visualization"
+- title: 'NVIZ: Unraveling Neural Networks Through Visualization'
   authors:
   - Kevin Hoffman
   - William M. Mongan
@@ -42,7 +42,8 @@
   - explainableai
   - visualization
   - cosa
-- title: "The Ursinus WebIDE: A Serverless Browser-Based Development Environment for Student Practice and Rapid Instructor Exercise Development"
+- title: 'The Ursinus WebIDE: A Serverless Browser-Based Development Environment for
+    Student Practice and Rapid Instructor Exercise Development'
   authors:
   - Christopher Tralie
   - William M. Mongan
@@ -56,7 +57,8 @@
   - cs education
   - ide
   - webide
-- title: "Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback on Student Mathematical Thinking"
+- title: 'Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback
+    on Student Mathematical Thinking'
   authors:
   - A. Reinsburrow
   - C. Yovanov
@@ -67,7 +69,8 @@
   - V. Klein
   - J. Silverman
   - S. Weimar
-  publisher: Society for Information Technology & Teacher Education International Conference 2026
+  publisher: Society for Information Technology & Teacher Education International
+    Conference 2026
   date: '2026-03-25'
   id: manual:reinsburrow-2026-site
   type: paper
@@ -75,7 +78,8 @@
   - ai
   - education
   - mathematics
-- title: "RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir AI"
+- title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
+    AI'
   authors:
   - Michael Cummins
   - Matt Latta
@@ -90,7 +94,8 @@
   - education
   - rag
   - cosa
-- title: "Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine Learning Pipeline"
+- title: Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine
+    Learning Pipeline
   authors:
   - Andrei Bogdan
   - William M. Mongan
