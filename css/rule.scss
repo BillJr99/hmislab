@@ -5,7 +5,7 @@
 
 hr {
   margin: 40px 0;
-  background: $border-light;
   border: none;
-  height: 1px;
+  border-top: 1.5px dashed $border-strong;
+  background: none;
 }

@@ -16,7 +16,7 @@
     display: inline-block;
     width: 150px;
     height: 150px;
-    border-radius: 999px;
+    border-radius: $radius-full;
     overflow: hidden;
     box-shadow: $shadow-card;
     border: 2px solid transparent;
@@ -35,8 +35,8 @@
   }
 
   &:hover .portrait_image {
-    border-color: $accent;
-    box-shadow: 0 0 0 3px $accent-glow, $shadow-card;
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.15), $shadow-card;
   }
 
   &[data-mini="true"] {
@@ -54,7 +54,7 @@
     text-align: center;
     line-height: 1.2;
     font-weight: $medium;
-    color: #1e293b;
+    color: $text-dark;
   }
 
   .role {
@@ -65,20 +65,19 @@
     left: 0;
     top: 0;
     margin: 0;
-    width: 35px;
-    height: 35px;
-    background: $surface;
-    color: $accent;
-    border-radius: 999px;
-    border: 2px solid $border-dark;
+    width: 34px;
+    height: 34px;
+    background: $bg-surface;
+    color: $primary;
+    border-radius: $radius-full;
+    border: 1.5px solid $border-medium;
+    box-shadow: $shadow;
   }
 
   &[data-mini="true"] {
     .role {
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
+      width: 28px;
+      height: 28px;
     }
   }
 }

@@ -13,7 +13,7 @@
     max-width: 100%;
     overflow: hidden;
     box-shadow: $shadow-card;
-    border-radius: 4px;
+    border-radius: $radius-lg;
 
     img {
       object-fit: cover;
@@ -23,7 +23,7 @@
     }
 
     &:hover img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
   }
 
@@ -32,12 +32,12 @@
       display: block;
       margin-bottom: 10px;
       font-weight: $semi-bold;
-      color: #111827;
+      color: $text-dark;
       text-decoration: none;
       transition: color $fast;
 
       &:hover {
-        color: $accent;
+        color: $primary;
       }
     }
 
@@ -54,7 +54,7 @@
     }
   }
 
-  // ── Large card (vertical, 300px column) ────────────────────────────────────
+  // ── Large card ────────────────────────────────────────────────────────────
   &[data-size="large"] {
     display: flex;
     justify-content: flex-start;
@@ -62,17 +62,22 @@
     flex-direction: column;
     width: 300px;
     margin: 20px;
-    border-radius: 6px;
-    transition: box-shadow $fast;
+    border-radius: $radius-lg;
+    border: 1px solid $border-medium;
+    background: $bg-surface;
+    padding: 16px;
+    box-shadow: $shadow;
+    transition: box-shadow $fast, transform $fast;
 
     &:hover {
-      box-shadow: 0 0 0 1px $accent, $shadow-card;
+      box-shadow: $shadow-overlay;
+      transform: translateY(-2px);
     }
 
     .card_image {
-      width: 300px;
+      width: 268px;
       height: 200px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .card_text {
@@ -84,7 +89,7 @@
     }
   }
 
-  // ── Medium card ────────────────────────────────────────────────────────────
+  // ── Medium card ───────────────────────────────────────────────────────────
   &[data-size="medium"] {
     display: inline-flex;
     justify-content: flex-start;
@@ -92,17 +97,22 @@
     flex-direction: column;
     width: 200px;
     margin: 20px;
-    border-radius: 6px;
-    transition: box-shadow $fast;
+    border-radius: $radius-lg;
+    border: 1px solid $border-medium;
+    background: $bg-surface;
+    padding: 12px;
+    box-shadow: $shadow;
+    transition: box-shadow $fast, transform $fast;
 
     &:hover {
-      box-shadow: 0 0 0 1px $accent, $shadow-card;
+      box-shadow: $shadow-overlay;
+      transform: translateY(-2px);
     }
 
     .card_image {
-      width: 200px;
+      width: 176px;
       height: 150px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .card_text {
@@ -120,20 +130,27 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    margin: 16px 0;
-    padding-left: 14px;
+    margin: 14px 0;
+    padding: 14px 14px 14px 16px;
+    border-radius: $radius-md;
+    border: 1px solid transparent;
     border-left: 2px solid transparent;
-    transition: border-color $fast;
+    background: transparent;
+    transition: border-color $fast, background $fast, box-shadow $fast;
 
     &:hover {
-      border-left-color: $accent;
+      border-left-color: $primary;
+      border-color: $border-medium;
+      background: $bg-surface;
+      box-shadow: $shadow;
     }
 
     .card_image {
       width: 100px;
       height: 100px;
-      margin-right: 30px;
+      margin-right: 24px;
       flex-shrink: 0;
+      border-radius: $radius-md;
     }
 
     .card_text {
@@ -154,20 +171,20 @@
     @media (max-width: $phone) {
       align-items: center;
       flex-direction: column;
-      padding-left: 0;
+      padding: 14px;
       border-left: none;
       border-top: 2px solid transparent;
 
       &:hover {
         border-left-color: transparent;
-        border-top-color: $accent;
+        border-top-color: $primary;
       }
 
       .card_image {
         width: 200px;
         height: 150px;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
       }
 
       .card_text {

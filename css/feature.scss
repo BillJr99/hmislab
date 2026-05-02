@@ -15,7 +15,7 @@
     flex-shrink: 0;
     overflow: hidden;
     box-shadow: $shadow-card;
-    border-radius: 6px;
+    border-radius: $radius-lg;
 
     img {
       object-fit: cover;
@@ -25,7 +25,7 @@
     }
 
     &:hover img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
   }
 
@@ -45,10 +45,11 @@
 
   .feature_heading {
     font-family: $serif;
-    font-weight: 400;
-    font-size: 1.2rem;
+    font-weight: $bold;
+    font-size: 1.4rem;
     text-align: center;
     margin-bottom: 12px;
+    color: $text-dark;
   }
 
   @media (max-width: $tablet) {
@@ -59,10 +60,6 @@
       width: unset !important;
       margin: 0 !important;
       margin-bottom: 20px !important;
-
-      .feature_text {
-        width: unset !important;
-      }
     }
   }
 }

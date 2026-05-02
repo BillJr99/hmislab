@@ -12,19 +12,19 @@
   overflow: hidden;
   border-bottom: 1px solid $border-dark;
 
-  // Animated dot-grid background
+  // Coral dot-grid background
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle, rgba($accent-light, 0.15) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba($primary, 0.18) 1px, transparent 1px);
     background-size: 28px 28px;
     animation: hero-grid-drift 30s linear infinite;
     z-index: 0;
     pointer-events: none;
   }
 
-  // Vignette fades dots toward the edges, keeping center clear for text
+  // Vignette: clear center, dark edges
   &::after {
     content: "";
     position: absolute;
@@ -56,16 +56,16 @@
   text-transform: uppercase;
   color: $accent-light;
   margin-bottom: 20px;
-  padding: 4px 14px;
-  border: 1px solid rgba($accent-light, 0.35);
-  border-radius: 999px;
-  background: rgba($accent-light, 0.07);
+  padding: 4px 16px;
+  border: 1px solid rgba($primary, 0.4);
+  border-radius: $radius-full;
+  background: rgba($primary, 0.08);
 }
 
 .hero_title {
   font-family: $serif;
   font-size: clamp(2.4rem, 6vw, 3.8rem);
-  font-weight: 700;
+  font-weight: $bold;
   color: $text-primary;
   line-height: 1.2;
   margin: 0 0 24px 0;
@@ -96,25 +96,26 @@
     font-weight: $semi-bold;
     letter-spacing: 0.5px;
     text-decoration: none;
-    padding: 10px 24px;
-    border-radius: 6px;
-    transition: background $fast, color $fast, box-shadow $fast;
+    padding: 11px 26px;
+    border-radius: $radius-sm;
+    transition: background $fast, color $fast, box-shadow $fast, transform $fast;
 
     &.hero_cta--primary {
-      background: $accent-light;
-      color: $surface-deep;
+      background: $primary;
+      color: #fff;
 
       &:hover {
-        background: lighten($accent-light, 5%);
-        box-shadow: 0 4px 16px rgba($accent-light, 0.3);
-        color: $surface-deep;
+        background: #f84b4b;
+        box-shadow: 0 4px 16px rgba($primary, 0.4);
+        transform: translateY(-1px);
+        color: #fff;
       }
     }
 
     &.hero_cta--secondary {
       background: transparent;
       color: $text-primary;
-      border: 1px solid $border-dark;
+      border: 1.5px solid rgba($text-primary, 0.3);
 
       &:hover {
         border-color: $accent-light;

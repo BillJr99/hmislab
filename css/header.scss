@@ -9,29 +9,11 @@ header {
   position: relative;
   @include flex-center;
   justify-content: space-between;
-  padding: 20px 40px;
-  color: $text-primary;
-  background: $surface;
+  padding: 18px 40px;
+  background: $bg-raised;
   font-family: $sans;
   z-index: 10;
-  border-bottom: 1px solid $border-dark;
-
-  // Subtle dot-grid texture
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba($accent-light, 0.07) 1px, transparent 1px);
-    background-size: 24px 24px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .logo_row,
-  .nav_row {
-    position: relative;
-    z-index: 1;
-  }
+  border-bottom: 1px solid $border-medium;
 
   .logo_row {
     @include inline-flex-center;
@@ -39,17 +21,15 @@ header {
 
     .logo > * {
       max-width: 100%;
-      height: 42px;
-      opacity: 0.9;
+      height: 40px;
     }
 
     .logo_text {
       font-family: $serif;
-      font-size: 1.3rem;
-      font-weight: 400;
+      font-size: 1.4rem;
+      font-weight: $bold;
       margin: 0 14px;
-      color: $text-primary;
-      letter-spacing: 0.3px;
+      color: $text-dark;
       white-space: nowrap;
     }
   }
@@ -67,32 +47,27 @@ header {
       padding: 8px 12px;
       text-align: center;
       white-space: nowrap;
-      color: $text-muted !important;
+      color: $text-secondary !important;
       text-decoration: none;
       border-bottom: 2px solid transparent;
       transition: color $fast, border-color $fast;
 
       &:hover {
-        color: $accent !important;
-        border-bottom-color: $accent;
-        opacity: 1;
+        color: $primary !important;
+        border-bottom-color: $primary;
       }
-    }
-
-    &:hover .nav_link {
-      opacity: 1;
     }
   }
 
   a {
-    color: $text-primary !important;
+    color: $text-dark !important;
     font-family: $sans;
     text-decoration: none;
   }
 
   @media (max-width: $tablet) {
     flex-direction: column;
-    padding: 20px;
+    padding: 18px 24px;
 
     .logo_row {
       margin-bottom: 12px;
@@ -106,7 +81,7 @@ header {
 
       .logo_text {
         margin: 8px 0 0 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         text-align: center;
       }
     }
@@ -122,8 +97,7 @@ header {
         border-left: 2px solid transparent;
 
         &:hover {
-          border-bottom-color: transparent;
-          border-left-color: $accent;
+          border-left-color: $primary;
         }
       }
     }

@@ -9,10 +9,9 @@
   font-family: $sans;
   font-weight: $semi-bold;
   font-size: 0.9rem;
-  letter-spacing: 0.5px;
   text-decoration: none;
-  color: $accent;
-  border-bottom: 1px solid transparent;
+  color: $primary;
+  border-bottom: 1.5px solid transparent;
   transition: color $fast, border-color $fast;
 
   i {
@@ -20,7 +19,7 @@
   }
 
   &:hover {
-    color: darken($accent, 10%);
-    border-bottom-color: $accent;
+    color: #f84b4b;
+    border-bottom-color: $primary;
   }
 }

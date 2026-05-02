@@ -14,20 +14,21 @@ code * {
 // inline code
 code.highlighter-rouge {
   padding: 2px 7px;
-  background: $surface;
-  color: $accent;
-  border-radius: 4px;
+  background: rgba($primary, 0.08);
+  color: #c0392b;
+  border-radius: $radius-sm;
   font-size: 0.9em;
-  line-height: 1.5;
+  line-height: 1.6;
+  border: 1px solid rgba($primary, 0.2);
 }
 
 // code block
 div.highlighter-rouge {
   margin: 40px 0;
   @include trim-margins;
-  background: $surface;
+  background: $surface-deep;
   border: 1px solid $border-dark;
-  border-radius: 6px;
+  border-radius: $radius-lg;
   overflow-x: auto;
   overflow-y: auto;
 
@@ -38,71 +39,49 @@ div.highlighter-rouge {
   }
 }
 
-// syntax highlighting (Tomorrow Night Eighties palette, updated colors)
+// syntax highlighting
 pre.highlight {
-  color: $text-primary;
+  color: #F5F0E8;
 
-  .c  { color: $gray; }
+  .c  { color: #A8A29E; }
   .err { color: $pink; }
   .k  { color: $light-purple; }
   .l  { color: $light-orange; }
-  .n, .h { color: $text-primary; }
-  .o  { color: $light-blue; }
-  .p  { color: $text-primary; }
-  .cm { color: $gray; }
-  .cp { color: $gray; }
-  .c1 { color: $gray; }
-  .cs { color: $gray; }
+  .n, .h { color: #F5F0E8; }
+  .o  { color: $tertiary; }
+  .p  { color: #F5F0E8; }
+  .cm { color: #A8A29E; }
+  .cp { color: #A8A29E; }
+  .c1 { color: #A8A29E; }
+  .cs { color: #A8A29E; }
   .gd { color: $pink; }
   .ge { font-style: italic; }
-  .gh { color: $text-primary; font-weight: bold; }
+  .gh { color: #F5F0E8; font-weight: bold; }
   .gi { color: $light-green; }
-  .gp { color: $gray; font-weight: bold; }
+  .gp { color: #A8A29E; font-weight: bold; }
   .gs { font-weight: bold; }
-  .gu { color: $light-blue; font-weight: bold; }
+  .gu { color: $tertiary; font-weight: bold; }
   .kc { color: $light-purple; }
   .kd { color: $light-purple; }
-  .kn { color: $light-blue; }
+  .kn { color: $tertiary; }
   .kp { color: $light-purple; }
   .kr { color: $light-purple; }
   .kt { color: $yellow; }
-  .ld { color: $light-green; }
   .m  { color: $light-orange; }
   .s  { color: $light-green; }
-  .na { color: $light-blue; }
-  .nb { color: $text-primary; }
+  .na { color: $tertiary; }
+  .nb { color: #F5F0E8; }
   .nc { color: $yellow; }
   .no { color: $pink; }
-  .nd { color: $light-blue; }
-  .ni { color: $text-primary; }
-  .ne { color: $pink; }
-  .nf { color: $accent; }
-  .nl { color: $text-primary; }
+  .nd { color: $tertiary; }
+  .nf { color: $accent-light; }
   .nn { color: $yellow; }
-  .nx { color: $light-blue; }
-  .py { color: $text-primary; }
-  .nt { color: $light-blue; }
+  .nx { color: $tertiary; }
+  .nt { color: $tertiary; }
   .nv { color: $pink; }
-  .ow { color: $light-blue; }
-  .w  { color: $text-primary; }
-  .mf { color: $light-orange; }
-  .mh { color: $light-orange; }
-  .mi { color: $light-orange; }
-  .mo { color: $light-orange; }
-  .sb { color: $light-green; }
-  .sc { color: $text-primary; }
-  .sd { color: $gray; }
+  .ow { color: $tertiary; }
   .s2 { color: $light-green; }
-  .se { color: $light-orange; }
-  .sh { color: $light-green; }
-  .si { color: $light-orange; }
-  .sx { color: $light-green; }
-  .sr { color: $light-green; }
   .s1 { color: $light-green; }
-  .ss { color: $light-green; }
-  .bp { color: $text-primary; }
-  .vc { color: $pink; }
-  .vg { color: $pink; }
-  .vi { color: $pink; }
-  .il { color: $light-orange; }
+  .mi { color: $light-orange; }
+  .mf { color: $light-orange; }
 }
