@@ -10,7 +10,7 @@ title: Research
 <span class="research-header_eyebrow">The Lab's Work</span>
 <h1 class="research-header_title">Research</h1>
 <p class="research-header_intro">
-What follows is everything the lab has published or shown: peer-reviewed papers, conference posters, undergraduate research projects, and the occasional piece of software. Posters from undergraduate work belong here for the same reason papers do, because the work is real and the students did it.
+What follows is everything the lab has published or shown: peer-reviewed papers, conference posters, undergraduate research projects, and the occasional piece of software.
 </p>
 
 {% include card-search.html subject="papers" %}
