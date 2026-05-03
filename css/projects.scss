@@ -1,0 +1,550 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Projects page ──────────────────────────────────────────────────────────
+// Page header strip (Pale Honey), Active block of feature rows on Warm Linen,
+// then Completed bibliography on Pale Honey. All scoped to .projects-page so
+// styling does not bleed to other pages that share partials (cards, tags).
+
+.projects-page {
+  // Break out of the .section content wrapper.
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -40px;
+  margin-bottom: -40px;
+
+  // ── Page header strip (Pale Honey) ───────────────────────────────────────
+  .projects-header {
+    background: $bg-raised;
+    padding: 80px 40px 56px;
+    border-bottom: 1px solid $border-medium;
+  }
+
+  .projects-header_inner {
+    max-width: 880px;
+    margin: 0 auto;
+
+    @include trim-margins;
+  }
+
+  .projects-header_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 18px 0;
+  }
+
+  .projects-header_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: $bold;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: $text-dark;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .projects-header_intro {
+    font-family: $sans;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: $text-dark;
+    margin: 0;
+    max-width: 65ch;
+  }
+
+  // ── Active block (Warm Linen) ────────────────────────────────────────────
+  .projects-active {
+    background: $bg-base;
+    padding: 64px 40px 80px;
+  }
+
+  .projects-active_header {
+    max-width: 880px;
+    margin: 0 auto 40px;
+  }
+
+  .projects-active_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 12px 0;
+  }
+
+  .projects-active_lead {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: $text-dark;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  .projects-active_features {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  // ── Project feature row (active) ─────────────────────────────────────────
+  .project-feature {
+    @include trim-margins;
+  }
+
+  .project-feature_inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+
+  .project-feature_image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: $bg-raised;
+    border-radius: $radius-sm;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $slow;
+    }
+
+    a:hover img,
+    &:hover img {
+      transform: scale(1.03);
+    }
+
+    a:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .project-feature_text {
+    @include trim-margins;
+  }
+
+  .project-feature_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.7rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 12px 0;
+  }
+
+  .project-feature_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    font-weight: $semi-bold;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    color: $text-dark;
+    margin: 0 0 14px 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+
+    &::after {
+      display: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color $fast;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .project-feature_description {
+    font-family: $sans;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: $text-dark;
+    margin: 0 0 16px 0;
+    max-width: 60ch;
+  }
+
+  .project-feature_tags {
+    margin: 0 0 16px 0;
+
+    .tags {
+      justify-content: flex-start;
+      margin: 0;
+    }
+  }
+
+  .project-feature_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: $sans;
+    font-size: 0.9rem;
+    font-weight: $semi-bold;
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 2px;
+    transition: color $fast, border-color $fast;
+
+    span {
+      transition: transform $fast;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: #f84b4b;
+      border-bottom-color: $primary;
+
+      span {
+        transform: translateX(4px);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: 2px;
+    }
+  }
+
+  // ── Image-right variant ──────────────────────────────────────────────────
+  .project-feature--image-right .project-feature_inner {
+    .project-feature_image {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .project-feature_text {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+
+  // ── Image-left variant (default) ─────────────────────────────────────────
+  .project-feature--image-left .project-feature_inner {
+    .project-feature_image {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .project-feature_text {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  // ── Completed block (Pale Honey) ─────────────────────────────────────────
+  .projects-completed {
+    background: $bg-raised;
+    padding: 64px 40px 80px;
+  }
+
+  .projects-completed_header {
+    max-width: 880px;
+    margin: 0 auto 40px;
+  }
+
+  .projects-completed_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 12px 0;
+  }
+
+  .projects-completed_lead {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: $text-dark;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  // Light-touch sub-eyebrows for SOFTWARE / STUDENT RESEARCH within Completed.
+  // Single line, no rule, just a small Label-style anchor.
+  .projects-completed_subgroup {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .projects-completed_subgroup + .projects-completed_subgroup {
+    margin-top: 56px;
+  }
+
+  .projects-completed_sublabel {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.7rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    margin: 0 0 24px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $border-medium;
+    width: 100%;
+  }
+
+  .projects-completed_entries {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  // ── Project entry (bibliography line, completed) ─────────────────────────
+  .project-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: start;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: none;
+
+    &[data-size="small"] {
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .project-entry_thumbnail {
+    display: block;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: $radius-sm;
+    background: $bg-base;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $slow;
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .project-entry_text {
+    min-width: 0;
+
+    @include trim-margins;
+  }
+
+  .project-entry_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.15rem;
+    font-weight: $semi-bold;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+    color: $text-dark;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+
+    &::after {
+      display: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color $fast;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .project-entry_description {
+    font-family: $sans;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: $text-dark;
+    margin: 0 0 12px 0;
+    max-width: 65ch;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color $fast, border-color $fast;
+
+      &:hover {
+        color: #f84b4b;
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  .project-entry_tags {
+    margin: 0;
+
+    .tags {
+      justify-content: flex-start;
+      margin: 0;
+    }
+  }
+
+  // Tighten tag size for the dense bibliography rhythm in the completed block.
+  .project-entry_tags .tag {
+    font-size: 0.74rem;
+    padding: 3px 11px;
+    margin: 2px 4px 2px 0;
+  }
+
+  // ── Mobile ───────────────────────────────────────────────────────────────
+  @media (max-width: 700px) {
+    .projects-header {
+      padding: 56px 24px 40px;
+    }
+
+    .projects-header_title {
+      font-size: 1.9rem;
+    }
+
+    .projects-active,
+    .projects-completed {
+      padding: 48px 24px 64px;
+    }
+
+    .projects-active_lead,
+    .projects-completed_lead {
+      font-size: 1.1rem;
+    }
+
+    // Stack feature rows: image on top, text below. Order property
+    // beats the desktop variant grid placement deterministically.
+    .project-feature_inner {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .project-feature_image {
+      order: 1;
+      aspect-ratio: 16 / 10;
+    }
+
+    .project-feature_text {
+      order: 2;
+    }
+
+    .project-feature_title {
+      font-size: 1.25rem;
+    }
+
+    // Stack entry: banner thumbnail + text below.
+    .project-entry {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .project-entry_thumbnail {
+      width: 100%;
+      height: 0;
+      padding-top: 50%;
+      position: relative;
+
+      img {
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .project-entry_title {
+      font-size: 1.1rem;
+    }
+
+    .projects-active_features {
+      gap: 48px;
+    }
+
+    .projects-completed_entries {
+      gap: 32px;
+    }
+  }
+}
+
+// ── Reduced motion ──────────────────────────────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  .projects-page .project-feature_image a:hover img,
+  .projects-page .project-feature_image:hover img,
+  .projects-page .project-entry_thumbnail:hover img,
+  .projects-page .project-feature_link:hover span {
+    transform: none;
+  }
+}

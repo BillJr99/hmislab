@@ -4,66 +4,36 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+{% include page-header.html
+  eyebrow="Lab member"
+  title=page.title
+%}
 
-{% include figure.html image=page.image %}
+<div class="member-page">
+  <div class="member-page_inner">
 
-{% capture html %}
-{% include role.html type=page.role text=true %}
-{% endcapture %}
+    {% include member-feature.html member=page %}
 
-{% include centerer.html html=html %}
+    {%- assign names = "" | split: ',' -%}
+    {%- if page.search.first -%}
+    {%- assign names = names | concat: page.search -%}
+    {%- elsif page.search -%}
+    {%- assign names = names | push: page.search -%}
+    {%- elsif page.title -%}
+    {%- assign names = names | push: page.title -%}
+    {%- endif -%}
 
-{% capture html %}
-{% if page.website %}
-{% include social-link.html type="website" link=page.website %}
-{% endif %}
-{% if page.email %}
-{% include social-link.html type="email" link=page.email %}
-{% endif %}
-{% if page.google %}
-{% include social-link.html type="google" link=page.google %}
-{% endif %}
-{% if page.github %}
-{% include social-link.html type="github" link=page.github %}
-{% endif %}
-{% if page.twitter %}
-{% include social-link.html type="twitter" link=page.twitter %}
-{% endif %}
-{% if page.instagram %}
-{% include social-link.html type="instagram" link=page.instagram %}
-{% endif %}
-{% if page.youtube %}
-{% include social-link.html type="youtube" link=page.youtube %}
-{% endif %}
-{% endcapture %}
+    {%- capture search -%}
+    {%- for name in names -%}"{{ name }}" {% endfor -%}
+    {%- endcapture -%}
 
-{% include centerer.html html=html %}
+    {%- assign search = search | strip | prepend: "/research/?search=" -%}
 
-{{ content }}
+    <a class="member-page_papers" href="{{ search | relative_url }}">
+      <i class="fas fa-book-open" aria-hidden="true"></i>
+      <span>{{ page.title }}'s papers</span>
+      <span aria-hidden="true">→</span>
+    </a>
 
-{% assign names = "" | split: ',' %}
-
-{% if page.search.first %}
-{% assign names = names | concat: page.search %}
-{% elsif page.search %}
-{% assign names = names | push: page.search %}
-{% elsif page.title %}
-{% assign names = names | push: page.title %}
-{% endif %}
-
-{% capture search %}
-{% for name in names %}"{{ name }}" {% endfor %}
-{% endcapture %}
-
-{% assign search =  search | strip | prepend: "/research/?search=" %}
-
-{% capture text %}
-{{ page.title }}'s papers
-{% endcapture %}
-
-{% capture html %}
-{% include big-link.html icon="fas fa-book-open" link=search text=text %}
-{% endcapture %}
-
-{% include centerer.html html=html %}
+  </div>
+</div>

@@ -1,0 +1,116 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Team Peek ──────────────────────────────────────────────────────────────
+// Horizontal portrait strip on the home page. Pulls from the existing
+// team-list / portrait components, scoped to current members at the mini
+// (100px) size so the section reads as a quick overview, not a roster.
+
+.team-peek {
+  background: $bg-raised;
+  padding: 80px 40px;
+
+  .team-peek_inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include trim-margins;
+  }
+
+  .team-peek_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 16px 0;
+  }
+
+  .team-peek_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.75rem;
+    font-weight: $semi-bold;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    color: $text-dark;
+    margin: 0 0 12px 0;
+    text-align: center;
+  }
+
+  .team-peek_lead {
+    font-family: $sans;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: $text-secondary;
+    max-width: 56ch;
+    margin: 0 auto 40px;
+  }
+
+  .team-peek_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto 40px;
+    max-width: 800px;
+
+    // Tighten the existing portrait component's outer margin in this context;
+    // the strip layout wants a denser pack than a full team page.
+    .portrait {
+      margin: 8px 6px;
+    }
+  }
+
+  .team-peek_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    font-family: $sans;
+    font-size: 0.95rem;
+    font-weight: $semi-bold;
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 2px;
+    transition: color $fast, border-color $fast;
+
+    span {
+      transition: transform $fast;
+      display: inline-block;
+    }
+
+    &:hover {
+      color: #f84b4b;
+      border-bottom-color: $primary;
+
+      span {
+        transform: translateX(4px);
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: 2px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 56px 24px;
+  }
+}
+
+// ── Reduced motion ──────────────────────────────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  .team-peek .team-peek_link:hover span {
+    transform: none;
+  }
+}

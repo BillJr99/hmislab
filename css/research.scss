@@ -1,0 +1,395 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Research page ──────────────────────────────────────────────────────────
+// A page-level layout for the research catalog: a Pale Honey header strip
+// with title + intro + small filter, then topic clusters of bibliography
+// entries on Warm Linen. Editorial throughout. No card chrome on entries.
+//
+// All selectors are scoped to .research-page so styling does not bleed to
+// other pages that use the same shared partials (cards, tags).
+
+.research-page {
+  // Break out of the .section content wrapper so the page header strip and
+  // cluster rows can extend full-bleed with their own backgrounds.
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -40px;   // counter the .section parent's top padding
+  margin-bottom: -40px; // counter the .section parent's bottom padding
+
+  // ── Page header strip (Pale Honey) ───────────────────────────────────────
+  .research-header {
+    background: $bg-raised;
+    padding: 80px 40px 56px;
+    border-bottom: 1px solid $border-medium;
+  }
+
+  .research-header_inner {
+    max-width: 880px;
+    margin: 0 auto;
+
+    @include trim-margins;
+  }
+
+  .research-header_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 18px 0;
+  }
+
+  .research-header_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: $bold;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: $text-dark;
+    margin: 0 0 20px 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .research-header_intro {
+    font-family: $sans;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: $text-dark;
+    margin: 0 0 32px 0;
+    max-width: 65ch;
+  }
+
+  // ── Demoted search ───────────────────────────────────────────────────────
+  // Shrink and re-style the existing card-search component. The default
+  // .card_search component is wide and centered; here it sits left-aligned
+  // and looks like a filter, not a hero element.
+  .card_search {
+    max-width: 420px;
+    margin: 0;
+  }
+
+  .card_search_box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: $bg-surface;
+    border: 1px solid $border-medium;
+    border-radius: $radius-sm;
+    padding: 8px 14px;
+    transition: border-color $fast, box-shadow $fast;
+
+    i {
+      color: $text-secondary;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    &:focus-within {
+      border-color: $primary;
+      box-shadow: 0 0 0 3px rgba($primary, 0.20);
+    }
+  }
+
+  .card_search_input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-family: $sans;
+    font-size: 0.95rem;
+    color: $text-dark;
+    background: transparent;
+    padding: 4px 0;
+    width: 100%;
+    min-width: 0;
+
+    &::placeholder {
+      color: $text-secondary;
+    }
+  }
+
+  .card_search_info {
+    font-family: $sans;
+    font-size: 0.8rem;
+    color: $text-secondary;
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  // ── Cluster section ──────────────────────────────────────────────────────
+  // Alternates Warm Linen / Pale Honey by using nth-child on the section.
+  .research-cluster {
+    background: $bg-base;
+    padding: 64px 40px;
+
+    &:nth-of-type(even) {
+      background: $bg-raised;
+    }
+
+    @include trim-margins;
+  }
+
+  .research-cluster_header {
+    max-width: 880px;
+    margin: 0 auto 32px;
+  }
+
+  .research-cluster_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 16px 0;
+  }
+
+  .research-cluster_intro {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    letter-spacing: -0.1px;
+    color: $text-dark;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  .research-cluster_entries {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  // ── Bibliography entry ───────────────────────────────────────────────────
+  .research-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: start;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: none;
+
+    // Reset card.scss [data-size="small"] inheritance so no card chrome.
+    &[data-size="small"] {
+      border: none;
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .research-entry_thumbnail {
+    display: block;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: $radius-sm;
+    background: $bg-raised;
+    flex-shrink: 0;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $slow;
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .research-entry_text {
+    min-width: 0;
+
+    @include trim-margins;
+  }
+
+  .research-entry_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.2rem;
+    font-weight: $semi-bold;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+    color: $text-dark;
+    margin: 0 0 8px 0;
+    padding: 0;
+    text-align: left;
+    // Override global h3 uppercase + letter-spacing label styling.
+    text-transform: none;
+    letter-spacing: -0.2px;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color $fast;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .research-entry_authors {
+    font-family: $sans;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: $text-dark;
+    margin: 0 0 4px 0;
+  }
+
+  .research-entry_venue {
+    font-family: $sans;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: $text-secondary;
+    margin: 0 0 14px 0;
+  }
+
+  .research-entry_venue_dot {
+    color: $border-strong;
+    font-style: normal;
+    margin: 0 4px;
+  }
+
+  .research-entry_venue_date--pending {
+    color: $text-secondary;
+  }
+
+  .research-entry_tags {
+    margin: 0 0 12px 0;
+
+    .tags {
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    // Tighten the global tag pill for this page's denser bibliography rhythm.
+    .tag {
+      font-size: 0.74rem;
+      padding: 3px 11px;
+      margin: 2px 4px 2px 0;
+    }
+  }
+
+  .research-entry_links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 4px 0 0 0;
+
+    .paper_link {
+      font-family: $sans;
+      font-size: 0.82rem;
+      font-weight: $medium;
+      color: $primary;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: color $fast, border-color $fast;
+
+      i {
+        font-size: 0.78rem;
+      }
+
+      &:hover {
+        color: #f84b4b;
+        border-bottom-color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  // ── Mobile ───────────────────────────────────────────────────────────────
+  @media (max-width: 700px) {
+    .research-header {
+      padding: 56px 24px 40px;
+    }
+
+    .research-header_title {
+      font-size: 1.9rem;
+    }
+
+    .research-cluster {
+      padding: 48px 24px;
+    }
+
+    .research-cluster_intro {
+      font-size: 1.1rem;
+    }
+
+    .research-cluster_entries {
+      gap: 32px;
+    }
+
+    .research-entry {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .research-entry_thumbnail {
+      width: 100%;
+      height: 0;
+      padding-top: 50%; // 2:1 banner aspect on mobile
+      position: relative;
+
+      img {
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    .research-entry_title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// ── Reduced motion ──────────────────────────────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  .research-page .research-entry_thumbnail:hover img {
+    transform: none;
+  }
+}

@@ -1,0 +1,159 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Contact page ───────────────────────────────────────────────────────────
+// A short directory: email / phone / address blocks in a row, then a
+// photograph of the building. No card chrome.
+
+.contact-page {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: -40px;
+  padding: 64px 40px 80px;
+  background: $bg-base;
+}
+
+.contact-grid {
+  max-width: 880px;
+  margin: 0 auto 64px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-block {
+  @include trim-margins;
+}
+
+.contact-block_label {
+  display: block;
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $primary;
+  margin: 0 0 14px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $border-medium;
+}
+
+.contact-block_value {
+  display: block;
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 1.15rem;
+  font-weight: $semi-bold;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  color: $text-dark;
+  text-decoration: none;
+  word-break: break-word;
+  transition: color $fast;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    border-radius: 2px;
+  }
+}
+
+.contact-block_value--plain {
+  font-family: $sans;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $text-dark;
+  margin: 0;
+  cursor: default;
+
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+.contact-block_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 10px;
+  font-family: $sans;
+  font-size: 0.85rem;
+  font-weight: $semi-bold;
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 1px;
+  transition: color $fast, border-color $fast;
+
+  span {
+    transition: transform $fast;
+    display: inline-block;
+  }
+
+  &:hover {
+    color: #f84b4b;
+    border-bottom-color: $primary;
+
+    span {
+      transform: translateX(4px);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    border-radius: 2px;
+  }
+}
+
+.contact-figure {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: $radius-md;
+  }
+
+  figcaption {
+    margin-top: 12px;
+    font-family: $sans;
+    font-size: 0.82rem;
+    color: $text-secondary;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-page {
+    padding: 48px 24px 64px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-block_link:hover span {
+    transform: none;
+  }
+}

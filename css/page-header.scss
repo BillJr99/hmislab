@@ -1,0 +1,72 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Shared page-header strip ───────────────────────────────────────────────
+// Pale Coral strip with eyebrow + title + intro. Used across catalog and
+// informational pages so every "what page is this" feels the same.
+
+.page-header {
+  // Break out of the .section content wrapper.
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-top: -40px;
+  background: $bg-raised;
+  padding: 80px 40px 56px;
+  border-bottom: 1px solid $border-medium;
+}
+
+.page-header_inner {
+  max-width: 880px;
+  margin: 0 auto;
+
+  @include trim-margins;
+}
+
+.page-header_eyebrow {
+  display: inline-block;
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: $primary;
+  margin: 0 0 18px 0;
+}
+
+.page-header_title {
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: $bold;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: $text-dark;
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.page-header_intro {
+  font-family: $sans;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: $text-dark;
+  margin: 0;
+  max-width: 65ch;
+}
+
+@media (max-width: 700px) {
+  .page-header {
+    padding: 56px 24px 40px;
+  }
+
+  .page-header_title {
+    font-size: 1.9rem;
+  }
+}

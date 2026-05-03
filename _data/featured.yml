@@ -1,0 +1,28 @@
+# Featured content used on the home page.
+# Edit titles, body, images, and links here to update home page spreads.
+home:
+  - side: image-left
+    eyebrow: TEACHING & LEARNING
+    title: Helping students and teachers see how AI thinks.
+    body: >
+      We build machine learning systems that do not just give answers, but show their reasoning,
+      so students can learn alongside them and teachers can trust them.
+      The work spans intelligent tutors, automated feedback for student writing,
+      and explainable models that surface the why, not just the what.
+    image: images/network.jpg
+    alt: Connected nodes in a network diagram, suggesting how ideas and reasoning steps link in a learning system.
+    link: research
+    link_label: See the research
+
+  - side: image-right
+    eyebrow: BIOMEDICAL ML
+    title: Machine learning where care actually happens.
+    body: >
+      Working with clinicians and biologists, we build models for the messy realities
+      of clinical and lab data: small samples, missing labels, drifting distributions,
+      sensors that move with the patient. The aim is research that lands where it is needed,
+      not benchmarks for their own sake.
+    image: images/laboratory.jpg
+    alt: A research bench in a working laboratory, the scale at which biomedical machine learning lands.
+    link: research
+    link_label: See the research

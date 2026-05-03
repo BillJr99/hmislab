@@ -1,0 +1,44 @@
+{%- comment -%}
+  PI Welcome. A short, personal note from the lab's principal investigator.
+  Photo on the left, italic Fraunces opener on the right, plain follow-up,
+  signature. The block is intentionally letter-shaped, not card-shaped.
+
+  Defaults work for the HMIS Lab as configured. To repurpose, set:
+    pi_welcome.image       — relative path to the photo
+    pi_welcome.alt         — descriptive alt text
+    pi_welcome.opener      — italic Fraunces opener (one short sentence)
+    pi_welcome.body        — 2-3 sentences in plain language
+    pi_welcome.signature   — name + role
+    pi_welcome.link        — optional: link target for the portrait
+{%- endcomment -%}
+
+{%- assign image = page.pi_welcome.image | default: "images/team/william-mongan.png" -%}
+{%- assign alt = page.pi_welcome.alt | default: "William Mongan, founder and PI of the HMIS Lab." -%}
+{%- assign opener = page.pi_welcome.opener | default: "Welcome. I’m glad you’re here." -%}
+{%- assign body = page.pi_welcome.body | default: "Our lab is about the work, the people, and the use the work is put to. We collaborate across the sciences and humanities, including biomedicine, teaching, and learning, and we believe AI should be honest about how it reasons. If you’re an undergraduate curious about research, you belong here." -%}
+{%- assign signature_name = page.pi_welcome.signature_name | default: "William M. Mongan" -%}
+{%- assign signature_role = page.pi_welcome.signature_role | default: "Principal Investigator" -%}
+{%- assign link = page.pi_welcome.link | default: "team/william-m-mongan" -%}
+
+<section class="pi-welcome" aria-labelledby="pi-welcome-opener">
+  <div class="pi-welcome_inner">
+    <div class="pi-welcome_portrait">
+      {%- if link -%}
+      <a href="{{ link | relative_url }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ image | relative_url }}" alt="{{ alt }}" loading="lazy" />
+      </a>
+      {%- else -%}
+      <img src="{{ image | relative_url }}" alt="{{ alt }}" loading="lazy" />
+      {%- endif -%}
+    </div>
+
+    <div class="pi-welcome_letter">
+      <p class="pi-welcome_opener" id="pi-welcome-opener">{{ opener }}</p>
+      <p class="pi-welcome_body">{{ body }}</p>
+      <p class="pi-welcome_signature">
+        <span class="pi-welcome_signature_name">{%- if link -%}<a href="{{ link | relative_url }}">{{ signature_name }}</a>{%- else -%}{{ signature_name }}{%- endif -%}</span>
+        <span class="pi-welcome_signature_role">{{ signature_role }}</span>
+      </p>
+    </div>
+  </div>
+</section>

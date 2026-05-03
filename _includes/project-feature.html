@@ -1,0 +1,64 @@
+{%- comment -%}
+  Project feature row. Image one side, text article-shaped on the other.
+  Alternates by `side` parameter. Used for active projects on /projects/.
+
+  Distinct from the home Spread: no seam-overlap, smaller scale, more
+  compact vertical rhythm so a sequence of 5 rows reads at a sensible
+  page length.
+
+  Parameters
+    project   Required. The project object from site.data.projects.
+    side      "image-left" (default) or "image-right".
+{%- endcomment -%}
+
+{%- assign project = include.project -%}
+{%- assign side = include.side | default: "image-left" -%}
+
+{%- assign type_label = "Project" -%}
+{%- if project.type == "research" -%}{%- assign type_label = "Research Project" -%}{%- endif -%}
+{%- if project.type == "software" -%}{%- assign type_label = "Software" -%}{%- endif -%}
+{%- if project.type == "student" -%}{%- assign type_label = "Student Work" -%}{%- endif -%}
+
+<article class="project-feature project-feature--{{ side }}" data-type="{{ project.type }}">
+  <div class="project-feature_inner">
+    {%- if project.image -%}
+    <div class="project-feature_image">
+      {%- if project.link -%}
+      <a href="{{ project.link }}" tabindex="-1" aria-hidden="true">
+        <img src="{{ project.image | relative_url }}" alt="" loading="lazy" />
+      </a>
+      {%- else -%}
+      <img src="{{ project.image | relative_url }}" alt="" loading="lazy" />
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <div class="project-feature_text">
+      <span class="project-feature_eyebrow">{{ type_label }}</span>
+      <h3 class="project-feature_title">
+        {%- if project.link -%}
+        <a href="{{ project.link }}">{{ project.title }}</a>
+        {%- else -%}
+        {{ project.title }}
+        {%- endif -%}
+      </h3>
+
+      {%- if project.description -%}
+      <p class="project-feature_description">{{ project.description }}</p>
+      {%- endif -%}
+
+      {%- if project.tags or project.repo -%}
+      <div class="project-feature_tags">
+        {%- include tags.html tags=project.tags repo=project.repo -%}
+      </div>
+      {%- endif -%}
+
+      {%- if project.link -%}
+      <a href="{{ project.link }}" class="project-feature_link">
+        Visit project
+        <span aria-hidden="true">→</span>
+      </a>
+      {%- endif -%}
+    </div>
+  </div>
+</article>

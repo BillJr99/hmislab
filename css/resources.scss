@@ -1,0 +1,250 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Resources page ─────────────────────────────────────────────────────────
+// Featured (lab software) at richer scale, then Tutorials (external videos)
+// at compact bibliography scale. All scoped to .resources-page.
+
+.resources-page {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  margin-bottom: -40px;
+
+  .resources-section {
+    padding: 64px 40px 80px;
+  }
+
+  .resources-section--featured {
+    background: $bg-base;
+  }
+
+  .resources-section--tutorials {
+    background: $bg-raised;
+  }
+
+  .resources-section_header {
+    max-width: 880px;
+    margin: 0 auto 40px;
+  }
+
+  .resources-section_eyebrow {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 0.72rem;
+    font-weight: $semi-bold;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: $primary;
+    margin: 0 0 12px 0;
+  }
+
+  .resources-section_lead {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: $text-dark;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  .resources-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .resources-list--compact {
+    max-width: 880px;
+    gap: 36px;
+  }
+
+  // ── Resource entry (featured) ────────────────────────────────────────────
+  .resource-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    transition: none;
+  }
+
+  .resource-entry_thumbnail {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: $radius-sm;
+    background: $bg-raised;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform $slow;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .resource-entry_text {
+    @include trim-margins;
+  }
+
+  .resource-entry_title {
+    font-family: $serif;
+    font-optical-sizing: auto;
+    font-size: 1.5rem;
+    font-weight: $semi-bold;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+    color: $text-dark;
+    margin: 0 0 14px 0;
+    padding: 0;
+    text-align: left;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color $fast;
+
+      &:hover {
+        color: $primary;
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary, 0.30);
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .resource-entry_description {
+    font-family: $sans;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: $text-dark;
+    margin: 0 0 14px 0;
+    max-width: 60ch;
+
+    a {
+      color: $primary;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color $fast, border-color $fast;
+
+      &:hover {
+        color: #f84b4b;
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  .resource-entry_tags {
+    margin: 0;
+
+    .tags {
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .tag {
+      font-size: 0.74rem;
+      padding: 3px 11px;
+      margin: 2px 4px 2px 0;
+    }
+  }
+
+  // ── Resource entry (compact / tutorial) ──────────────────────────────────
+  .resource-entry--compact {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 28px;
+    align-items: start;
+
+    .resource-entry_thumbnail {
+      width: 180px;
+      height: 110px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .resource-entry_title {
+      font-size: 1.15rem;
+      // Override global h3 uppercase + label styling.
+      text-transform: none;
+      letter-spacing: -0.2px;
+    }
+
+    .resource-entry_description {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+
+  // ── Mobile ───────────────────────────────────────────────────────────────
+  @media (max-width: 700px) {
+    .resources-section {
+      padding: 48px 24px 64px;
+    }
+
+    .resources-section_lead {
+      font-size: 1.1rem;
+    }
+
+    .resource-entry {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .resource-entry--compact {
+      grid-template-columns: 1fr;
+      gap: 14px;
+
+      .resource-entry_thumbnail {
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        position: relative;
+
+        img {
+          position: absolute;
+          inset: 0;
+        }
+      }
+    }
+
+    .resource-entry_title {
+      font-size: 1.25rem;
+    }
+
+    .resource-entry--compact .resource-entry_title {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resources-page .resource-entry_thumbnail:hover img {
+    transform: none;
+  }
+}

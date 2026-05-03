@@ -1,0 +1,58 @@
+{%- comment -%}
+  Team grid section. Eyebrow + italic-Fraunces lead + portrait grid.
+  Wraps the existing team-list partial; pass-through filter parameters.
+
+  Parameters
+    eyebrow       Required. Coral uppercase label above the grid.
+    lead          Optional. One-sentence italic-Fraunces lead.
+    group         Optional. Filter members by group (current / alum).
+    role          Optional. Filter members by role.
+    exclude_role  Optional. Skip members whose role matches this string
+                  (e.g. "pi" so the PI block is not duplicated in the grid).
+{%- endcomment -%}
+
+{%- assign members = site.members -%}
+
+{%- if include.group != nil and include.group != "" -%}
+  {%- assign members = members | where: "group", include.group -%}
+{%- endif -%}
+
+{%- if include.role != nil and include.role != "" -%}
+  {%- assign members = members | where: "role", include.role -%}
+{%- endif -%}
+
+{%- if include.exclude_role != nil and include.exclude_role != "" -%}
+  {%- assign filtered = "" | split: "" -%}
+  {%- for m in members -%}
+    {%- if m.role != include.exclude_role -%}
+      {%- assign filtered = filtered | push: m -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign members = filtered -%}
+{%- endif -%}
+
+{%- assign count = members | size -%}
+
+{%- assign modifier = include.modifier | default: "" -%}
+
+{%- if count > 0 -%}
+<section class="team-section{% if modifier != "" %} team-section--{{ modifier }}{% endif %}">
+  <div class="team-section_header">
+    <span class="team-section_eyebrow">{{ include.eyebrow }}</span>
+    {%- if include.lead -%}
+    <p class="team-section_lead">{{ include.lead }}</p>
+    {%- endif -%}
+  </div>
+
+  <div class="team-grid">
+    {%- for m in members -%}
+      {%- include portrait.html
+        name=m.title
+        link=m.url
+        image=m.image
+        role=m.role
+      -%}
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}

@@ -1,0 +1,22 @@
+{%- comment -%}
+  Page header strip. The shared "this is what page you're on" pattern used
+  across catalog and informational pages: small Coral eyebrow + serif title
+  + intro paragraph, on a Pale Coral strip.
+
+  Parameters
+    eyebrow   Required. Short uppercase label.
+    title     Required. The page title in mixed case.
+    intro     Optional. One-paragraph framing.
+{%- endcomment -%}
+
+<section class="page-header">
+  <div class="page-header_inner">
+    {%- if include.eyebrow -%}
+    <span class="page-header_eyebrow">{{ include.eyebrow }}</span>
+    {%- endif -%}
+    <h1 class="page-header_title">{{ include.title }}</h1>
+    {%- if include.intro -%}
+    <p class="page-header_intro">{{ include.intro }}</p>
+    {%- endif -%}
+  </div>
+</section>

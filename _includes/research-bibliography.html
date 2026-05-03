@@ -1,0 +1,55 @@
+{%- comment -%}
+  Research bibliography. Renders all papers from research-output.yml
+  organized by cluster (research theme), with a brief intro per cluster.
+  Each paper is rendered via _includes/research-entry.html so the search
+  filter (which targets `.card`) keeps working.
+
+  Cluster order is fixed here. Empty clusters render nothing (no header,
+  no placeholder).
+
+  To re-cluster a paper, edit its `cluster:` field in
+  _data/research-input.yml (so Manubot preserves it) and in
+  _data/research-output.yml (so this page reflects it now).
+{%- endcomment -%}
+
+{%- assign papers = site.data.research-output -%}
+{%- assign papers = papers | sort: "date" | reverse -%}
+
+{%- comment -%} Cluster definitions. Order = display order. {%- endcomment -%}
+{%- assign cluster_ids = "explainable-ai|teaching-learning|biomedical-ml|systems-iot-cv" | split: "|" -%}
+
+{%- for cluster_id in cluster_ids -%}
+{%- assign cluster_papers = papers | where: "cluster", cluster_id -%}
+{%- if cluster_papers.size > 0 -%}
+
+{%- assign cluster_label = "" -%}
+{%- assign cluster_intro = "" -%}
+{%- if cluster_id == "explainable-ai" -%}
+  {%- assign cluster_label = "Explainable AI" -%}
+  {%- assign cluster_intro = "How can a machine show its reasoning, not just its answer? We work on visual and interactive tools that help students, teachers, and decision-makers see what is inside a model." -%}
+{%- elsif cluster_id == "teaching-learning" -%}
+  {%- assign cluster_label = "Teaching &amp; Learning" -%}
+  {%- assign cluster_intro = "Most of our students learn by doing real research. The work below ranges from intelligent tutors that give feedback on student writing, to course tools that we and the rest of the college actually use." -%}
+{%- elsif cluster_id == "biomedical-ml" -%}
+  {%- assign cluster_label = "Biomedical ML" -%}
+  {%- assign cluster_intro = "Machine learning where care actually happens: ECG, sleep, wearables, and the messy realities of clinical and lab data." -%}
+{%- elsif cluster_id == "systems-iot-cv" -%}
+  {%- assign cluster_label = "Wireless, IoT, and Computer Vision" -%}
+  {%- assign cluster_intro = "Lower-level systems work that supports the rest of what we do: secure IoT layers, sensor frameworks, and a few computer vision detours." -%}
+{%- endif -%}
+
+<section class="research-cluster" data-cluster="{{ cluster_id }}">
+  <div class="research-cluster_header card_search_hide">
+    <span class="research-cluster_eyebrow">{{ cluster_label }}</span>
+    <p class="research-cluster_intro">{{ cluster_intro }}</p>
+  </div>
+
+  <div class="research-cluster_entries">
+    {%- for paper in cluster_papers -%}
+      {%- include research-entry.html paper=paper -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- endif -%}
+{%- endfor -%}

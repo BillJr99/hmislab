@@ -1,0 +1,28 @@
+{%- comment -%}
+  Team Peek. A horizontal portrait strip of all current (non-alumni) lab
+  members, ordered: PI first, then undergraduate researchers in the order
+  the existing team-list logic supplies them.
+
+  Two team-list calls share a parent container so both sets of portraits
+  flow together as siblings of the .team-peek_grid flex container.
+{%- endcomment -%}
+
+<section class="team-peek" aria-labelledby="team-peek-heading">
+  <div class="team-peek_inner">
+    <span class="team-peek_eyebrow" id="team-peek-heading">The Team</span>
+    <h2 class="team-peek_title">Researchers, undergraduates, collaborators.</h2>
+    <p class="team-peek_lead">
+      The lab is built mostly of undergraduate researchers, working on real problems with real partners.
+    </p>
+
+    <div class="team-peek_grid">
+      {%- include team-list.html group="current" role="pi" mini=true -%}
+      {%- include team-list.html group="current" role="undergrad" mini=true -%}
+    </div>
+
+    <a href="{{ 'team' | relative_url }}" class="team-peek_link">
+      Meet the full team
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
