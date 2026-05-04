@@ -6,34 +6,41 @@
 
 <div class="card" data-size="{{ size }}">
   {% assign placeholder = include.placeholder | default: "images/placeholder.svg" | relative_url %}
-  <a
-    {% if include.link %}href="{{ include.link | relative_url }}"{% endif %}
-    class="card_image"
-  >
-    {%- if include.image -%}
-    <img
-      src="{{ include.image | relative_url }}"
-      alt="{{ include.heading }}"
-      onerror="this.src = '{{ placeholder }}'; this.onerror = null;"
+  <div class="card_image_wrap">
+    <a
+      {% if include.link %}href="{{ include.link | relative_url }}"{% endif %}
+      class="card_image"
     >
-    {%- else -%}
-    <img src="{{ placeholder }}" alt="{{ include.heading }}">
+      {%- if include.image -%}
+      <img
+        src="{{ include.image | relative_url }}"
+        alt="{{ include.heading }}"
+        loading="lazy"
+        onerror="this.src = '{{ placeholder }}'; this.onerror = null;"
+      >
+      {%- else -%}
+      <img src="{{ placeholder }}" alt="{{ include.heading }}" loading="lazy">
+      {%- endif -%}
+    </a>
+    {%- if include.image_credit -%}
+    <span class="card_image_credit">
+      {%- if include.image_credit_url -%}
+      <a href="{{ include.image_credit_url | relative_url }}" target="_blank" rel="noopener noreferrer">{{ include.image_credit }}</a>
+      {%- else -%}
+      {{ include.image_credit }}
+      {%- endif -%}
+    </span>
     {%- endif -%}
-  </a>
-  {%- if include.image_credit -%}
-  <span class="card_image_credit">
-    {%- if include.image_credit_url -%}
-    <a href="{{ include.image_credit_url }}" target="_blank" rel="noopener noreferrer">{{ include.image_credit }}</a>
-    {%- else -%}
-    {{ include.image_credit }}
-    {%- endif -%}
-  </span>
-  {%- endif -%}
+  </div>
   <div class="card_text">
     {% if include.heading %}
+    {%- if include.link -%}
     <a href="{{ include.link | relative_url }}" class="card_title">
       {{- include.heading -}}
     </a>
+    {%- else -%}
+    <span class="card_title">{{- include.heading -}}</span>
+    {%- endif -%}
     {% endif %}
 
     {%- for i in (1..5) -%}
@@ -63,7 +70,7 @@
     {%- if firstchar != "<" -%}
     </p>
     {%- endif -%}
-    
+
     {%- endif -%}
 
     {%- endfor -%}

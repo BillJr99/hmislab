@@ -14,7 +14,6 @@
     display: block;
     overflow: hidden;
     border-radius: $radius-lg;
-    box-shadow: $shadow-card;
     background: $border-subtle;
     // Suppress the browser broken-image icon; background shows instead
     min-height: 48px;
@@ -23,7 +22,6 @@
       display: block;
       max-width: 100%;
       height: auto;
-      transition: transform $slow;
       // Hide broken-image icon — container bg acts as placeholder
       color: transparent;
 
@@ -31,6 +29,14 @@
         max-width: 400px;
         max-height: 300px;
       }
+    }
+  }
+
+  &[data-flat="false"] .figure_image {
+    box-shadow: $shadow-card;
+
+    img {
+      transition: transform $slow;
     }
 
     &:hover img {
