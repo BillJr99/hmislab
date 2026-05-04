@@ -7,10 +7,8 @@
 <div class="card" data-size="{{ size }}">
   {% assign placeholder = include.placeholder | default: "images/placeholder.svg" | relative_url %}
   <div class="card_image_wrap">
-    <a
-      {% if include.link %}href="{{ include.link | relative_url }}"{% endif %}
-      class="card_image"
-    >
+    {%- if include.link -%}
+    <a href="{{ include.link | relative_url }}" class="card_image">
       {%- if include.image -%}
       <img
         src="{{ include.image | relative_url }}"
@@ -22,6 +20,20 @@
       <img src="{{ placeholder }}" alt="{{ include.heading }}" loading="lazy">
       {%- endif -%}
     </a>
+    {%- else -%}
+    <div class="card_image">
+      {%- if include.image -%}
+      <img
+        src="{{ include.image | relative_url }}"
+        alt="{{ include.heading }}"
+        loading="lazy"
+        onerror="this.src = '{{ placeholder }}'; this.onerror = null;"
+      >
+      {%- else -%}
+      <img src="{{ placeholder }}" alt="{{ include.heading }}" loading="lazy">
+      {%- endif -%}
+    </div>
+    {%- endif -%}
     {%- if include.image_credit -%}
     <span class="card_image_credit">
       {%- if include.image_credit_url -%}

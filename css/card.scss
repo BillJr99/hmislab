@@ -58,10 +58,10 @@
       color: $text-dark;
       text-decoration: none;
       transition: color $fast;
+    }
 
-      &:hover {
-        color: $primary;
-      }
+    a.card_title:hover {
+      color: $primary;
     }
 
     & > p {
@@ -218,13 +218,12 @@
 
       .card_image_wrap {
         margin-right: 0;
-        margin-bottom: 0;
+        margin-bottom: 8px;
       }
 
       .card_image {
         width: 200px;
         height: 150px;
-        margin-bottom: 8px;
       }
 
       .card_text {
