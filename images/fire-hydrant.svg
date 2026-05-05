@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+
+  <!-- ── Ground ── -->
+  <rect x="0" y="100" width="200" height="20" fill="#c8bfb8"/>
+  <rect x="0" y="98" width="200" height="4" fill="#b0a89e"/>
+
+  <!-- ══ FIRETRUCK (left side, facing right) ══ -->
+
+  <!-- chassis / body -->
+  <rect x="8" y="58" width="118" height="42" rx="4" fill="#c0281a"/>
+
+  <!-- cab front -->
+  <rect x="100" y="46" width="30" height="54" rx="4" fill="#c0281a"/>
+
+  <!-- windshield -->
+  <rect x="103" y="50" width="22" height="18" rx="2" fill="#b8ddf0"/>
+
+  <!-- cab door window -->
+  <rect x="82" y="62" width="18" height="14" rx="2" fill="#b8ddf0"/>
+
+  <!-- body side panel accent -->
+  <rect x="10" y="66" width="70" height="6" rx="1" fill="#a82315"/>
+  <rect x="10" y="78" width="70" height="6" rx="1" fill="#a82315"/>
+
+  <!-- ladder rack on top -->
+  <rect x="14" y="50" width="84" height="9" rx="2" fill="#8b1f14"/>
+  <!-- ladder rungs -->
+  <line x1="28" y1="50" x2="28" y2="59" stroke="#c0281a" stroke-width="1.5"/>
+  <line x1="42" y1="50" x2="42" y2="59" stroke="#c0281a" stroke-width="1.5"/>
+  <line x1="56" y1="50" x2="56" y2="59" stroke="#c0281a" stroke-width="1.5"/>
+  <line x1="70" y1="50" x2="70" y2="59" stroke="#c0281a" stroke-width="1.5"/>
+  <line x1="84" y1="50" x2="84" y2="59" stroke="#c0281a" stroke-width="1.5"/>
+
+  <!-- light bar -->
+  <rect x="104" y="44" width="24" height="5" rx="2" fill="#831b10"/>
+  <rect x="107" y="44" width="5" height="5" rx="1" fill="#f87171"/>
+  <rect x="119" y="44" width="5" height="5" rx="1" fill="#60a5fa"/>
+
+  <!-- front bumper -->
+  <rect x="128" y="80" width="8" height="14" rx="2" fill="#8b1f14"/>
+
+  <!-- hose compartment door -->
+  <rect x="12" y="68" width="14" height="24" rx="2" fill="#8b1f14"/>
+
+  <!-- wheels -->
+  <circle cx="32" cy="100" r="13" fill="#3a3633"/>
+  <circle cx="32" cy="100" r="8" fill="#6b6560"/>
+  <circle cx="32" cy="100" r="3" fill="#3a3633"/>
+
+  <circle cx="110" cy="100" r="13" fill="#3a3633"/>
+  <circle cx="110" cy="100" r="8" fill="#6b6560"/>
+  <circle cx="110" cy="100" r="3" fill="#3a3633"/>
+
+  <!-- ══ FIRE HYDRANT (right, smaller) ══ -->
+
+  <!-- base flange -->
+  <rect x="157" y="90" width="26" height="8" rx="2" fill="#a82315"/>
+
+  <!-- lower body -->
+  <rect x="161" y="74" width="18" height="17" rx="4" fill="#c0281a"/>
+
+  <!-- upper body -->
+  <rect x="163" y="64" width="14" height="13" rx="3" fill="#c0281a"/>
+
+  <!-- bonnet collar -->
+  <rect x="162" y="59" width="16" height="7" rx="3" fill="#a82315"/>
+
+  <!-- bonnet dome -->
+  <ellipse cx="170" cy="59" rx="9" ry="4" fill="#a82315"/>
+  <ellipse cx="170" cy="57" rx="6" ry="3" fill="#c0281a"/>
+
+  <!-- top nut -->
+  <rect x="167" y="53" width="6" height="5" rx="1" fill="#831b10"/>
+
+  <!-- left outlet -->
+  <rect x="153" y="77" width="9" height="6" rx="2" fill="#c0281a"/>
+  <circle cx="153" cy="80" r="2.5" fill="#831b10"/>
+
+  <!-- right outlet -->
+  <rect x="178" y="77" width="9" height="6" rx="2" fill="#c0281a"/>
+  <circle cx="187" cy="80" r="2.5" fill="#831b10"/>
+
+  <!-- center bolt detail -->
+  <rect x="167" y="80" width="6" height="6" rx="1" fill="#831b10"/>
+
+</svg>

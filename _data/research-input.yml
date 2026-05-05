@@ -1,53 +1,53 @@
 # List your research papers here. The "build research" Python script takes this
 # file and uses Manubot to generate a fully-cited "output research" file, which
 # is then read by the research list component.
- 
+
 # NOTES:
- 
+
 # Using the research list component, papers will be displayed in order of and
 # grouped by date, regardless of how they are listed here.
- 
+
 # Any property that Manubot returns can be manually overridden by putting it
 # here, such as "date", "publisher", etc. Use the output file as a reference
 # for the expected format (eg dates should be YYYY-MM-DD).
- 
+
 # If a paper is already in the output file (matched by id), that existing
 # citation data will be used instead of calling Manubot again. To clear this
 # "cache", remove that output entry, or simply delete the whole output file.
- 
+
 # PARAMETERS:
- 
+
 # id:
 # An identifier string that Manubot can understand and cite. Also used to
 # determine if a paper already exists in the output.
- 
+
 # image:
 # Url to a striking image. Use a figure from your paper, or if there are none,
 # use a journal logo or issue cover.
- 
+
 # tags:
 # A list of key topics/themes of your paper. Aim for 2 to 5. look at other
 # papers and try to use similar tags.
- 
+
 # repo:
 # A GitHub repo to automatically fetch tags (aka "topics") from.
- 
+
 # extra-links:
 # A list of additional links - beyond the main paper link that Manubot returns
 # - that will show under your paper citation.
- 
+
 # type:
 # Determines link icon and default text. Look in "/_includes/paper-links.html"
 # to see what unique types can be specified.
- 
+
 # text:
 # Text to show next to icon. If not specified, defaults to some text that
 # matches type (see "type")
- 
+
 # link:
 # Url to link to. If not specified, defaults to the url that Manubot returns for
 # the citation.
- 
+
 # Examples:
 #- id: doi:10.1101/2020.11.06.371963
 #  thumbnail: https://www.biorxiv.org/content/biorxiv/early/2020/11/07/2020.11.06.371963/F4.medium.gif
@@ -63,7 +63,6 @@
 #      link: https://doi.org/10.1101/142760
 #    - type: source
 #      link: http://github.com/greenelab/deep-review
- 
 - id: doi:10.5281/zenodo.3786933
   type: source
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
@@ -71,7 +70,10 @@
   tags:
     - iot
   cluster: systems-iot-cv
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
 - id: doi:10.5281/zenodo.3825126
   type: source
   link: "https://github.com/drexelwireless/iot-processing-framework"
@@ -79,7 +81,10 @@
   tags:
     - iot
   cluster: systems-iot-cv
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
 - id: url:https://digitalcommons.ursinus.edu/math_comp_pres/4/
   title: "NVIZ: Unraveling Neural Networks Through Visualization"
   authors:
@@ -95,7 +100,12 @@
     - visualization
     - cosa
   cluster: explainable-ai
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - kevin-h
+
 - id: doi:10.1145/3770761.3777114
   title: "The Ursinus WebIDE: A Serverless Browser-Based Development Environment for Student Practice and Rapid Instructor Exercise Development"
   authors:
@@ -110,7 +120,11 @@
     - ide
     - webide
   cluster: teaching-learning
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
 - id: manual:reinsburrow-2026-site
   title: "Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback on Student Mathematical Thinking"
   authors:
@@ -133,7 +147,13 @@
     - education
     - mathematics
   cluster: teaching-learning
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - michael-c
+    - matthew-l
+
 - id: manual:fritz-2026-cosa-theater
   title: "Interactive AI Theater Presentation"
   authors:
@@ -150,7 +170,11 @@
     - interactive
     - cosa
   cluster: teaching-learning
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
 - id: manual:cummins-2026-cosa-rag
   title: "RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir AI"
   authors:
@@ -168,7 +192,14 @@
     - rag
     - cosa
   cluster: teaching-learning
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - michael-c
+    - matthew-l
+    - claire
+
 - id: manual:bogdan-2026-cosa-sleep
   title: "Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine Learning Pipeline"
   authors:
@@ -184,7 +215,12 @@
     - ecg
     - cosa
   cluster: biomedical-ml
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - andrei
+
 - id: manual:cummins-2025-cosa-explainability
   title: "Developing Tools for AI Explainability"
   authors:
@@ -199,7 +235,12 @@
     - ai
     - cosa
   cluster: explainable-ai
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - michael-c
+
 - id: manual:thompson-2025-cosa-ggtw
   title: "Financial Tools for the Grizzly Guide to Wealth (GGTW)"
   authors:
@@ -216,7 +257,11 @@
     - tools
     - cosa
   cluster: teaching-learning
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
 - id: manual:artene-2023-cosa-ucplaces
   title: "UCPlaces: Campus Orientation App Using ArcGIS"
   authors:
@@ -232,7 +277,12 @@
     - mobile
     - cosa
   cluster: systems-iot-cv
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - arthur
+
 - id: manual:ling-2023-cosa-iot
   title: "RF IoT Security Layer"
   authors:
@@ -247,7 +297,12 @@
     - security
     - cosa
   cluster: systems-iot-cv
- 
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - jonas
+
 - id: manual:melby-2023-cosa-moon
   title: "Automated Moon Crater Detection: Exploring Algorithmic and Neural Network Approaches"
   authors:
@@ -262,3 +317,751 @@
     - computer vision
     - cosa
   cluster: systems-iot-cv
+  research-visible: true
+  projects-visible: true
+
+# New entries from billmongan.com/publications (visible: false until reviewed)
+  team-contributors:
+    - william-m-mongan
+    - dylan
+
+- id: manual:dissertation
+  title: "Predictive Analytics on Real-Time Biofeedback for Actionable Classification of Activity State"
+  authors:
+    - William M. Mongan
+  publisher: Drexel University
+  date: '2018-01-01'
+  type: thesis
+  link: https://www.billmongan.com/publication/dissertation
+  image: /images/ecg-trace.svg
+  tags:
+    - machine learning
+    - healthcare
+    - rfid
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:msthesis
+  title: "A Service-Based Web Portal for Integrated Reverse Engineering and Program Comprehension"
+  authors:
+    - William M. Mongan
+  publisher: Drexel University
+  date: '2008-01-01'
+  type: thesis
+  link: https://www.billmongan.com/publication/msthesis
+  image: /images/neural-network.svg
+  tags:
+    - software engineering
+    - web
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: doi:10.1007/978-3-030-67494-6_4
+  title: "Wearable Smart Garment Devices for Passive Biomedical Monitoring"
+  authors:
+    - Chelsea Amanatides
+    - Stephen Hansen
+    - Ariana S. Levitt
+    - Yuqiao Liu
+    - Patrick O-Neill
+    - Damiano Patron
+    - Robert Ross
+    - Daniel Schwartz
+    - Jesse Stover
+    - Md Abu Saleh Tajin
+    - Genevieve Dion
+    - Adam K. Fontecchio
+    - Vasil Pano
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: "Biomedical Signal Processing: Innovation and Applications"
+  date: '2021-04-01'
+  type: paper
+  link: https://www.billmongan.com/publication/spmb2021
+  image: /images/ecg-trace.svg
+  tags:
+    - wearables
+    - healthcare
+    - iot
+    - rfid
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:aose2011
+  title: "A Methodology for Developing an Agent Systems Reference Architecture"
+  authors:
+    - Duc N. Nguyen
+    - Kyle Usbeck
+    - William M. Mongan
+    - Christopher T. Cannon
+    - Robert N. Lass
+    - Jeff Salvage
+    - William C. Regli
+    - Israel Mayk
+    - Todd Urness
+  publisher: "Agent-Oriented Software Engineering XI"
+  date: '2011-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/aose2011
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:sensors2023
+  title: "Passive UHF RFID-based Real-Time Intravenous Fluid Level Sensor"
+  authors:
+    - Md Abu Saleh Tajin
+    - Md Shakir Hossain
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: IEEE Sensors Journal
+  date: '2023-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/sensors2023
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - healthcare
+    - iot
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:electronics2022
+  title: "Energy-Efficient Respiratory Anomaly Detection in Premature Newborn Infants"
+  authors:
+    - Ankita Paul
+    - Md. A.S. Tajin
+    - Anup Das
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: "MDPI Electronics Journal - Neuromorphic Sensing and Computing Systems"
+  date: '2022-03-01'
+  type: paper
+  link: https://www.billmongan.com/publication/electronics2022
+  image: /images/ecg-trace.svg
+  tags:
+    - machine learning
+    - healthcare
+    - rfid
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:access2020
+  title: "UHF RFID Channel Emulation Testbed for Wireless IoT Systems"
+  authors:
+    - Md Abu Saleh Tajin
+    - Marko Jacovic
+    - Genevieve Dion
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: IEEE Access Journal
+  date: '2021-05-01'
+  type: paper
+  link: https://www.billmongan.com/publication/access2020
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - iot
+    - wireless
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:sensors2020
+  title: "Passive RFID-based Diaper Moisture Sensor"
+  authors:
+    - Md Abu Saleh Tajin
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: IEEE Sensors Journal
+  date: '2020-10-01'
+  type: paper
+  link: https://www.billmongan.com/publication/sensors2020
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - healthcare
+    - iot
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:tbhi2019
+  title: "Ensemble Learning Approach via Kalman Filtering for a Passive Wearable Respiratory Monitor"
+  authors:
+    - Sayandeep Acharya
+    - William M. Mongan
+    - Ilhaan Rasheed
+    - Yuqiao Liu
+    - Endla Anday
+    - Genevieve Dion
+    - Adam Fontecchio
+    - Timothy Kurzweg
+    - Kapil R. Dandekar
+  publisher: IEEE Transactions on Biomedical and Health Informatics
+  date: '2019-05-01'
+  type: paper
+  link: https://www.billmongan.com/publication/tbhi2019
+  image: /images/ecg-trace.svg
+  tags:
+    - machine learning
+    - healthcare
+    - wearables
+    - rfid
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:tbcs2016
+  title: "On the Use of Knitted Antennas and Inductively Coupled RFID Tags for Wearable Applications"
+  authors:
+    - Damiano Patron
+    - William Mongan
+    - Timothy Kurzweg
+    - Adam Fontecchio
+    - Genevieve Dion
+    - Endla Anday
+    - Kapil R. Dandekar
+  publisher: IEEE Transactions on Biomedical Circuits and Systems
+  date: '2016-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/tbcs2016
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - wearables
+    - iot
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:thms2013
+  title: "Development and Specification of a Reference Architecture for Agent-Based Systems"
+  authors:
+    - William Regli
+    - Israel Mayk
+    - Christopher Cannon
+    - Joseph Kopena
+    - Robert Lass
+    - William M. Mongan
+  publisher: IEEE Transactions on Human Machine Systems
+  date: '2013-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/thms2013
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:smc2009
+  title: "Development and Specification of a Reference Model for Agent-Based Systems"
+  authors:
+    - William Regli
+    - Israel Mayk
+    - Christopher J. Dugan
+    - Joseph B. Kopena
+    - Robert N. Lass
+    - Pragnesh Jay Modi
+    - William M. Mongan
+    - Jeff K. Salvage
+    - Evan A. Sultanik
+  publisher: IEEE Transactions on Systems Man and Cybernetics
+  date: '2009-09-01'
+  type: paper
+  link: https://www.billmongan.com/publication/smc2009
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:compsac2021
+  title: "An Adaptively Parameterized Algorithm Estimating Respiratory Rate from a Passive Wearable RFID Smart Garment"
+  authors:
+    - Robert Ross
+    - William M. Mongan
+    - Patrick O-Neill
+    - Ilhaan Rasheed
+    - Adam Fontecchio
+    - Genevieve Dion
+    - Kapil R. Dandekar
+  publisher: "IEEE Conference on Computers, Software, and Applications (COMPSAC)"
+  date: '2021-07-01'
+  type: paper
+  link: https://www.billmongan.com/publication/compsac2021
+  image: /images/ecg-trace.svg
+  tags:
+    - rfid
+    - healthcare
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:wamicon2020
+  title: "Channel Emulation for the Characterization of Wearable RFID Antennas"
+  authors:
+    - Md Abu Saleh Tajin
+    - Marko Jacovic
+    - Xaime Rivas Rey
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: "IEEE Wireless and Microwave Technology Conference (WAMICON)"
+  date: '2021-04-01'
+  type: paper
+  link: https://www.billmongan.com/publication/wamicon2020
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - wireless
+    - wearables
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:bibe2020
+  title: "Fusion Learning on Multiple-Tag RFID Measurements for Respiratory Rate Monitoring"
+  authors:
+    - Stephen Hansen
+    - Daniel Schwartz
+    - Jesse Stover
+    - Md Abu Saleh Tajin
+    - William M. Mongan
+    - Kapil R. Dandekar
+  publisher: "IEEE International Conference on Bioinformatics and Biomedical Engineering (BIBE)"
+  date: '2020-10-01'
+  type: paper
+  link: https://www.billmongan.com/publication/bibe2020
+  image: /images/ecg-trace.svg
+  tags:
+    - machine learning
+    - rfid
+    - healthcare
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:spmb2019
+  title: "An Adaptive Search Algorithm for Detecting Respiratory Artifacts Using a Wireless Passive Wearable Device"
+  authors:
+    - Patrick O-Neill
+    - William M. Mongan
+    - Robert Ross
+    - Sayandeep Acharya
+    - Adam K. Fontecchio
+    - Kapil R. Dandekar
+  publisher: "IEEE Signal Processing in Medicine and Biology"
+  date: '2019-12-01'
+  type: paper
+  link: https://www.billmongan.com/publication/spmb2019
+  image: /images/ecg-trace.svg
+  tags:
+    - rfid
+    - healthcare
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:compsac2019
+  title: "Activity Segmentation Using Wearable Sensors for DVT/PE Risk Detection"
+  authors:
+    - Austin Gentry
+    - William M. Mongan
+    - Brent Lee
+    - Owen Montgomery
+    - Kapil Dandekar
+  publisher: "The First IEEE International Workshop on Integrated Smart Healthcare (WISH 2019) at IEEE COMPSAC"
+  date: '2019-07-01'
+  type: paper
+  link: https://www.billmongan.com/publication/compsac2019
+  image: /images/ecg-trace.svg
+  tags:
+    - machine learning
+    - healthcare
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:spmb2017
+  title: "Data Fusion of Single-Tag RFID Measurements for Respiratory Rate Monitoring"
+  authors:
+    - William M. Mongan
+    - Robert Ross
+    - Ilhaan Rasheed
+    - Yuqiao Liu
+    - Khyati Ved
+    - Endla Anday
+    - Kapil Dandekar
+    - Genevieve Dion
+    - Timothy Kurzweg
+    - Adam Fontecchio
+  publisher: "IEEE Signal Processing in Medicine and Biology (SPMB)"
+  date: '2017-12-01'
+  type: paper
+  link: https://www.billmongan.com/publication/spmb2017
+  image: /images/ecg-trace.svg
+  tags:
+    - rfid
+    - healthcare
+    - signal processing
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:rfid2017
+  title: "On Implementing an Unconventional Infant Vital Signs Monitor with Passive RFID Tags"
+  authors:
+    - Shrenik A. Vora
+    - William M. Mongan
+    - Endla K. Anday
+    - Kapil R. Dandekar
+    - Genevieve Dion
+    - Adam K. Fontecchio
+    - Timothy P. Kurzweg
+  publisher: "IEEE International Conference on RFID"
+  date: '2017-05-01'
+  type: paper
+  link: https://www.billmongan.com/publication/rfid2017
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - healthcare
+    - wearables
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:iotdi2017
+  title: "On the Use of Radio Frequency Identification for Continuous Biomedical Monitoring"
+  authors:
+    - William Mongan
+    - Ilhaan Rasheed
+    - Khyati Ved
+    - Shrenik Vora
+    - Kapil Dandekar
+    - Genevieve Dion
+    - Timothy Kurzweg
+    - Adam Fontecchio
+  publisher: "ACM/IEEE International Conference on Internet-of-Things Design and Implementation (IoTDI)"
+  date: '2017-04-01'
+  type: paper
+  link: https://www.billmongan.com/publication/iotdi2017
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - healthcare
+    - iot
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:spmb2016
+  title: "Real-Time Detection of Apnea via Signal Processing of Time-Series Properties of RFID-Based Smart Garments"
+  authors:
+    - William M. Mongan
+    - Ilhaan Rasheed
+    - Khyati Ved
+    - Ariana Levitt
+    - Endla Anday
+    - Kapil Dandekar
+    - Genevieve Dion
+    - Timothy Kurzweg
+    - Adam Fontecchio
+  publisher: "IEEE Signal Processing in Medicine and Biology (SPMB)"
+  date: '2016-12-01'
+  type: paper
+  link: https://www.billmongan.com/publication/spmb2016
+  image: /images/ecg-trace.svg
+  tags:
+    - rfid
+    - healthcare
+    - signal processing
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:smartcomp2016
+  title: "A Multi-Disciplinary Framework for Continuous Biomedical Monitoring Using Low-Power Passive RFID-based Wireless Wearable Sensors"
+  authors:
+    - William Mongan
+    - Endla Anday
+    - Genevieve Dion
+    - Adam Fontecchio
+    - Tim Kurzweg
+    - Kelly Joyce
+    - Yuqiao Liu
+    - Owen Montgomery
+    - Ilhaan Rasheed
+    - Cem Sahin
+    - Shrenik Vora
+    - Kapil Dandekar
+  publisher: "Proceedings of the IEEE Smart Systems Workshop"
+  date: '2016-05-01'
+  type: paper
+  link: https://www.billmongan.com/publication/smartcomp2016
+  image: /images/wireless-encrypted.svg
+  tags:
+    - rfid
+    - healthcare
+    - wearables
+    - iot
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:bhi2016
+  title: "Wireless Heart and Respiration Monitoring for Infants through Passive RFID Tags"
+  authors:
+    - Shrenik Vora
+    - William Mongan
+    - Kapil Dandekar
+    - Adam Fontecchio
+    - Tim Kurzweg
+  publisher: "IEEE International Conference on Biomedical and Health Informatics (BHI)"
+  date: '2016-02-01'
+  type: paper
+  link: https://www.billmongan.com/publication/bhi2016
+  image: /images/ecg-trace.svg
+  tags:
+    - rfid
+    - healthcare
+    - wearables
+  cluster: biomedical-ml
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:aose2010
+  title: "Developing an Agent Systems Reference Architecture"
+  authors:
+    - Duc N. Nguyen
+    - Robert N. Lass
+    - Kyle Usbeck
+    - William M. Mongan
+    - Christopher T. Cannon
+    - William C. Regli
+    - Israel Mayk
+    - Todd Urness
+  publisher: "Proceedings of the 11th International Workshop on Agent Oriented Software Engineering"
+  date: '2010-05-01'
+  type: paper
+  link: https://www.billmongan.com/publication/aose2010
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:icpc2008
+  title: "Re-engineering a Reverse Engineering Portal to a Distributed SOA"
+  authors:
+    - William M. Mongan
+    - Maxim Shevertalov
+    - Spiros Mancoridis
+  publisher: "IEEE Proceedings of the 16th International Conference on Program Comprehension (ICPC)"
+  date: '2008-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/icpc2008
+  image: /images/neural-network.svg
+  tags:
+    - software engineering
+    - web
+  cluster: systems-iot-cv
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:asee2008
+  title: "Computer Aided Instruction as a Vehicle for Problem Solving: Scratch Programming Environment in the Middle Years Classroom"
+  authors:
+    - Quincy Brown
+    - William Mongan
+    - Elaine Garbarine
+    - Dara Kusic
+    - Eli Fromm
+    - Adam Fontecchio
+  publisher: "Proceedings of the American Society for Engineering Education (ASEE) K-12 Track"
+  date: '2008-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/asee2008
+  image: /images/neural-network.svg
+  tags:
+    - cs education
+    - k-12
+  cluster: teaching-learning
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:aaai2008
+  title: "A Cyber-Infrastructure for Supporting K-12 Engineering Education through Robotics"
+  authors:
+    - William M. Mongan
+    - William C. Regli
+  publisher: "The Proceedings of the Association for the Advancement of Artificial Intelligence (AAAI) Education Track"
+  date: '2008-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/aaai2008
+  image: /images/neural-network.svg
+  tags:
+    - cs education
+    - k-12
+    - robotics
+  cluster: teaching-learning
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:iadis2007
+  title: "Dynamic Analysis of Agent Frameworks in Support of a Multiagent Systems Reference Model"
+  authors:
+    - William M. Mongan
+    - Christopher J. Dugan
+    - Robert N. Lass
+    - Andrew K. Hight
+    - Jeff Salvage
+    - William C. Regli
+    - Pragnesh J. Modi
+  publisher: "IADIS Proceedings of the International Conference Intelligent Systems and Agents (ISA)"
+  date: '2007-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/iadis2007
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:asc2006
+  title: "A Reference Model for Agent-Based Command and Control Systems"
+  authors:
+    - Christopher J. Dugan
+    - Pragnesh Jay Modi
+    - Joseph Kopena
+    - William M. Mongan
+    - William C. Regli
+    - Israel Mayk
+  publisher: "Proceedings of the 25th Army Science Conference"
+  date: '2006-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/asc2006
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:aamas2006
+  title: "Towards a Reference Model for Intelligent Agent Systems"
+  authors:
+    - Pragnesh Jay Modi
+    - Spiros Mancoridis
+    - William M. Mongan
+    - William Regli
+    - Israel Mayk
+  publisher: "Proceedings of the International Conference of Autonomous Agents and Multiagent Systems (AAMAS)"
+  date: '2006-01-01'
+  type: paper
+  link: https://www.billmongan.com/publication/aamas2006
+  image: /images/neural-network.svg
+  tags:
+    - agents
+    - software engineering
+  cluster: systems-agents
+  research-visible: false
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+
+- id: manual:pandemonium-2019-sigcse
+  title: "Post-It Pandemonium: Teaching Image Representation and Compression with an \"Unplugged\" Activity"
+  authors:
+    - William M. Mongan
+    - Jeffrey L. Popyack
+  publisher: "ACM SIGCSE 2019 Nifty Assignment"
+  date: '2019-02-01'
+  cluster: teaching-learning
+  image: https://img.youtube.com/vi/72TPC2bYaLk/hqdefault.jpg
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan

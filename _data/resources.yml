@@ -26,6 +26,18 @@
   link: https://michaelcummins1.github.io/nviz/
   description: "NVIZ is an interactive, no-code neural network visualizer that lets you upload data, define a network architecture, train a model, and explore its behavior through Sankey diagram visualizations — all in the browser. Designed to improve AI literacy through hands-on experimentation, NVIZ makes explainable AI (XAI) accessible without any programming knowledge. Developed by Ursinus students Kevin Hoffman and Michael Cummins. Source code available on <a href=\"https://github.com/michaelcummins1/nviz\">GitHub</a>."
 
+- title: "Ursinus WebIDE"
+  type: featured
+  image: https://www.billmongan.com/Ursinus-WebIDE/images/graphicsScreenshot.png
+  link: https://www.billmongan.com/Ursinus-WebIDE/
+  description: "A serverless, browser-based development environment for student practice and rapid instructor exercise development, supporting multiple languages with no setup required. Developed with Christopher Tralie at Ursinus College."
+
+- title: "Grizzly Guide to Wealth (GGTW) — Student Presentation"
+  type: featured
+  image: /images/candlestick-chart.svg
+  link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
+  description: "Financial literacy and planning tools developed for the Grizzly Guide to Wealth platform, presented at Ursinus CoSA 2025. Developed by Eugene Thompson and George Psaradakis."
+
 - title: IoT Sensor Framework
   type: featured
   image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg

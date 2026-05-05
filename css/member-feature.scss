@@ -152,8 +152,8 @@
 }
 
 // ── Single member page wrapper ─────────────────────────────────────────────
-// Used by _layouts/member.html. Wraps the member-feature block + a small
-// "papers by this member" link.
+// Used by _layouts/member.html. Wraps the member-feature block plus
+// project and publication sections for this member.
 
 .member-page {
   position: relative;
@@ -170,42 +170,141 @@
   margin: 0 auto;
 }
 
-.member-page_papers {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
+// ── Work sections (projects + publications) ──────────────────────────────────
+
+.member-page_work {
   margin-top: 56px;
   padding-top: 32px;
   border-top: 1px solid $border-medium;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.member-page_section-title {
   font-family: $sans;
-  font-size: 0.95rem;
+  font-size: 0.72rem;
   font-weight: $semi-bold;
-  color: $primary;
-  text-decoration: none;
-  width: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
+  margin: 0 0 20px 0;
+  padding: 0;
 
-  i {
-    font-size: 0.85rem;
+  &::after {
+    display: none;
+  }
+}
+
+.member-page_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.member-page_list-item {
+  padding: 18px 0;
+  border-bottom: 1px solid $border-medium;
+
+  &:first-child {
+    border-top: 1px solid $border-medium;
+  }
+}
+
+.member-page_item-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.member-page_item-title {
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 0.98rem;
+  font-weight: $medium;
+  line-height: 1.45;
+  color: $text-dark;
+  margin: 0 0 4px 0;
+  padding: 0;
+  display: block;
+
+  &::after {
+    display: none;
   }
 
-  span:last-child {
-    transition: transform $fast;
-    display: inline-block;
-  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color $fast, border-color $fast;
 
-  &:hover {
-    color: #f84b4b;
+    &:hover {
+      color: $primary;
+      border-bottom-color: rgba($primary, 0.4);
+    }
 
-    span:last-child {
-      transform: translateX(4px);
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: 2px;
     }
   }
+}
 
-  &:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba($primary, 0.30);
-    border-radius: 2px;
+.member-page_item-badge {
+  font-family: $sans;
+  font-size: 0.68rem;
+  font-weight: $semi-bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: $radius-full;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &--active {
+    background: rgba($primary, 0.1);
+    color: $primary;
   }
+
+  &--completed {
+    background: $bg-raised;
+    color: $text-secondary;
+  }
+
+  &--year {
+    background: $bg-raised;
+    color: $text-secondary;
+  }
+}
+
+.member-page_item-desc {
+  font-family: $sans;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin: 4px 0 0 0;
+}
+
+.member-page_item-meta {
+  font-family: $sans;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: $text-secondary;
+  margin: 0;
+
+  em {
+    font-style: normal;
+  }
+}
+
+.member-page_dot {
+  color: $border-strong;
 }
 
 // ── Mobile ─────────────────────────────────────────────────────────────────
@@ -230,7 +329,7 @@
     padding: 48px 24px 64px;
   }
 
-  .member-page_papers {
+  .member-page_work {
     margin-top: 40px;
     padding-top: 24px;
   }
@@ -239,10 +338,6 @@
 // ── Reduced motion ─────────────────────────────────────────────────────────
 @media (prefers-reduced-motion: reduce) {
   .member-feature_portrait:hover img {
-    transform: none;
-  }
-
-  .member-page_papers:hover span:last-child {
     transform: none;
   }
 }

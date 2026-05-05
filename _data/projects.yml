@@ -2,24 +2,39 @@
 #
 # status: "active" | "completed"
 # type:   "research" | "software" | "student"
-# link:   Optional URL (demo, repo, publication, etc.)
 # image:  Optional thumbnail URL or path
+# research: Optional array of research-output IDs to show in the sidebar
 
-- title: "Mathforum AI: Mentir AI"
+- title: "AI in K-12 Math Education"
   status: active
   type: research
   image: /images/neural-network.svg
   description: >
-    An AI-powered math tutoring assistant built on the historic Mathforum
-    problem-thread archive. The project explores RAG (retrieval-augmented
-    generation) and fine-tuning strategies to provide pedagogically sound
-    feedback on student mathematical thinking, in collaboration with Jason
-    Silverman and the Gates Foundation.
+    Part of the Gates Foundation-funded MentirAI project, this research
+    builds an AI-powered math tutoring assistant on the historic Mathforum
+    problem-thread archive, exploring RAG (retrieval-augmented generation)
+    and fine-tuning strategies to provide pedagogically sound feedback on
+    student mathematical thinking, in collaboration with Jason Silverman.
+    The work extends into broader investigations of AI applications in
+    educational contexts — including generative AI, classroom integration,
+    and pedagogy — conducted with students across CS394 and the Honors
+    thesis sequence (CS491–CS492). This collaboration began in 2019.
   tags:
     - ai
     - education
     - mathematics
     - rag
+
+  team-contributors:
+    - william-m-mongan
+    - claire
+    - michael-c
+    - matthew-l
+    - renzhi
+    - tim
+  research:
+    - "manual:reinsburrow-2026-site"
+    - "manual:cummins-2026-cosa-rag"
 
 - title: "End-to-End Intelligent Cardiorespiratory Monitor"
   status: active
@@ -29,42 +44,115 @@
     A full-stack wearable system in collaboration with the Drexel Wireless Systems Lab for continuous, ambulatory cardiorespiratory
     monitoring. The project integrates signal acquisition, edge processing,
     and machine learning inference for real-time health monitoring outside
-    clinical settings.
+    clinical settings, and includes the IoT Sensor Framework (a HIPAA-compliant
+    platform for collecting data from IoT-based sensors including knitted smart
+    textiles) and the IoT Processing Framework (real-time and offline signal
+    processing and machine learning on sensor data), both developed with the
+    Drexel Wireless Systems Lab. Related student work includes multi-semester
+    research in RF-based biomedical signal acquisition and analysis using
+    wearable IoT devices (conducted across CS391 and CS394), independent study
+    in multi-sensor data fusion techniques for wearable and IoT applications
+    (conducted in CS392), and a machine learning pipeline for minute-level and
+    subject-level sleep apnea detection using ECG signals (presented at Ursinus
+    CoSA 2026 by Andrei Bogdan). We became involved in this research in 2013.
   tags:
     - machine learning
     - healthcare
     - wearables
     - iot
+    - sensing
+    - signal processing
+    - ecg
 
-- title: "RFID Antenna State Selection"
+  team-contributors:
+    - william-m-mongan
+    - andrei
+    - ian
+    - kevin-h
+  research:
+    - "manual:dissertation"
+    - "doi:10.1007/978-3-030-67494-6_4"
+    - "manual:electronics2022"
+    - "manual:compsac2021"
+    - "manual:bibe2020"
+    - "manual:spmb2019"
+    - "manual:compsac2019"
+    - "manual:tbhi2019"
+    - "manual:spmb2017"
+    - "manual:iotdi2017"
+    - "manual:rfid2017"
+    - "manual:spmb2016"
+    - "manual:smartcomp2016"
+    - "manual:bhi2016"
+    - "doi:10.5281/zenodo.3786933"
+    - "doi:10.5281/zenodo.3825126"
+    - "manual:bogdan-2026-cosa-sleep"
+
+- title: "RF Antenna State Selection for Localization and Tracking"
   status: active
   type: research
   image: /images/wireless-encrypted.svg
   description: >
-    Research into intelligent antenna state selection for RFID-based sensing in collaboration with the Drexel Wireless Systems Lab, targeting improved read range and accuracy in multi-tag environments.
+    Research into intelligent antenna state selection for RFID-based sensing
+    in collaboration with the Drexel Wireless Systems Lab, targeting improved
+    read range and accuracy in multi-tag environments. Related student research
+    includes RFID-based indoor localization, multi-tag tracking, and dynamic
+    radar sensing techniques, as well as research and educational module
+    development for software-defined radio (SDR) platforms in smart-grid
+    communication scenarios, conducted across CS392 and CS394. We became
+    involved in this research in 2016.
   tags:
     - rfid
     - wireless
     - sensing
+    - sdr
+    - infrastructure
+
+  team-contributors:
+    - william-m-mongan
+    - josh-b
+    - brenden
+    - ian
+    - josh-k
+    - kacey
+    - khoi
+    - matt-quigley
+    - nikolai
+    - zack
+    - breeze
+  research:
+    - "manual:sensors2023"
+    - "manual:access2020"
+    - "manual:sensors2020"
+    - "manual:wamicon2020"
+    - "manual:tbcs2016"
 
 - title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
   status: active
-  type: student
+  type: research
   image: /images/rag-schema.svg
   description: >
     Student research comparing retrieval-augmented generation and fine-tuning
     for building an AI math tutoring assistant on the Mathforum archive.
     Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
-    and Claire Shoemaker.
+    and Claire Shoemaker. This work began in 2025.
   tags:
     - ai
     - education
     - rag
 
+  team-contributors:
+    - william-m-mongan
+    - michael-c
+    - matthew-l
+    - claire
+  research:
+    - "manual:cummins-2026-cosa-rag"
+    - "manual:reinsburrow-2026-site"
+
 - title: "NVIZ: Neural Network Visualizer"
-  status: completed
+  status: active
   type: software
-  link: https://michaelcummins1.github.io/nviz/
   image: /images/nviz-sankey.png
   description: >
     An interactive, no-code neural network visualizer that lets users upload
@@ -72,313 +160,326 @@
     behavior through Sankey diagram visualizations — all in the browser.
     Developed by Ursinus students Kevin Hoffman and Michael Cummins.
     Source on <a href="https://github.com/michaelcummins1/nviz">GitHub</a>.
+    Related work includes tools for making machine learning model decisions
+    more interpretable and transparent (presented at Ursinus CoSA 2025 by
+    Michael Cummins), and independent studies developing methods to visualize
+    internal feature representations in trained neural networks. Conducted by
+    multiple students across CS391 and CS392. Development began in 2022.
   tags:
+    - ai
     - explainableai
     - visualization
     - education
 
+  team-contributors:
+    - william-m-mongan
+    - kevin-h
+    - michael-c
+  research:
+    - "url:https://digitalcommons.ursinus.edu/math_comp_pres/4/"
+    - "manual:cummins-2025-cosa-explainability"
+
 - title: "Ursinus WebIDE"
   status: completed
   type: software
-  link: https://www.billmongan.com/Ursinus-WebIDE/
   image: https://www.billmongan.com/Ursinus-WebIDE/images/graphicsScreenshot.png
   description: >
     A serverless, browser-based development environment for student practice
     and rapid instructor exercise development, supporting multiple languages
-    with no setup required. Developed with Christopher Tralie.
+    with no setup required. Developed with Christopher Tralie. Development
+    took place from 2020 to 2026.
   tags:
     - cs education
     - ide
     - webide
 
-- title: "IoT Sensor Framework"
-  status: completed
-  type: software
-  link: https://github.com/drexelwireless/iot-sensor-framework
-  image: http://www.billmongan.com/files/media/software-iotframework/simbabyandpregnancy.jpg
-  description: >
-    A platform to collect data from IoT-based sensors — including knitted
-    smart textiles — for HIPAA-compliant processing and research. Developed
-    with the Drexel Wireless Systems Lab.
-  tags:
-    - iot
-    - healthcare
-    - wearables
-
-- title: "IoT Processing Framework"
-  status: completed
-  type: software
-  link: https://github.com/drexelwireless/iot-processing-framework
-  image: http://www.billmongan.com/files/media/software-iotframework/simbaby.jpg
-  description: >
-    Integrates with the IoT Sensor Framework to provide real-time or offline
-    signal processing and machine learning on data collected by the sensor
-    framework. Developed with the Drexel Wireless Systems Lab.
-  tags:
-    - iot
-    - machine learning
-    - signal processing
-
-- title: "Sleep Apnea Detection via ECG"
-  status: completed
-  type: student
-  image: /images/ecg-trace.svg
-  description: >
-    A machine learning pipeline for minute-level and subject-level sleep apnea
-    detection using ECG signals. Presented at Ursinus CoSA 2026. Developed by
-    Andrei Bogdan.
-  tags:
-    - machine learning
-    - healthcare
-    - ecg
-
-- title: "AI Explainability Tools"
-  status: completed
-  type: student
-  image: /images/decision-tree.svg
-  description: >
-    Tools for making machine learning model decisions more interpretable and
-    transparent. Presented at Ursinus CoSA 2025. Developed by Michael Cummins.
-  tags:
-    - explainableai
-    - ai
+  team-contributors:
+    - william-m-mongan
+  research:
+    - "doi:10.1145/3770761.3777114"
 
 - title: "Grizzly Guide to Wealth (GGTW)"
   status: completed
-  type: student
-  link: https://digitalcommons.ursinus.edu/math_comp_pres/9/
+  type: research
   image: /images/candlestick-chart.svg
   description: >
     A suite of financial literacy and planning tools developed for the Grizzly
     Guide to Wealth platform. Presented at Ursinus CoSA 2025. Developed by
-    Eugene Thompson and George Psaradakis.
+    Eugene Thompson and George Psaradakis. Related independent study work
+    developed FinLitKit, an open financial literacy toolkit for educational
+    and personal finance use, conducted in CS392. This work was conducted
+    from 2024 to 2025.
   tags:
     - financial
     - tools
 
+  team-contributors:
+    - william-m-mongan
+    - eugene-t
+  research:
+    - "manual:thompson-2025-cosa-ggtw"
+
 - title: "UCPlaces: Campus Orientation App"
   status: completed
-  type: student
+  type: research
   image: /images/map-pin.svg
   description: >
     A mobile campus orientation app using ArcGIS to help new students navigate
     Ursinus College. Presented at Ursinus CoSA 2023. Developed by Arthur Artene
-    and Tristan Ashcroft.
+    and Tristan Ashcroft. This work was conducted from 2022 to 2023.
   tags:
     - gis
     - mobile
 
+  team-contributors:
+    - william-m-mongan
+    - arthur
+  research:
+    - "manual:artene-2023-cosa-ucplaces"
+
 - title: "RF IoT Security Layer"
   status: completed
-  type: student
+  type: research
   image: /images/wireless-encrypted.svg
   description: >
     A radio-frequency security layer for IoT sensor networks, adding
     authentication and encryption at the physical layer. Presented at
-    Ursinus CoSA 2023. Developed by Jonas Ling.
+    Ursinus CoSA 2023. Developed by Jonas Ling. Related independent study
+    explored side-channel electromagnetic signatures for hardware-level
+    malware detection, conducted in CS391. This work was conducted from
+    2021 to 2023.
   tags:
     - iot
     - security
+    - cybersecurity
+    - machine learning
+
+  team-contributors:
+    - william-m-mongan
+    - jonas
+  research:
+    - "manual:ling-2023-cosa-iot"
 
 - title: "Automated Moon Crater Detection"
   status: completed
-  type: student
+  type: research
   image: /images/moon-crater.svg
   description: >
     Exploring algorithmic and neural network approaches to automatically
     detect and catalog craters on the lunar surface from LRO imagery.
-    Presented at Ursinus CoSA 2023. Developed by Dylan Melby.
+    Presented at Ursinus CoSA 2023. Developed by Dylan Melby. Related
+    independent study applied deep learning techniques to astrophysical
+    image and data analysis more broadly, conducted in CS391. This work
+    was conducted from 2020 to 2023.
   tags:
     - machine learning
     - computer vision
+    - astrophysics
+
+  team-contributors:
+    - william-m-mongan
+    - dylan
+    - will
+  research:
+    - "manual:melby-2023-cosa-moon"
 
 - title: "Interactive AI Theater Presentation"
   status: active
-  type: student
+  type: research
   image: /images/neural-network.svg
   description: >
     An AI-driven interactive theater performance exploring human-machine
     collaboration in live performance art. Presented at Ursinus CoSA 2026.
-    Developed by Levi Fritz and Shannon Zura.
+    Developed by Levi Fritz and Shannon Zura. This work began in 2025.
   tags:
     - ai
     - performance art
     - interactive
 
-- title: "AI in Teaching and Learning"
+  team-contributors:
+    - william-m-mongan
+    - levi-f
+  research:
+    - "manual:fritz-2026-cosa-theater"
+
+
+- title: "Pennsylvania Statewide Computing Education Data Systems (NSF ECEP)"
   status: active
-  type: student
+  type: research
+  image: /images/map-pin.svg
+  description: >
+    An internship project developing statewide data infrastructure for
+    Pennsylvania to broaden access to K–12 computing education, in support
+    of the NSF Expanding Computing Education Pathways (ECEP) Alliance.
+    Conducted by one student (CS382). This work began in 2025.
+  tags:
+    - cs education
+    - data systems
+    - broadening participation
+
+  team-contributors:
+    - jonathan
+    - william-m-mongan
+
+- title: "Institutional Tonality Analysis for At-Risk Student Re-Engagement"
+  status: active
+  type: research
   image: /images/neural-network.svg
   description: >
-    Honors and research independent studies investigating AI applications
-    in educational contexts, including generative AI, classroom integration,
-    and pedagogy. Conducted by four students across CS394 and the Honors
-    thesis sequence (CS491–CS492).
+    An internship project analyzing institutional communication data to
+    identify trends in linguistic tonality and their relationship to academic
+    re-engagement among at-risk students. Conducted by one student (CS382).
+    This work began in 2025.
   tags:
-    - ai
+    - data analysis
     - education
+    - student success
+    - nlp
+
+  team-contributors:
+    - william-m-mongan
+    - izayah-c
 
 - title: "AI-Based Wi-Fi Penetration Tool"
-  status: completed
-  type: student
+  status: active
+  type: research
   image: /images/wireless-encrypted.svg
   description: >
     Honors independent study designing an AI-assisted tool for automated
-    Wi-Fi security assessment and penetration testing. Conducted in the
-    Honors thesis sequence (CS491–CS492).
+    Wi-Fi security assessment and penetration testing, using the Pwnagotchi
+    software framework to explore and mitigate Wi-Fi vulnerability exploits.
+    Conducted in the Honors thesis sequence (CS491–CS492). This work began
+    in 2025.
   tags:
     - ai
     - cybersecurity
     - wireless
 
+  team-contributors:
+    - william-m-mongan
+    - emily
+
 - title: "Human Pose Estimation through WiFi"
   status: completed
-  type: student
+  type: research
   image: /images/wireless-encrypted.svg
   description: >
     Research independent studies using RF signal analysis and machine
     learning to estimate human body pose without cameras. Conducted by
-    two students (CS394).
+    two students (CS394). This work was conducted from 2023 to 2024.
   tags:
     - machine learning
     - wireless
     - sensing
 
-- title: "RFID Localization and Tracking"
-  status: completed
-  type: student
-  image: /images/wireless-encrypted.svg
-  description: >
-    Research independent studies in RFID-based indoor localization,
-    multi-tag tracking, and dynamic radar sensing techniques. Conducted
-    by four students across CS394.
-  tags:
-    - rfid
-    - wireless
-    - sensing
+  team-contributors:
+    - william-m-mongan
+    - kacey
 
-- title: "RF Biomedical Analysis via Wearable IoT"
-  status: completed
-  type: student
-  image: /images/ecg-trace.svg
-  description: >
-    Multi-semester research in RF-based biomedical signal acquisition
-    and analysis using wearable IoT sensor devices. Conducted by four
-    students across CS391 and CS394.
-  tags:
-    - healthcare
-    - wearables
-    - iot
 
-- title: "Grid Software Defined Radios"
+- title: "Natural Language Processing to Parse the Taino Language"
   status: completed
-  type: student
-  image: /images/wireless-encrypted.svg
-  description: >
-    Research and educational module development for software-defined
-    radio (SDR) platforms in smart-grid communication scenarios.
-    Conducted by multiple students across CS392 and CS394.
-  tags:
-    - wireless
-    - sdr
-    - infrastructure
-
-- title: "AI Feature Visualization"
-  status: completed
-  type: student
+  type: research
   image: /images/neural-network.svg
   description: >
-    Research independent studies developing methods to visualize
-    internal feature representations in trained neural networks,
-    connecting to broader explainable AI themes. Conducted by
-    multiple students across CS391 and CS392.
-  tags:
-    - ai
-    - explainableai
-    - visualization
-
-- title: "Natural Language Processing Research"
-  status: completed
-  type: student
-  image: /images/neural-network.svg
-  description: >
-    Research independent study in natural language processing
-    techniques and applications, including retrieval-augmented
-    approaches. Conducted by three students (CS394).
+    Research independent study applying natural language processing
+    techniques — including retrieval-augmented approaches — to parse and
+    analyze the Taino language. Conducted by three students (CS394). This
+    work was conducted from 2023 to 2024.
   tags:
     - ai
     - nlp
+    - linguistics
 
-- title: "FinLitKit: Financial Literacy Toolkit"
-  status: completed
-  type: student
-  image: /images/candlestick-chart.svg
-  description: >
-    Independent study developing an open financial literacy
-    toolkit for educational and personal finance use. Conducted
-    in CS392.
-  tags:
-    - financial
-    - tools
-
-- title: "Sensor Fusion Research"
-  status: completed
-  type: student
-  image: /images/ecg-trace.svg
-  description: >
-    Research independent study in multi-sensor data fusion
-    techniques for wearable and IoT applications. Conducted
-    by two students (CS392).
-  tags:
-    - iot
-    - sensing
-    - machine learning
-
-- title: "Malware Detection via Electromagnetic Response"
-  status: completed
-  type: student
-  image: /images/wireless-encrypted.svg
-  description: >
-    Research independent study exploring side-channel
-    electromagnetic signatures for hardware-level malware
-    detection. Conducted in CS391.
-  tags:
-    - cybersecurity
-    - machine learning
+  team-contributors:
+    - william-m-mongan
+    - audrey
+    - mold
+    - matthew-a
 
 - title: "Virtual Museum Environments"
   status: completed
-  type: student
+  type: research
   image: /images/map-pin.svg
   description: >
     Research independent study in virtual reality museum
     environment design and interactive digital exhibit
-    development. Conducted in CS391.
+    development. Conducted in CS391. This work was conducted from 2023
+    to 2024.
   tags:
     - vr
     - education
 
+  team-contributors:
+    - william-m-mongan
+    - josh-f
+
 - title: "Wireless Emergency Communications"
-  status: completed
-  type: student
+  status: active
+  type: research
   image: /images/wireless-encrypted.svg
   description: >
-    Independent studies in reliable RF-based emergency
-    communication systems and protocols, including amateur
-    radio integration. Conducted across CS392 and CS394.
+    Independent studies in reliable RF-based emergency communication systems
+    and protocols, including amateur radio integration, conducted across CS392
+    and CS394. Work is conducted in collaboration with the Montgomery County
+    ARES/RACES group and the Jim Fisher Memorial Digital Network Association.
+    This work began in 2024.
   tags:
     - wireless
     - communications
     - rf
+    - public safety
 
-- title: "Deep Learning in Astrophysics"
-  status: completed
-  type: student
-  image: /images/moon-crater.svg
+  team-contributors:
+    - william-m-mongan
+    - owen
+
+- title: "Pixel Pandemonium"
+  status: active
+  type: research
+  image: https://img.youtube.com/vi/72TPC2bYaLk/hqdefault.jpg
   description: >
-    Research independent study applying deep learning
-    techniques to astrophysical image and data analysis.
-    Conducted in CS391.
+    An "unplugged" interactive activity for teaching computer science
+    fundamentals through pixel-based visual demonstrations — no computer
+    required. Participants fill in grids to recreate images and animations,
+    building intuition for how digital graphics, encoding, and algorithms
+    work. The activity has been presented at venues including CSTA,
+    CS4Philly, CS4AllPA, the Philadelphia Science Festival, and Pixar,
+    and can be explored at the
+    <a href="https://www.billmongan.com/Ursinus-CS173/DrawingCanvas/Replay">Pixel Pandemonium drawing canvas</a>.
+    Developed in part through independent research projects by two students
+    in CS394. This work began in 2022.
   tags:
-    - machine learning
-    - astrophysics
+    - cs education
+    - visualization
+    - outreach
+    - pixel graphics
+
+  team-contributors:
+    - william-m-mongan
+    - tyler
+    - jaheim
+  research:
+    - "manual:pandemonium-2019-sigcse"
+
+- title: "Facilitating Rapid Emergency Response via Graph Optimization Algorithms"
+  status: active
+  type: research
+  image: /images/fire-hydrant.svg
+  description: >
+    Research applying graph pathfinding algorithms and network flow analysis
+    to GIS data to optimize emergency fire response. The project identifies
+    the optimal fire hydrants to use given a fire location, and determines
+    which roads to close to protect equipment and personnel while maintaining
+    driver visibility.
+
+  tags:
+    - gis
+    - graph algorithms
+    - optimization
+    - public safety
+
+  team-contributors:
+    - william-m-mongan
+    - aleni
+

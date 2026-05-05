@@ -29,9 +29,9 @@
       <img src="{{ member.image | relative_url }}"
         alt="Portrait of {{ member.title }}, {{ role_label }}, HMIS Lab."
         loading="lazy"
-        onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
+        onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror = null;" />
       {%- else -%}
-      <img src="{{ '/images/placeholder.svg' | relative_url }}"
+      <img src="{{ '/images/placeholder-avatar.svg' | relative_url }}"
         alt="Portrait placeholder for {{ member.title }}, {{ role_label }}, HMIS Lab."
         loading="lazy" />
       {%- endif -%}

@@ -39,13 +39,7 @@
       {%- if include.eyebrow -%}
       <span class="spread_eyebrow">{{ include.eyebrow }}</span>
       {%- endif -%}
-      <h2 class="spread_title">
-        {%- if include.link -%}
-        <a href="{{ include.link | relative_url }}">{{ include.title }}</a>
-        {%- else -%}
-        {{ include.title }}
-        {%- endif -%}
-      </h2>
+      <h2 class="spread_title">{{ include.title }}</h2>
       <p class="spread_body">{{ include.body }}</p>
       {%- if include.link -%}
       <a href="{{ include.link | relative_url }}" class="spread_link">
