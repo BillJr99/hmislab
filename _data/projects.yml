@@ -5,10 +5,6 @@
 # link:   Optional URL (demo, repo, publication, etc.)
 # image:  Optional thumbnail URL or path
 
-# ---------------------------------------------------------------------------
-# Active research projects (sourced from Asana Consulting backlog)
-# ---------------------------------------------------------------------------
-
 - title: "Mathforum AI: Mentir AI"
   status: active
   type: research
@@ -51,9 +47,19 @@
     - wireless
     - sensing
 
-# ---------------------------------------------------------------------------
-# Completed / published projects (sourced from research-input.yml + CV)
-# ---------------------------------------------------------------------------
+- title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
+  status: active
+  type: student
+  image: /images/rag-schema.svg
+  description: >
+    Student research comparing retrieval-augmented generation and fine-tuning
+    for building an AI math tutoring assistant on the Mathforum archive.
+    Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
+    and Claire Shoemaker.
+  tags:
+    - ai
+    - education
+    - rag
 
 - title: "NVIZ: Neural Network Visualizer"
   status: completed
@@ -112,20 +118,6 @@
     - iot
     - machine learning
     - signal processing
-
-- title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
-  status: completed
-  type: student
-  image: /images/rag-schema.svg
-  description: >
-    Student research comparing retrieval-augmented generation and fine-tuning
-    for building an AI math tutoring assistant on the Mathforum archive.
-    Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
-    and Claire Shoemaker.
-  tags:
-    - ai
-    - education
-    - rag
 
 - title: "Sleep Apnea Detection via ECG"
   status: completed
@@ -200,12 +192,8 @@
     - machine learning
     - computer vision
 
-# ---------------------------------------------------------------------------
-# Student independent studies (sourced from CV)
-# ---------------------------------------------------------------------------
-
 - title: "Interactive AI Theater Presentation"
-  status: completed
+  status: active
   type: student
   image: /images/neural-network.svg
   description: >
@@ -218,7 +206,7 @@
     - interactive
 
 - title: "AI in Teaching and Learning"
-  status: completed
+  status: active
   type: student
   image: /images/neural-network.svg
   description: >
