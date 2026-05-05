@@ -30,7 +30,7 @@
   type: research
   image: /images/ecg-trace.svg
   description: >
-    A full-stack wearable system for continuous, ambulatory cardiorespiratory
+    A full-stack wearable system in collaboration with the Drexel Wireless Systems Lab for continuous, ambulatory cardiorespiratory
     monitoring. The project integrates signal acquisition, edge processing,
     and machine learning inference for real-time health monitoring outside
     clinical settings.
@@ -40,39 +40,12 @@
     - wearables
     - iot
 
-- title: "DWSL Grid Testbed"
-  status: active
-  type: research
-  image: /images/wireless-encrypted.svg
-  description: >
-    A reconfigurable wireless testbed at the Drexel Wireless Systems Lab
-    supporting experiments in RF sensing, smart grid communications, and
-    spectrum management.
-  tags:
-    - wireless
-    - iot
-    - infrastructure
-
-- title: "Ventilation Monitoring: Full-Stack Paper"
-  status: active
-  type: research
-  image: /images/ecg-trace.svg
-  description: >
-    End-to-end paper on passive wearable respiratory device design and the
-    analysis algorithms that monitor respiratory activity, covering hardware,
-    signal processing, and clinical validation.
-  tags:
-    - healthcare
-    - wearables
-    - respiratory
-
 - title: "RFID Antenna State Selection"
   status: active
   type: research
   image: /images/wireless-encrypted.svg
   description: >
-    Research into intelligent antenna state selection for RFID-based sensing,
-    targeting improved read range and accuracy in multi-tag environments.
+    Research into intelligent antenna state selection for RFID-based sensing in collaboration with the Drexel Wireless Systems Lab, targeting improved read range and accuracy in multi-tag environments.
   tags:
     - rfid
     - wireless
