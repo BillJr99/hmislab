@@ -55,8 +55,9 @@
       {%- if project.link or has_sidebar -%}
       <div class="project-feature_actions">
         {%- if project.link -%}
-        <a class="project-feature_link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
-          Navigate to {{ project.title }} <span aria-hidden="true">→</span>
+        <a class="project-feature_link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer"
+           aria-label="Visit site: {{ project.title }} (opens in a new tab)">
+          Visit site <span aria-hidden="true">→</span>
         </a>
         {%- endif -%}
         {%- if has_sidebar -%}
