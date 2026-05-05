@@ -218,11 +218,6 @@
     &:hover img {
       transform: scale(1.04);
     }
-
-    &:focus-visible {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba($primary, 0.30);
-    }
   }
 
   .research-entry_text {
@@ -246,21 +241,6 @@
     text-transform: none;
     letter-spacing: -0.2px;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color $fast;
-
-      &:hover {
-        color: $primary;
-      }
-
-      &:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 3px rgba($primary, 0.30);
-        border-radius: 2px;
-      }
-    }
   }
 
   .research-entry_authors {
