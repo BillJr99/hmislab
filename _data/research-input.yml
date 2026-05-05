@@ -173,6 +173,7 @@
   research-visible: true
   projects-visible: true
   team-contributors:
+    - levi-f
     - william-m-mongan
 
 - id: manual:cummins-2026-cosa-rag
@@ -260,6 +261,7 @@
   research-visible: true
   projects-visible: true
   team-contributors:
+    - eugene-t
     - william-m-mongan
 
 - id: manual:artene-2023-cosa-ucplaces
