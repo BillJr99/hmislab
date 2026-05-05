@@ -153,6 +153,7 @@
 - title: "NVIZ: Neural Network Visualizer"
   status: active
   type: software
+  link: https://michaelcummins1.github.io/nviz/
   image: /images/nviz-sankey.png
   description: >
     An interactive, no-code neural network visualizer that lets users upload
@@ -182,6 +183,7 @@
 - title: "Ursinus WebIDE"
   status: completed
   type: software
+  link: https://www.billmongan.com/Ursinus-WebIDE/
   image: https://www.billmongan.com/Ursinus-WebIDE/images/graphicsScreenshot.png
   description: >
     A serverless, browser-based development environment for student practice

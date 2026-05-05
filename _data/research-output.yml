@@ -129,6 +129,7 @@
   research-visible: true
   projects-visible: true
   team-contributors:
+  - levi-f
   - william-m-mongan
 - title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
     AI'
@@ -214,6 +215,7 @@
   research-visible: true
   projects-visible: true
   team-contributors:
+  - eugene-t
   - william-m-mongan
 - title: 'UCPlaces: Campus Orientation App Using ArcGIS'
   authors:

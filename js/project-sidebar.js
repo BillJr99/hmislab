@@ -72,11 +72,40 @@
     }
   });
 
-  // Close on Escape.
+  var FOCUSABLE =
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), ' +
+    'textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+  function getFocusable(el) {
+    return Array.prototype.slice.call(el.querySelectorAll(FOCUSABLE));
+  }
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       var open = getOpenSidebar();
       if (open) closeSidebar(open, getTriggerForSidebar(open));
+      return;
+    }
+
+    if (e.key !== "Tab") return;
+    var open = getOpenSidebar();
+    if (!open) return;
+
+    var focusable = getFocusable(open);
+    if (focusable.length === 0) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 })();

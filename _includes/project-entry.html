@@ -48,6 +48,11 @@
     </div>
     {%- endif -%}
 
+    {%- if project.link -%}
+    <a class="project-feature_link" href="{{ project.link }}" target="_blank" rel="noopener noreferrer">
+      Launch app <span aria-hidden="true">→</span>
+    </a>
+    {%- endif -%}
     {%- if has_sidebar -%}
     <button class="project-feature_link project-title-btn"
             aria-controls="sidebar-{{ project_slug }}"
