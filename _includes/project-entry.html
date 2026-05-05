@@ -1,26 +1,31 @@
 {%- comment -%}
   Single completed project rendered as a bibliography line.
-  Thumbnail left, title + description + tags + link right.
-  Carries `card` so the existing card-search JS can find it
-  if a search component is ever added to this page.
+  Thumbnail left, title + description + tags right.
+
+  If the project has associated research IDs, a "See publications" button
+  is shown that opens a slide-out sidebar listing those publications.
 
   Parameter
     project   The project object from site.data.projects.
 {%- endcomment -%}
 
 {%- assign project = include.project -%}
+{%- assign project_slug = project.title | slugify -%}
+
+{%- assign all_papers = site.data['research-output'] -%}
+{%- assign project_papers = "" | split: "" -%}
+{%- for paper_id in project.research -%}
+  {%- assign matching = all_papers | where: "id", paper_id -%}
+  {%- assign project_papers = project_papers | concat: matching -%}
+{%- endfor -%}
+{%- assign has_research = false -%}
+{%- if project.research and project_papers.size > 0 -%}{%- assign has_research = true -%}{%- endif -%}
+{%- assign has_contributors = false -%}
+{%- if project['team-contributors'] and project['team-contributors'].size > 0 -%}{%- assign has_contributors = true -%}{%- endif -%}
+{%- assign has_sidebar = false -%}
+{%- if has_research or has_contributors -%}{%- assign has_sidebar = true -%}{%- endif -%}
 
 <article class="card project-entry" data-type="{{ project.type }}">
-  {%- if project.link -%}
-  <a class="project-entry_thumbnail" href="{{ project.link }}" tabindex="-1" aria-hidden="true">
-    {%- if project.image -%}
-    <img src="{{ project.image | relative_url }}" alt="" loading="lazy"
-      onerror="this.src='{{ '/images/placeholder.svg' | relative_url }}'; this.onerror = null;" />
-    {%- else -%}
-    <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
-    {%- endif -%}
-  </a>
-  {%- else -%}
   <div class="project-entry_thumbnail">
     {%- if project.image -%}
     <img src="{{ project.image | relative_url }}" alt="" loading="lazy"
@@ -29,16 +34,9 @@
     <img src="{{ '/images/placeholder.svg' | relative_url }}" alt="" loading="lazy" />
     {%- endif -%}
   </div>
-  {%- endif -%}
 
   <div class="project-entry_text">
-    <h3 class="project-entry_title">
-      {%- if project.link -%}
-      <a href="{{ project.link }}">{{ project.title }}</a>
-      {%- else -%}
-      {{ project.title }}
-      {%- endif -%}
-    </h3>
+    <h3 class="project-entry_title">{{ project.title }}</h3>
 
     {%- if project.description -%}
     <p class="project-entry_description">{{ project.description }}</p>
@@ -49,5 +47,19 @@
       {%- include tags.html tags=project.tags repo=project.repo -%}
     </div>
     {%- endif -%}
+
+    {%- if has_sidebar -%}
+    <button class="project-feature_link project-title-btn"
+            aria-controls="sidebar-{{ project_slug }}"
+            aria-expanded="false"
+            aria-haspopup="dialog">
+      {%- if has_research -%}See team and publications{%- else -%}Meet the team{%- endif -%}
+      <span aria-hidden="true">→</span>
+    </button>
+    {%- endif -%}
   </div>
+
+  {%- if has_sidebar -%}
+  {%- include project-sidebar.html project=project slug=project_slug -%}
+  {%- endif -%}
 </article>

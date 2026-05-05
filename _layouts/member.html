@@ -14,26 +14,87 @@ layout: default
 
     {% include member-feature.html member=page %}
 
-    {%- assign names = "" | split: ',' -%}
-    {%- if page.search.first -%}
-    {%- assign names = names | concat: page.search -%}
-    {%- elsif page.search -%}
-    {%- assign names = names | push: page.search -%}
-    {%- elsif page.title -%}
-    {%- assign names = names | push: page.title -%}
+    {%- assign member_slug = page.path | split: "/" | last | remove: ".md" -%}
+
+    {%- comment -%} Collect projects this member contributed to {%- endcomment -%}
+    {%- assign member_projects = "" | split: "" -%}
+    {%- for project in site.data.projects -%}
+      {%- if project['team-contributors'] contains member_slug -%}
+        {%- assign member_projects = member_projects | push: project -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- comment -%} Collect publications this member contributed to {%- endcomment -%}
+    {%- assign all_papers = site.data['research-output'] -%}
+    {%- assign member_papers = "" | split: "" -%}
+    {%- for paper in all_papers -%}
+      {%- if paper['team-contributors'] contains member_slug -%}
+        {%- if paper['research-visible'] != false or paper['projects-visible'] != false -%}
+          {%- assign member_papers = member_papers | push: paper -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign member_papers = member_papers | sort: "date" | reverse -%}
+
+    {%- if member_projects.size > 0 or member_papers.size > 0 -%}
+    <div class="member-page_work">
+
+      {%- if member_projects.size > 0 -%}
+      <div class="member-page_section">
+        <h2 class="member-page_section-title">Projects</h2>
+        <ul class="member-page_list" role="list">
+          {%- for project in member_projects -%}
+          <li class="member-page_list-item">
+            <div class="member-page_item-header">
+              <span class="member-page_item-title">{{ project.title }}</span>
+              <span class="member-page_item-badge member-page_item-badge--{{ project.status }}">
+                {%- if project.status == "completed" -%}Completed{%- else -%}Active{%- endif -%}
+              </span>
+            </div>
+            {%- if project.description -%}
+            <p class="member-page_item-desc">{{ project.description }}</p>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+
+      {%- if member_papers.size > 0 -%}
+      <div class="member-page_section">
+        <h2 class="member-page_section-title">Publications</h2>
+        <ul class="member-page_list" role="list">
+          {%- for paper in member_papers -%}
+          {%- assign year = paper.date | date: "%Y" -%}
+          {%- assign authors = paper.authors | join: ", " -%}
+          <li class="member-page_list-item">
+            <div class="member-page_item-header">
+              <span class="member-page_item-title">
+                {%- if paper.link -%}
+                <a href="{{ paper.link }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+                {%- else -%}
+                {{ paper.title }}
+                {%- endif -%}
+              </span>
+              {%- if year != "" -%}
+              <span class="member-page_item-badge member-page_item-badge--year">{{ year }}</span>
+              {%- endif -%}
+            </div>
+            {%- if authors != "" or paper.publisher -%}
+            <p class="member-page_item-desc">
+              {%- if authors != "" -%}{{ authors }}{%- endif -%}
+              {%- if authors != "" and paper.publisher -%}<span class="member-page_dot" aria-hidden="true"> · </span>{%- endif -%}
+              {%- if paper.publisher -%}<em>{{ paper.publisher }}</em>{%- endif -%}
+            </p>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+
+    </div>
     {%- endif -%}
-
-    {%- capture search -%}
-    {%- for name in names -%}"{{ name }}" {% endfor -%}
-    {%- endcapture -%}
-
-    {%- assign search = search | strip | prepend: "/research/?search=" -%}
-
-    <a class="member-page_papers" href="{{ search | relative_url }}">
-      <i class="fas fa-book-open" aria-hidden="true"></i>
-      <span>{{ page.title }}'s papers</span>
-      <span aria-hidden="true">→</span>
-    </a>
 
   </div>
 </div>

@@ -1,0 +1,105 @@
+{%- comment -%}
+  Sidebar panel for a project's associated research publications and team.
+  Rendered inline inside project-feature and project-entry articles.
+  Opened by clicking the project title button; closed via the X button,
+  the backdrop overlay, or the Escape key (handled by project-sidebar.js).
+
+  Parameters
+    project   The project object from site.data.projects.
+    slug      Pre-computed slugify of project.title.
+{%- endcomment -%}
+
+{%- assign project = include.project -%}
+{%- assign slug = include.slug -%}
+{%- assign all_papers = site.data['research-output'] -%}
+
+{%- assign project_papers = "" | split: "" -%}
+{%- for paper_id in project.research -%}
+  {%- assign matching = all_papers | where: "id", paper_id -%}
+  {%- assign project_papers = project_papers | concat: matching -%}
+{%- endfor -%}
+{%- assign project_papers = project_papers | where_exp: "paper", "paper['projects-visible'] != false" -%}
+{%- assign project_papers = project_papers | sort: "date" | reverse -%}
+
+{%- assign has_contributors = false -%}
+{%- if project['team-contributors'] and project['team-contributors'].size > 0 -%}
+  {%- assign has_contributors = true -%}
+{%- endif -%}
+
+{%- if project_papers.size > 0 or has_contributors -%}
+<aside class="project-sidebar"
+       id="sidebar-{{ slug }}"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="sidebar-title-{{ slug }}"
+       aria-hidden="true">
+  <div class="project-sidebar_inner">
+    <div class="project-sidebar_header">
+      <h2 class="project-sidebar_title" id="sidebar-title-{{ slug }}">{{ project.title }}</h2>
+      <button class="project-sidebar_close" aria-label="Close research panel" data-sidebar-close>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <path d="M3 3L15 15M15 3L3 15" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    {%- if has_contributors -%}
+    <div class="project-sidebar_team">
+      <p class="project-sidebar_section-label">Team</p>
+      <ul class="project-sidebar_contributors" role="list">
+        {%- for contrib_slug in project['team-contributors'] -%}
+        {%- assign member = nil -%}
+        {%- for m in site.members -%}
+          {%- assign m_slug = m.path | split: "/" | last | remove: ".md" -%}
+          {%- if m_slug == contrib_slug -%}{%- assign member = m -%}{%- endif -%}
+        {%- endfor -%}
+        {%- if member -%}
+        <li class="project-sidebar_contributor">
+          <a href="{{ member.url | relative_url }}" class="project-sidebar_contributor-link">
+            {%- if member.image -%}
+            <img src="{{ member.image | relative_url }}" alt="{{ member.title }}"
+                 class="project-sidebar_contributor-avatar"
+                 onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror=null;" />
+            {%- else -%}
+            <span class="project-sidebar_contributor-avatar project-sidebar_contributor-avatar--placeholder" aria-hidden="true">
+              {{ member.title | slice: 0 }}
+            </span>
+            {%- endif -%}
+            <span class="project-sidebar_contributor-name">{{ member.title }}</span>
+          </a>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {%- if project_papers.size > 0 -%}
+    <p class="project-sidebar_count">
+      {{ project_papers.size }} publication{%- if project_papers.size != 1 -%}s{%- endif -%}
+    </p>
+    <ul class="project-sidebar_papers" role="list">
+      {%- for paper in project_papers -%}
+      {%- assign year = paper.date | date: "%Y" -%}
+      {%- assign authors = paper.authors | join: ", " -%}
+      <li class="project-sidebar_paper">
+        <h3 class="project-sidebar_paper-title">
+          {%- if paper.link -%}
+          <a href="{{ paper.link }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a>
+          {%- else -%}
+          {{ paper.title }}
+          {%- endif -%}
+        </h3>
+        <p class="project-sidebar_paper-meta">
+          {%- if authors != "" -%}{{ authors }}{%- endif -%}
+          {%- if authors != "" and paper.publisher -%}<span class="project-sidebar_dot" aria-hidden="true"> · </span>{%- endif -%}
+          {%- if paper.publisher -%}<em>{{ paper.publisher }}</em>{%- endif -%}
+          {%- if paper.date -%}<span class="project-sidebar_dot" aria-hidden="true"> · </span>{{ year }}{%- endif -%}
+        </p>
+      </li>
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+</aside>
+{%- endif -%}

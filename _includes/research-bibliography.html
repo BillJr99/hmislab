@@ -12,7 +12,8 @@
   _data/research-output.yml (so this page reflects it now).
 {%- endcomment -%}
 
-{%- assign papers = site.data.research-output -%}
+{%- assign papers = site.data['research-output'] -%}
+{%- assign papers = papers | where_exp: "paper", "paper['research-visible'] != false" -%}
 {%- assign papers = papers | sort: "date" | reverse -%}
 
 {%- comment -%} Cluster definitions. Order = display order. {%- endcomment -%}

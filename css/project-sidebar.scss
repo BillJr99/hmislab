@@ -1,0 +1,326 @@
+---
+---
+
+@import "variables";
+@import "mixins";
+
+// ── Project sidebar overlay ──────────────────────────────────────────────────
+
+.project-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(41, 37, 36, 0.45);
+  z-index: 200;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $fast, visibility $fast;
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+// ── Project sidebar panel ────────────────────────────────────────────────────
+
+.project-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(480px, 100vw);
+  height: 100dvh;
+  background: $bg-surface;
+  z-index: 210;
+  box-shadow: -4px 0 32px rgba(41, 37, 36, 0.14);
+  overflow-y: auto;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform $slow, visibility $slow;
+
+  &.is-open {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.project-sidebar_inner {
+  padding: 36px 32px 56px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+// ── Header ───────────────────────────────────────────────────────────────────
+
+.project-sidebar_header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.project-sidebar_title {
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
+  font-weight: $semi-bold;
+  line-height: 1.35;
+  color: $text-dark;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  text-align: left;
+
+  &::after {
+    display: none;
+  }
+}
+
+.project-sidebar_close {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 1.5px solid $border-medium;
+  border-radius: $radius-full;
+  color: $text-secondary;
+  cursor: pointer;
+  transition: color $fast, border-color $fast, background $fast;
+  margin-top: 1px;
+
+  &:hover {
+    color: $text-dark;
+    border-color: $border-strong;
+    background: $bg-raised;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.30);
+  }
+}
+
+// ── Section label ────────────────────────────────────────────────────────────
+
+.project-sidebar_section-label {
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
+  margin: 0 0 14px 0;
+}
+
+// ── Team contributors ─────────────────────────────────────────────────────────
+
+.project-sidebar_team {
+  margin-bottom: 32px;
+}
+
+.project-sidebar_contributors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-sidebar_contributor {
+  display: flex;
+}
+
+.project-sidebar_contributor-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: $text-dark;
+  transition: color $fast;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    border-radius: 4px;
+  }
+}
+
+.project-sidebar_contributor-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: $radius-full;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: $bg-raised;
+}
+
+.project-sidebar_contributor-avatar--placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-raised;
+  color: $text-secondary;
+  font-family: $sans;
+  font-size: 0.85rem;
+  font-weight: $semi-bold;
+  text-transform: uppercase;
+}
+
+.project-sidebar_contributor-name {
+  font-family: $sans;
+  font-size: 0.88rem;
+  font-weight: $medium;
+  line-height: 1.3;
+}
+
+// ── Count label ──────────────────────────────────────────────────────────────
+
+.project-sidebar_count {
+  font-family: $sans;
+  font-size: 0.72rem;
+  font-weight: $semi-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $text-secondary;
+  margin: 0 0 24px 0;
+}
+
+// ── Paper list ───────────────────────────────────────────────────────────────
+
+.project-sidebar_papers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-sidebar_paper {
+  padding: 20px 0;
+  border-bottom: 1px solid $border-medium;
+
+  &:first-child {
+    border-top: 1px solid $border-medium;
+  }
+}
+
+.project-sidebar_paper-title {
+  font-family: $serif;
+  font-optical-sizing: auto;
+  font-size: 0.98rem;
+  font-weight: $medium;
+  line-height: 1.45;
+  color: $text-dark;
+  margin: 0 0 6px 0;
+  padding: 0;
+  text-align: left;
+
+  &::after {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color $fast, border-color $fast;
+
+    &:hover {
+      color: $primary;
+      border-bottom-color: rgba($primary, 0.4);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: 2px;
+    }
+  }
+}
+
+.project-sidebar_paper-meta {
+  font-family: $sans;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: $text-secondary;
+  margin: 0;
+
+  em {
+    font-style: normal;
+  }
+}
+
+.project-sidebar_dot {
+  color: $border-strong;
+}
+
+// ── Title trigger button (looks like text, opens sidebar) ────────────────────
+
+.project-title-btn {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  width: 100%;
+  transition: color $fast;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    border-radius: 2px;
+  }
+}
+
+// When used as the "See publications →" CTA inside project-feature, inherit
+// the link styling already defined there.
+.project-feature_link.project-title-btn {
+  width: auto;
+  display: inline-flex;
+}
+
+// ── Prevent body scroll when sidebar is open ─────────────────────────────────
+
+body.sidebar-open {
+  overflow: hidden;
+}
+
+// ── Mobile ───────────────────────────────────────────────────────────────────
+
+@media (max-width: 500px) {
+  .project-sidebar {
+    width: 100vw;
+  }
+
+  .project-sidebar_inner {
+    padding: 24px 20px 48px;
+  }
+}
+
+// ── Reduced motion ────────────────────────────────────────────────────────────
+
+@media (prefers-reduced-motion: reduce) {
+  .project-sidebar,
+  .project-sidebar-overlay {
+    transition: none;
+  }
+}

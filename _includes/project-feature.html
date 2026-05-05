@@ -2,9 +2,8 @@
   Project feature row. Image one side, text article-shaped on the other.
   Alternates by `side` parameter. Used for active projects on /projects/.
 
-  Distinct from the home Spread: no seam-overlap, smaller scale, more
-  compact vertical rhythm so a sequence of 5 rows reads at a sensible
-  page length.
+  If the project has associated research IDs, the title becomes a button
+  that opens a slide-out sidebar listing those publications.
 
   Parameters
     project   Required. The project object from site.data.projects.
@@ -13,35 +12,35 @@
 
 {%- assign project = include.project -%}
 {%- assign side = include.side | default: "image-left" -%}
+{%- assign project_slug = project.title | slugify -%}
 
-{%- assign type_label = "Project" -%}
-{%- if project.type == "research" -%}{%- assign type_label = "Research Project" -%}{%- endif -%}
+{%- assign type_label = "Research Project" -%}
 {%- if project.type == "software" -%}{%- assign type_label = "Software" -%}{%- endif -%}
-{%- if project.type == "student" -%}{%- assign type_label = "Student Work" -%}{%- endif -%}
+
+{%- assign all_papers = site.data['research-output'] -%}
+{%- assign project_papers = "" | split: "" -%}
+{%- for paper_id in project.research -%}
+  {%- assign matching = all_papers | where: "id", paper_id -%}
+  {%- assign project_papers = project_papers | concat: matching -%}
+{%- endfor -%}
+{%- assign has_research = false -%}
+{%- if project.research and project_papers.size > 0 -%}{%- assign has_research = true -%}{%- endif -%}
+{%- assign has_contributors = false -%}
+{%- if project['team-contributors'] and project['team-contributors'].size > 0 -%}{%- assign has_contributors = true -%}{%- endif -%}
+{%- assign has_sidebar = false -%}
+{%- if has_research or has_contributors -%}{%- assign has_sidebar = true -%}{%- endif -%}
 
 <article class="project-feature project-feature--{{ side }}" data-type="{{ project.type }}">
   <div class="project-feature_inner">
     {%- if project.image -%}
     <div class="project-feature_image">
-      {%- if project.link -%}
-      <a href="{{ project.link }}" tabindex="-1" aria-hidden="true">
-        <img src="{{ project.image | relative_url }}" alt="" loading="lazy" />
-      </a>
-      {%- else -%}
       <img src="{{ project.image | relative_url }}" alt="" loading="lazy" />
-      {%- endif -%}
     </div>
     {%- endif -%}
 
     <div class="project-feature_text">
       <span class="project-feature_eyebrow">{{ type_label }}</span>
-      <h3 class="project-feature_title">
-        {%- if project.link -%}
-        <a href="{{ project.link }}">{{ project.title }}</a>
-        {%- else -%}
-        {{ project.title }}
-        {%- endif -%}
-      </h3>
+      <h3 class="project-feature_title">{{ project.title }}</h3>
 
       {%- if project.description -%}
       <p class="project-feature_description">{{ project.description }}</p>
@@ -53,12 +52,19 @@
       </div>
       {%- endif -%}
 
-      {%- if project.link -%}
-      <a href="{{ project.link }}" class="project-feature_link">
-        Visit project
+      {%- if has_sidebar -%}
+      <button class="project-feature_link project-title-btn"
+              aria-controls="sidebar-{{ project_slug }}"
+              aria-expanded="false"
+              aria-haspopup="dialog">
+        {%- if has_research -%}See team and publications{%- else -%}Meet the team{%- endif -%}
         <span aria-hidden="true">→</span>
-      </a>
+      </button>
       {%- endif -%}
     </div>
   </div>
+
+  {%- if has_sidebar -%}
+  {%- include project-sidebar.html project=project slug=project_slug -%}
+  {%- endif -%}
 </article>
