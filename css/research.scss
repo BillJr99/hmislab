@@ -274,21 +274,18 @@
     list-style: none;
     margin: 10px 0 0 0;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .research-entry_contributor {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 44px);
+    gap: 8px 6px;
+    justify-content: start;
+    align-items: start;
   }
 
   .research-entry_contributor-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+    display: grid;
+    grid-template-rows: 32px auto;
+    justify-items: center;
+    row-gap: 4px;
     text-decoration: none;
     color: $text-secondary;
     transition: color $fast, opacity $fast;
@@ -312,6 +309,7 @@
     border-radius: $radius-full;
     object-fit: cover;
     background: $bg-raised;
+    align-self: start;
   }
 
   .research-entry_contributor-name {
@@ -320,7 +318,7 @@
     font-weight: $medium;
     line-height: 1.25;
     text-align: center;
-    max-width: 56px;
+    max-width: 44px;
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -328,6 +326,7 @@
     -webkit-box-orient: vertical;
     word-break: normal;
     overflow-wrap: normal;
+    align-self: start;
   }
 
   .research-entry_tags {
