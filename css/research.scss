@@ -320,8 +320,13 @@
     font-weight: $medium;
     line-height: 1.25;
     text-align: center;
-    width: 32px;
-    word-break: break-word;
+    max-width: 56px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: normal;
+    overflow-wrap: normal;
   }
 
   .research-entry_tags {
