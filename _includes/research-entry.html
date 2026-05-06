@@ -51,9 +51,14 @@
       {%- if member -%}
       <li class="research-entry_contributor">
         <a href="{{ member.url | relative_url }}" class="research-entry_contributor-link">
-          <img src="{{ member.image | relative_url }}" alt="{{ member.title }}"
+          {%- if member.image -%}
+          <img src="{{ member.image | relative_url }}" alt=""
                class="research-entry_contributor-avatar"
                onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror=null;" />
+          {%- else -%}
+          <img src="{{ '/images/placeholder-avatar.svg' | relative_url }}" alt=""
+               class="research-entry_contributor-avatar" />
+          {%- endif -%}
           <span class="research-entry_contributor-name">{{ member.title }}</span>
         </a>
       </li>
