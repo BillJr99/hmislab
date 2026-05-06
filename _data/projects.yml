@@ -26,12 +26,12 @@
     - rag
 
   team-contributors:
-    - william-m-mongan
     - claire
     - michael-c
     - matthew-l
     - renzhi
     - tim
+    - william-m-mongan
   research:
     - "manual:reinsburrow-2026-site"
     - "manual:cummins-2026-cosa-rag"
@@ -65,10 +65,10 @@
     - ecg
 
   team-contributors:
-    - william-m-mongan
     - andrei
     - ian
     - kevin-h
+    - william-m-mongan
   research:
     - "manual:dissertation"
     - "doi:10.1007/978-3-030-67494-6_4"
@@ -109,7 +109,6 @@
     - infrastructure
 
   team-contributors:
-    - william-m-mongan
     - josh-b
     - brenden
     - ian
@@ -120,6 +119,7 @@
     - nikolai
     - zack
     - breeze
+    - william-m-mongan
   research:
     - "manual:sensors2023"
     - "manual:access2020"
@@ -142,10 +142,10 @@
     - rag
 
   team-contributors:
-    - william-m-mongan
     - michael-c
     - matthew-l
     - claire
+    - william-m-mongan
   research:
     - "manual:cummins-2026-cosa-rag"
     - "manual:reinsburrow-2026-site"
@@ -173,9 +173,9 @@
     - education
 
   team-contributors:
-    - william-m-mongan
     - kevin-h
     - michael-c
+    - william-m-mongan
   research:
     - "url:https://digitalcommons.ursinus.edu/math_comp_pres/4/"
     - "manual:cummins-2025-cosa-explainability"
@@ -216,8 +216,8 @@
     - tools
 
   team-contributors:
-    - william-m-mongan
     - eugene-t
+    - william-m-mongan
   research:
     - "manual:thompson-2025-cosa-ggtw"
 
@@ -234,8 +234,8 @@
     - mobile
 
   team-contributors:
-    - william-m-mongan
     - arthur
+    - william-m-mongan
   research:
     - "manual:artene-2023-cosa-ucplaces"
 
@@ -257,8 +257,8 @@
     - machine learning
 
   team-contributors:
-    - william-m-mongan
     - jonas
+    - william-m-mongan
   research:
     - "manual:ling-2023-cosa-iot"
 
@@ -279,9 +279,9 @@
     - astrophysics
 
   team-contributors:
-    - william-m-mongan
     - dylan
     - will
+    - william-m-mongan
   research:
     - "manual:melby-2023-cosa-moon"
 
@@ -299,8 +299,8 @@
     - interactive
 
   team-contributors:
-    - william-m-mongan
     - levi-f
+    - william-m-mongan
   research:
     - "manual:fritz-2026-cosa-theater"
 
@@ -339,8 +339,8 @@
     - nlp
 
   team-contributors:
-    - william-m-mongan
     - izayah-c
+    - william-m-mongan
 
 - title: "AI-Based Wi-Fi Penetration Tool"
   status: active
@@ -358,8 +358,8 @@
     - wireless
 
   team-contributors:
-    - william-m-mongan
     - emily
+    - william-m-mongan
 
 - title: "Human Pose Estimation through WiFi"
   status: completed
@@ -375,8 +375,8 @@
     - sensing
 
   team-contributors:
-    - william-m-mongan
     - kacey
+    - william-m-mongan
 
 
 - title: "Natural Language Processing to Parse the Taino Language"
@@ -394,10 +394,10 @@
     - linguistics
 
   team-contributors:
-    - william-m-mongan
     - audrey
     - mold
     - matthew-a
+    - william-m-mongan
 
 - title: "Virtual Museum Environments"
   status: completed
@@ -413,8 +413,8 @@
     - education
 
   team-contributors:
-    - william-m-mongan
     - josh-f
+    - william-m-mongan
 
 - title: "Wireless Emergency Communications"
   status: active
@@ -433,8 +433,8 @@
     - public safety
 
   team-contributors:
-    - william-m-mongan
     - owen
+    - william-m-mongan
 
 - title: "Pixel Pandemonium"
   status: active
@@ -458,9 +458,9 @@
     - pixel graphics
 
   team-contributors:
-    - william-m-mongan
     - tyler
     - jaheim
+    - william-m-mongan
   research:
     - "manual:pandemonium-2019-sigcse"
 
@@ -482,6 +482,6 @@
     - public safety
 
   team-contributors:
-    - william-m-mongan
     - aleni
+    - william-m-mongan
 
