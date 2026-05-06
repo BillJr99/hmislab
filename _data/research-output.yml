@@ -57,8 +57,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - kevin-h
+  - william-m-mongan
 - title: 'The Ursinus WebIDE: A Serverless Browser-Based Development Environment for
     Student Practice and Rapid Instructor Exercise Development'
   authors:
@@ -107,9 +107,9 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - michael-c
   - matthew-l
+  - william-m-mongan
 - title: Interactive AI Theater Presentation
   authors:
   - Levi Fritz
@@ -152,10 +152,10 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - michael-c
   - matthew-l
   - claire
+  - william-m-mongan
 - title: Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine
     Learning Pipeline
   authors:
@@ -175,8 +175,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - andrei
+  - william-m-mongan
 - title: Developing Tools for AI Explainability
   authors:
   - Michael Cummins
@@ -194,8 +194,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - michael-c
+  - william-m-mongan
 - title: Financial Tools for the Grizzly Guide to Wealth (GGTW)
   authors:
   - Eugene Thompson
@@ -235,8 +235,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - arthur
+  - william-m-mongan
 - title: RF IoT Security Layer
   authors:
   - Jonas Ling
@@ -254,8 +254,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - jonas
+  - william-m-mongan
 - title: 'Automated Moon Crater Detection: Exploring Algorithmic and Neural Network
     Approaches'
   authors:
@@ -274,8 +274,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-  - william-m-mongan
   - dylan
+  - william-m-mongan
 - title: Predictive Analytics on Real-Time Biofeedback for Actionable Classification
     of Activity State
   authors:

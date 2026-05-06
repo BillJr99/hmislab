@@ -103,8 +103,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - kevin-h
+    - william-m-mongan
 
 - id: doi:10.1145/3770761.3777114
   title: "The Ursinus WebIDE: A Serverless Browser-Based Development Environment for Student Practice and Rapid Instructor Exercise Development"
@@ -150,9 +150,9 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - michael-c
     - matthew-l
+    - william-m-mongan
 
 - id: manual:fritz-2026-cosa-theater
   title: "Interactive AI Theater Presentation"
@@ -196,10 +196,10 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - michael-c
     - matthew-l
     - claire
+    - william-m-mongan
 
 - id: manual:bogdan-2026-cosa-sleep
   title: "Minute and Subject-Level Sleep Apnea Detection Using an ECG-Based Machine Learning Pipeline"
@@ -219,8 +219,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - andrei
+    - william-m-mongan
 
 - id: manual:cummins-2025-cosa-explainability
   title: "Developing Tools for AI Explainability"
@@ -239,8 +239,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - michael-c
+    - william-m-mongan
 
 - id: manual:thompson-2025-cosa-ggtw
   title: "Financial Tools for the Grizzly Guide to Wealth (GGTW)"
@@ -282,8 +282,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - arthur
+    - william-m-mongan
 
 - id: manual:ling-2023-cosa-iot
   title: "RF IoT Security Layer"
@@ -302,8 +302,8 @@
   research-visible: true
   projects-visible: true
   team-contributors:
-    - william-m-mongan
     - jonas
+    - william-m-mongan
 
 - id: manual:melby-2023-cosa-moon
   title: "Automated Moon Crater Detection: Exploring Algorithmic and Neural Network Approaches"
@@ -324,8 +324,8 @@
 
 # New entries from billmongan.com/publications (visible: false until reviewed)
   team-contributors:
-    - william-m-mongan
     - dylan
+    - william-m-mongan
 
 - id: manual:dissertation
   title: "Predictive Analytics on Real-Time Biofeedback for Actionable Classification of Activity State"
