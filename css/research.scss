@@ -270,35 +270,35 @@
     color: $text-secondary;
   }
 
+  // Avatar links (row 1) and name spans (row 2) are direct siblings so
+  // grid-auto-flow:column places every avatar in the same explicit row,
+  // guaranteeing their tops are co-planar regardless of name line count.
   .research-entry_contributors {
-    list-style: none;
     margin: 10px 0 0 0;
-    padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 44px);
-    gap: 8px 6px;
+    grid-auto-flow: column;
+    grid-template-rows: 32px auto;
+    grid-auto-columns: 44px;
+    column-gap: 6px;
+    row-gap: 4px;
     justify-content: start;
-    align-items: start;
   }
 
   .research-entry_contributor-link {
-    display: grid;
-    grid-template-rows: 32px auto;
-    justify-items: center;
-    row-gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    color: $text-secondary;
-    transition: color $fast, opacity $fast;
+    border-radius: $radius-full;
+    transition: opacity $fast;
 
     &:hover {
-      color: $primary;
-      opacity: 0.85;
+      opacity: 0.75;
     }
 
     &:focus-visible {
       outline: none;
       box-shadow: 0 0 0 3px rgba($primary, 0.30);
-      border-radius: $radius-sm;
     }
   }
 
@@ -309,7 +309,6 @@
     border-radius: $radius-full;
     object-fit: cover;
     background: $bg-raised;
-    align-self: start;
   }
 
   .research-entry_contributor-name {
@@ -318,7 +317,7 @@
     font-weight: $medium;
     line-height: 1.25;
     text-align: center;
-    max-width: 44px;
+    color: $text-secondary;
     overflow: hidden;
     display: block;
     display: -webkit-box;

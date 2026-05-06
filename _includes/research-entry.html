@@ -41,7 +41,7 @@
     </p>
 
     {%- if paper['team-contributors'] and paper['team-contributors'].size > 0 -%}
-    <ul class="research-entry_contributors" role="list" aria-label="Lab contributors">
+    <div class="research-entry_contributors">
       {%- for contrib_slug in paper['team-contributors'] -%}
       {%- assign member = nil -%}
       {%- for m in site.members -%}
@@ -49,22 +49,21 @@
         {%- if m_slug == contrib_slug -%}{%- assign member = m -%}{%- endif -%}
       {%- endfor -%}
       {%- if member -%}
-      <li class="research-entry_contributor">
-        <a href="{{ member.url | relative_url }}" class="research-entry_contributor-link">
-          {%- if member.image -%}
-          <img src="{{ member.image | relative_url }}" alt="" loading="lazy"
-               class="research-entry_contributor-avatar"
-               onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror=null;" />
-          {%- else -%}
-          <img src="{{ '/images/placeholder-avatar.svg' | relative_url }}" alt="" loading="lazy"
-               class="research-entry_contributor-avatar" />
-          {%- endif -%}
-          <span class="research-entry_contributor-name">{{ member.title }}</span>
-        </a>
-      </li>
+      <a href="{{ member.url | relative_url }}" class="research-entry_contributor-link"
+         aria-label="{{ member.title }}">
+        {%- if member.image -%}
+        <img src="{{ member.image | relative_url }}" alt="" loading="lazy"
+             class="research-entry_contributor-avatar"
+             onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror=null;" />
+        {%- else -%}
+        <img src="{{ '/images/placeholder-avatar.svg' | relative_url }}" alt="" loading="lazy"
+             class="research-entry_contributor-avatar" />
+        {%- endif -%}
+      </a>
+      <span class="research-entry_contributor-name" aria-hidden="true">{{ member.title }}</span>
       {%- endif -%}
       {%- endfor -%}
-    </ul>
+    </div>
     {%- endif -%}
 
     {%- if paper.tags or paper.repo -%}
