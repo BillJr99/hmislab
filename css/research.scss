@@ -276,6 +276,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 6px;
   }
 
@@ -315,14 +316,12 @@
 
   .research-entry_contributor-name {
     font-family: $sans;
-    font-size: 0.68rem;
+    font-size: 0.55rem;
     font-weight: $medium;
-    line-height: 1.2;
+    line-height: 1.25;
     text-align: center;
-    max-width: 52px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    width: 32px;
+    word-break: break-word;
   }
 
   .research-entry_tags {
