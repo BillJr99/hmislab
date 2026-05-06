@@ -40,6 +40,34 @@
       {%- endif -%}
     </p>
 
+    {%- if paper['team-contributors'] and paper['team-contributors'].size > 0 -%}
+    <ul class="research-entry_contributors" role="list" aria-label="Lab contributors">
+      {%- for contrib_slug in paper['team-contributors'] -%}
+      {%- assign member = nil -%}
+      {%- for m in site.members -%}
+        {%- assign m_slug = m.path | split: "/" | last | remove: ".md" -%}
+        {%- if m_slug == contrib_slug -%}{%- assign member = m -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if member -%}
+      <li class="research-entry_contributor">
+        <a href="{{ member.url | relative_url }}" class="research-entry_contributor-link"
+           aria-label="{{ member.title }}">
+          {%- if member.image -%}
+          <img src="{{ member.image | relative_url }}" alt="{{ member.title }}"
+               class="research-entry_contributor-avatar"
+               onerror="this.src='{{ '/images/placeholder-avatar.svg' | relative_url }}'; this.onerror=null;" />
+          {%- else -%}
+          <span class="research-entry_contributor-avatar research-entry_contributor-avatar--placeholder" aria-hidden="true">
+            {{ member.title | slice: 0 }}
+          </span>
+          {%- endif -%}
+        </a>
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+
     {%- if paper.tags or paper.repo -%}
     <div class="research-entry_tags">
       {%- include tags.html tags=paper.tags repo=paper.repo -%}
