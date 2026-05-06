@@ -281,7 +281,7 @@
   }
 
   .research-entry_contributor {
-    display: flex;
+    display: block;
   }
 
   .research-entry_contributor-link {
@@ -322,6 +322,7 @@
     text-align: center;
     max-width: 56px;
     overflow: hidden;
+    display: block;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
