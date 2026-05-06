@@ -321,8 +321,6 @@
   cluster: systems-iot-cv
   research-visible: true
   projects-visible: true
-
-# New entries from billmongan.com/publications (visible: false until reviewed)
   team-contributors:
     - dylan
     - william-m-mongan
