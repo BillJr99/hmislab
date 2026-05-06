@@ -284,42 +284,45 @@
   }
 
   .research-entry_contributor-link {
-    display: block;
-    border-radius: $radius-full;
-    transition: opacity $fast, box-shadow $fast;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: $text-secondary;
+    transition: color $fast, opacity $fast;
 
     &:hover {
-      opacity: 0.8;
+      color: $primary;
+      opacity: 0.85;
     }
 
     &:focus-visible {
       outline: none;
       box-shadow: 0 0 0 3px rgba($primary, 0.30);
+      border-radius: $radius-sm;
     }
   }
 
   .research-entry_contributor-avatar {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: $radius-full;
     object-fit: cover;
     background: $bg-raised;
   }
 
-  .research-entry_contributor-avatar--placeholder {
-    width: 28px;
-    height: 28px;
-    border-radius: $radius-full;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: $bg-raised;
-    color: $text-secondary;
+  .research-entry_contributor-name {
     font-family: $sans;
-    font-size: 0.75rem;
-    font-weight: $semi-bold;
-    text-transform: uppercase;
+    font-size: 0.68rem;
+    font-weight: $medium;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 52px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .research-entry_tags {
