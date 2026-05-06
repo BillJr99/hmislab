@@ -282,6 +282,7 @@
     column-gap: 6px;
     row-gap: 4px;
     justify-content: start;
+    overflow-x: auto;
   }
 
   .research-entry_contributor-link {
@@ -318,6 +319,7 @@
     line-height: 1.25;
     text-align: center;
     color: $text-secondary;
+    text-decoration: none;
     overflow: hidden;
     display: block;
     display: -webkit-box;
@@ -326,6 +328,10 @@
     word-break: normal;
     overflow-wrap: normal;
     align-self: start;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   .research-entry_tags {
