@@ -270,6 +270,58 @@
     color: $text-secondary;
   }
 
+  .research-entry_contributors {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .research-entry_contributor {
+    display: flex;
+  }
+
+  .research-entry_contributor-link {
+    display: block;
+    border-radius: $radius-full;
+    transition: opacity $fast, box-shadow $fast;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($primary, 0.30);
+    }
+  }
+
+  .research-entry_contributor-avatar {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-full;
+    object-fit: cover;
+    background: $bg-raised;
+  }
+
+  .research-entry_contributor-avatar--placeholder {
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-full;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-raised;
+    color: $text-secondary;
+    font-family: $sans;
+    font-size: 0.75rem;
+    font-weight: $semi-bold;
+    text-transform: uppercase;
+  }
+
   .research-entry_tags {
     margin: 0 0 12px 0;
 
