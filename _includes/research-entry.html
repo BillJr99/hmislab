@@ -41,7 +41,7 @@
     </p>
 
     {%- if paper['team-contributors'] and paper['team-contributors'].size > 0 -%}
-    <div class="research-entry_contributors" aria-label="Lab contributors">
+    <div class="research-entry_contributors" role="group" aria-label="Lab contributors">
       {%- for contrib_slug in paper['team-contributors'] -%}
       {%- assign member = nil -%}
       {%- for m in site.members -%}
