@@ -127,29 +127,6 @@
     - "manual:wamicon2020"
     - "manual:tbcs2016"
 
-- title: "Mentir AI: RAG vs. Fine-Tuning in Math Education"
-  status: active
-  type: research
-  image: /images/rag-schema.svg
-  description: >
-    Student research comparing retrieval-augmented generation and fine-tuning
-    for building an AI math tutoring assistant on the Mathforum archive.
-    Presented at Ursinus CoSA 2026. Developed by Michael Cummins, Matt Latta,
-    and Claire Shoemaker. This work began in 2025.
-  tags:
-    - ai
-    - education
-    - rag
-
-  team-contributors:
-    - michael-c
-    - matthew-l
-    - claire
-    - william-m-mongan
-  research:
-    - "manual:cummins-2026-cosa-rag"
-    - "manual:reinsburrow-2026-site"
-
 - title: "NVIZ: Neural Network Visualizer"
   status: active
   type: software
