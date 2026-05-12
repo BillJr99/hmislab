@@ -131,6 +131,28 @@
   team-contributors:
   - levi-f
   - william-m-mongan
+- title: 'The One-Shot Ceiling: Comparing RAG and Fine-Tuning Architectures for AI-Assisted
+    Math Mentoring'
+  authors:
+  - Michael J. Cummins
+  - William M. Mongan
+  publisher: Computer Science Honors Papers, Ursinus College
+  date: '2026-05-08'
+  id: url:https://digitalcommons.ursinus.edu/comp_hon/2/
+  type: thesis
+  link: https://digitalcommons.ursinus.edu/comp_hon/2/
+  image: /images/rag-schema.svg
+  tags:
+  - ai
+  - education
+  - rag
+  - mathematics
+  cluster: teaching-learning
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+  - michael-c
+  - william-m-mongan
 - title: 'RAG vs. Fine-Tuning in Math Education: Developing and Validating Mentir
     AI'
   authors:
