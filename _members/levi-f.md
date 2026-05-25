@@ -3,6 +3,5 @@ title: Levi F.
 search:
   - Levi
 role: undergrad
-group: current
+group: alum
 ---
-
