@@ -3,6 +3,5 @@ title: Will P.
 search:
   - Will
 role: undergrad
-group: current
+group: alum
 ---
-
