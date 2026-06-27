@@ -417,6 +417,8 @@
   status: active
   type: research
   image: https://img.youtube.com/vi/72TPC2bYaLk/hqdefault.jpg
+  link: https://www.billmongan.com/PixelPandemonium_Client
+  repo: https://github.com/BillJr99/PixelPandemonium_Client
   description: >
     An "unplugged" interactive activity for teaching computer science
     fundamentals through pixel-based visual demonstrations — no computer
@@ -426,6 +428,13 @@
     CS4Philly, CS4AllPA, the Philadelphia Science Festival, and Pixar,
     and can be explored at the
     <a href="https://www.billmongan.com/Ursinus-CS173/DrawingCanvas/Replay">Pixel Pandemonium drawing canvas</a>.
+    The project now includes a collaborative web application that brings the
+    activity online: a teacher launches an instance from any picture, students
+    join from their own devices and submit individual colored pixels into a
+    shared grid, and the image rebuilds live on a projected replay — letting a
+    large group build one picture together in real time. The deployable client
+    is backed by a small service with realtime updates, and can be tried at the
+    <a href="https://www.billmongan.com/PixelPandemonium_Client">live Pixel Pandemonium app</a>.
     Developed in part through independent research projects by two students
     in CS394. This work began in 2022.
   tags:
@@ -447,10 +456,19 @@
   image: /images/fire-hydrant.svg
   description: >
     Research applying graph pathfinding algorithms and network flow analysis
-    to GIS data to optimize emergency fire response. The project identifies
-    the optimal fire hydrants to use given a fire location, and determines
-    which roads to close to protect equipment and personnel while maintaining
-    driver visibility.
+    to GIS data to optimize emergency fire response. Given an incident
+    location, the system models the road network as a graph and recommends a
+    complete response plan: which fire hydrant to draw from (scored by hose-run
+    length, route curvature, and road grade via shortest-path search), how to
+    route the hose to the scene, and which roads to close — using a minimum-cut
+    computation to find the least-disruptive set of closures that still
+    separates traffic from the incident while protecting crews and equipment.
+    It then places MUTCD-compliant advance warning signs and channelizing-device
+    tapers so the traffic-control plan matches what crews are trained to deploy,
+    all while respecting the limited barricades, signs, and devices available in
+    the field. The tool is built as a Python (FastAPI) planner over the standard
+    geospatial and graph stack (GeoPandas, Shapely, NetworkX, OSMnx) with an
+    interactive map front end.
 
   tags:
     - gis
