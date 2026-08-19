@@ -154,6 +154,28 @@
     - matthew-l
     - william-m-mongan
 
+- id: manual:mongan-2026-aacu-ai-student-success
+  title: "Leveraging AI and Analytics for Student Success: From Early Alert Language Analysis to LLM-Based Assessment at a Small Liberal Arts College"
+  authors:
+    - William M. Mongan
+    - Carla Anderson
+    - Corrie Fahl
+    - Izayah Carlton
+  publisher: "2026 AAC&U Conference on AI and Higher Education, Atlanta, Georgia"
+  date: '2026-10-28'
+  type: talk
+  image: /images/neural-network.svg
+  tags:
+    - ai
+    - education
+    - analytics
+    - student success
+  cluster: teaching-learning
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+    - izayah-c
 - id: manual:fritz-2026-cosa-theater
   title: "Interactive AI Theater Presentation"
   authors:
