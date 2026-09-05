@@ -31,6 +31,7 @@
     - matthew-l
     - renzhi
     - tim
+    - taylor-f
     - william-m-mongan
   research:
     - "manual:reinsburrow-2026-site"
@@ -290,7 +291,7 @@
     An internship project developing statewide data infrastructure for
     Pennsylvania to broaden access to K–12 computing education, in support
     of the NSF Expanding Computing Education Pathways (ECEP) Alliance.
-    Conducted by one student (CS382). This work began in 2025.
+    Conducted through CS382. This work began in 2025.
   tags:
     - cs education
     - data systems
@@ -298,6 +299,7 @@
 
   team-contributors:
     - jonathan
+    - cole-g
     - william-m-mongan
 
 - title: "Institutional Tonality Analysis for At-Risk Student Re-Engagement"
@@ -307,8 +309,8 @@
   description: >
     An internship project analyzing institutional communication data to
     identify trends in linguistic tonality and their relationship to academic
-    re-engagement among at-risk students. Conducted by one student (CS382).
-    This work began in 2025.
+    re-engagement among at-risk students. Conducted through CS382. This
+    work began in 2025.
   tags:
     - data analysis
     - education
@@ -344,8 +346,8 @@
   image: /images/wireless-encrypted.svg
   description: >
     Research independent studies using RF signal analysis and machine
-    learning to estimate human body pose without cameras. Conducted by
-    two students (CS394). This work was conducted from 2023 to 2024.
+    learning to estimate human body pose without cameras. Conducted
+    through CS394 from 2023 to 2024.
   tags:
     - machine learning
     - wireless
@@ -363,8 +365,8 @@
   description: >
     Research independent study applying natural language processing
     techniques — including retrieval-augmented approaches — to parse and
-    analyze the Taino language. Conducted by three students (CS394). This
-    work was conducted from 2023 to 2024.
+    analyze the Taino language. Conducted through CS394 from 2023 to
+    2024.
   tags:
     - ai
     - nlp
@@ -435,8 +437,8 @@
     large group build one picture together in real time. The deployable client
     is backed by a small service with realtime updates, and can be tried at the
     <a href="https://www.billmongan.com/PixelPandemonium_Client">live Pixel Pandemonium app</a>.
-    Developed in part through independent research projects by two students
-    in CS394. This work began in 2022.
+    Developed in part through independent research projects in CS394.
+    This work began in 2022.
   tags:
     - cs education
     - visualization
