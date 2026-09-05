@@ -17,8 +17,8 @@
     student mathematical thinking, in collaboration with Jason Silverman.
     The work extends into broader investigations of AI applications in
     educational contexts — including generative AI, classroom integration,
-    and pedagogy — conducted with students across CS394 and the Honors
-    thesis sequence (CS491–CS492). This collaboration began in 2019.
+    and pedagogy — conducted with students across CS392, CS394, and the
+    Honors thesis sequence (CS491–CS492). This collaboration began in 2019.
   tags:
     - ai
     - education
@@ -291,7 +291,7 @@
     An internship project developing statewide data infrastructure for
     Pennsylvania to broaden access to K–12 computing education, in support
     of the NSF Expanding Computing Education Pathways (ECEP) Alliance.
-    Conducted through CS382. This work began in 2025.
+    Conducted through CS382 and STAT394. This work began in 2025.
   tags:
     - cs education
     - data systems
@@ -338,6 +338,29 @@
 
   team-contributors:
     - emily
+    - william-m-mongan
+
+- title: "Data Hiding in 3D Meshes"
+  status: active
+  type: research
+  image: /images/3d-mesh.svg
+  description: >
+    Honors research on steganography for three-dimensional geometry,
+    embedding hidden information in polygonal mesh models so that the
+    payload survives ordinary handling of the model while leaving its
+    visible shape unchanged. The work examines where capacity can be found
+    in a mesh — vertex coordinates, connectivity, and traversal order —
+    and how embedding trades off against distortion and robustness.
+    Conducted in the Honors thesis sequence (CS491). This work began in
+    2025.
+  tags:
+    - steganography
+    - computer graphics
+    - 3d geometry
+    - security
+
+  team-contributors:
+    - aleni
     - william-m-mongan
 
 - title: "Human Pose Estimation through WiFi"
