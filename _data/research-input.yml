@@ -125,6 +125,26 @@
   team-contributors:
     - william-m-mongan
 
+- id: manual:silverman-2026-pmena
+  title: "Examining Pedagogical Decision-Making in AI-Generated Mathematical Feedback"
+  authors:
+    - Jason Silverman
+    - Amanda Reinsburrow
+    - Cindy Yovanov
+    - William M. Mongan
+  publisher: "Proceedings of the 48th Annual Conference of the North American Chapter of the International Group for the Psychology of Mathematics Education (PME-NA)"
+  date: '2026-10-11'
+  type: paper
+  image: /images/neural-network.svg
+  tags:
+    - ai
+    - education
+    - mathematics
+  cluster: teaching-learning
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
 - id: manual:reinsburrow-2026-site
   title: "Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback on Student Mathematical Thinking"
   authors:
