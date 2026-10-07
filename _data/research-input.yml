@@ -125,6 +125,26 @@
   team-contributors:
     - william-m-mongan
 
+- id: manual:silverman-2026-pmena
+  title: "Examining Pedagogical Decision-Making in AI-Generated Mathematical Feedback"
+  authors:
+    - Jason Silverman
+    - Amanda Reinsburrow
+    - Cindy Yovanov
+    - William M. Mongan
+  publisher: "Proceedings of the 48th Annual Conference of the North American Chapter of the International Group for the Psychology of Mathematics Education (PME-NA)"
+  date: '2026-10-11'
+  type: paper
+  image: /images/neural-network.svg
+  tags:
+    - ai
+    - education
+    - mathematics
+  cluster: teaching-learning
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
 - id: manual:reinsburrow-2026-site
   title: "Instructional Judgment, Not Just Correctness: Evaluating AI-Generated Feedback on Student Mathematical Thinking"
   authors:
@@ -1105,6 +1125,49 @@
   date: '2019-02-01'
   cluster: teaching-learning
   image: https://img.youtube.com/vi/72TPC2bYaLk/hqdefault.jpg
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+
+- id: manual:mongan-2026-kill-the-robots
+  title: "Kill the Robots? AI Policy & Regulation in the United States & Worldwide"
+  authors:
+    - Shai Karp
+    - Anthony Nadler
+    - Aubrey Paris
+    - Ann Karreth
+    - Johannes Karreth
+    - William M. Mongan
+  publisher: "Nontechnically Speaking Podcast, Parlee Center for Science and the Common Good, Ursinus College"
+  date: '2026-09-30'
+  type: talk
+  link: https://open.spotify.com/episode/0MfDMq6AOBbPuN7CIq7KsL
+  image: /images/neural-network.svg
+  tags:
+    - ai
+    - policy
+    - podcast
+  cluster: teaching-learning
+  research-visible: true
+  projects-visible: true
+  team-contributors:
+    - william-m-mongan
+- id: manual:mongan-2019-pop-the-question
+  title: "Pop, The Question Podcast (S3-E19): Computing, Culture, and Inclusivity"
+  authors:
+    - Melinda Lewis
+    - William M. Mongan
+  publisher: "Pop, The Question Podcast, Penoni Honors College, Drexel University"
+  date: '2019-06-06'
+  type: talk
+  link: https://www.popqpodcast.com/season-3-episode-19
+  image: /images/network.jpg
+  tags:
+    - education
+    - inclusivity
+    - podcast
+  cluster: teaching-learning
   research-visible: true
   projects-visible: true
   team-contributors:
